@@ -1,0 +1,1399 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Vitta Travel · Viajar es vivir</title>
+<meta name="description" content="Agencia de viajes en Quito. Galápagos, Cancún, Cartagena y más. Cotiza tu viaje en línea o escríbenos por WhatsApp.">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vitta Travel">
+<meta property="og:title" content="Vitta Travel · Viajar es vivir">
+<meta property="og:description" content="Agencia de viajes en Quito. Galápagos, Cancún, Cartagena y más. Cotiza tu viaje en línea.">
+<meta property="og:url" content="https://lemaempresauio-design.github.io/vitta-travel/">
+<meta property="og:image" content="https://lemaempresauio-design.github.io/vitta-travel/vista-previa.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://lemaempresauio-design.github.io/vitta-travel/vista-previa.jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Vitta Travel, agencia de viajes en La Carolina, Quito. Paquetes a Galápagos, Cancún y más. Viajar es vivir.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap">
+<style>
+/* Layout: paneles de foto redondeados, barra celeste sobre cada titular, cuadros marino con íconos, tarjetas glass sobre foto a pantalla completa */
+:root{
+  --navy:#0F1E3D;
+  --celeste:#4DB6E5;
+  --ground:#F1F2F4;
+  --card:#FFFFFF;
+  --muted:#3A4660;
+  --ice:#BFE6FF;
+  --gold:#C9A45C;
+  --line:rgba(15,30,61,.14);
+  --font:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --wrap:1180px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--ground);color:var(--navy);font-family:var(--font);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:rgba(241,242,244,.92)}
+img{max-width:100%;display:block}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--celeste);outline-offset:3px;border-radius:12px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:720px){.wrap{padding-left:max(32px,env(safe-area-inset-left,0px));padding-right:max(32px,env(safe-area-inset-right,0px))}}
+h1,h2,h3{margin:0;text-wrap:balance;letter-spacing:-.025em;line-height:1.02}
+p{margin:0}
+.bar{width:88px;height:12px;border-radius:3px;background:var(--celeste)}
+.label{font-size:14px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.lead{font-size:clamp(18px,2vw,21px);color:var(--muted);max-width:52ch}
+.lead b{color:var(--navy)}
+.h2{font-size:clamp(38px,5.4vw,64px);font-weight:800}
+.head{display:flex;flex-direction:column;gap:20px}
+section{scroll-margin-top:90px}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;gap:14px;min-height:56px;padding:10px 26px 10px 18px;border-radius:18px;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;font-size:17px;line-height:1.2;transition:transform .2s ease,background .2s ease}
+.btn:hover{transform:translateY(-2px);background:#18305C}
+.btn svg{flex-shrink:0}
+.btn small{display:block;font-weight:500;font-size:15px;opacity:.85}
+.btn-ghost{display:inline-flex;align-items:center;gap:10px;min-height:56px;padding:0 22px;border-radius:18px;border:2px solid var(--navy);color:var(--navy);text-decoration:none;font-weight:700;font-size:17px}
+.btn-ghost:hover{background:rgba(15,30,61,.06)}
+
+/* Cuadros de íconos */
+.tile{width:64px;height:64px;flex-shrink:0;border-radius:16px;background:var(--navy);display:flex;align-items:center;justify-content:center}
+.tile svg{width:34px;height:34px}
+.ico{fill:none;stroke:#fff;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* Header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(241,242,244,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
+.top img{width:96px;height:auto}
+.nav{display:flex;align-items:center;gap:26px}
+.nav a{text-decoration:none;font-weight:600;font-size:16px}
+.nav a:hover{color:#2F8FD0}
+.nav .pill{padding:10px 18px;border-radius:999px;background:var(--navy);color:#fff}
+.nav .pill:hover{color:#fff;background:#18305C}
+@media (max-width:760px){.nav a:not(.pill){display:none}}
+
+/* Hero */
+.hero{overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px;align-items:center;padding-block:56px 72px}
+.hero-copy{display:flex;flex-direction:column;gap:26px;min-width:0}
+.hero h1{font-size:clamp(56px,8.6vw,112px);font-weight:800;letter-spacing:-.04em;line-height:.94}
+.hero h1 span{color:#2F8FD0}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px}
+.facts{display:flex;flex-wrap:wrap;gap:12px 28px;font-size:15px;color:var(--muted);font-weight:600}
+.facts span{display:inline-flex;align-items:center;gap:8px}
+.facts i{width:8px;height:8px;border-radius:50%;background:var(--celeste);display:inline-block}
+.hero-art{position:relative;justify-self:end;width:100%;max-width:470px;aspect-ratio:41/56;min-width:0}
+.panel{position:absolute;inset:0;border-radius:34px;overflow:hidden;box-shadow:0 30px 60px rgba(15,30,61,.18)}
+.panel img{width:100%;height:100%;object-fit:cover}
+.notch{position:absolute;right:-1px;top:40%;width:84px;height:206px;border-radius:26px 0 0 26px;background:var(--ground)}
+.notch .tile{position:absolute;right:-22px}
+.notch .tile:first-child{top:18px}
+.notch .tile:last-child{bottom:18px}
+.plane{position:absolute;left:-26%;bottom:-9%;width:118%;max-width:none;pointer-events:none;animation:glide 6s ease-in-out infinite alternate;filter:drop-shadow(0 18px 18px rgba(15,30,61,.18))}
+@keyframes glide{from{transform:translate(0,0) rotate(0deg)}to{transform:translate(14px,-12px) rotate(-1.5deg)}}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;gap:56px;padding-block:36px 90px}
+  .hero-art{justify-self:center;max-width:360px}
+  .plane{left:-14%;width:110%}
+}
+
+/* Destinos */
+.dest{padding-block:72px}
+.dest .wrap{display:flex;flex-direction:column;gap:40px}
+.dest-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+@media (max-width:1020px){.dest-grid{grid-template-columns:1fr}}
+.trip{position:relative;min-height:680px;border-radius:36px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:28px;isolation:isolate}
+.trip>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .8s ease}
+.trip:hover>img{transform:scale(1.04)}
+.trip::before{content:"";position:absolute;inset:0 0 auto;height:55%;z-index:-1;background:linear-gradient(180deg,rgba(241,242,244,.94),rgba(241,242,244,.7) 45%,rgba(241,242,244,0))}
+.trip-top{display:flex;flex-direction:column;gap:16px;max-width:30ch}
+.trip h3{font-size:clamp(42px,4vw,56px);font-weight:800;letter-spacing:-.035em}
+.trip-top p{font-weight:700;font-size:18px;line-height:1.35}
+.glass{border-radius:30px;padding:24px 26px;color:#fff;background:linear-gradient(160deg,rgba(255,255,255,.32),rgba(170,185,225,.22) 55%,rgba(120,140,200,.28));backdrop-filter:blur(22px) saturate(1.3);-webkit-backdrop-filter:blur(22px) saturate(1.3);border:2px solid rgba(255,255,255,.7);box-shadow:0 20px 50px rgba(15,30,61,.22);text-shadow:0 1px 10px rgba(15,30,61,.3);display:flex;flex-direction:column;gap:18px}
+.glass .label{color:#fff}
+.inc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 8px}
+.inc>div{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;font-size:13px;font-weight:600;min-width:0}
+.inc span.c{width:52px;height:52px;border-radius:50%;background:var(--navy);border:2px solid var(--ice);display:flex;align-items:center;justify-content:center}
+.inc svg{width:26px;height:26px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.55);font-size:15px;font-weight:600}
+.price-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,.4)}
+.price{display:flex;align-items:baseline;gap:10px;font-size:18px;font-weight:500}
+.price b{font-size:52px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.price b em{font-style:normal;color:var(--ice)}
+.price b.ask{font-size:30px}
+.glass-btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 22px;border-radius:999px;background:rgba(255,255,255,.22);border:2px solid #fff;color:#fff;text-decoration:none;font-weight:700;font-size:16px}
+.glass-btn:hover{background:rgba(255,255,255,.34)}
+@media (max-width:520px){.trip{padding:22px;min-height:620px}.glass{padding:20px}.price b{font-size:46px}}
+
+/* Cómo trabajamos */
+.how{padding-block:72px;background:var(--card)}
+.how .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:center}
+@media (max-width:860px){.how .wrap{grid-template-columns:1fr;gap:36px}}
+.route{position:relative;display:flex;flex-direction:column;gap:34px;list-style:none;margin:0;padding:0}
+.route::before{content:"";position:absolute;left:31px;top:40px;bottom:40px;border-left:4px dotted rgba(15,30,61,.35)}
+.route li{position:relative;display:flex;gap:22px;align-items:flex-start}
+.route h3{font-size:22px;letter-spacing:-.01em;line-height:1.2}
+.route p{color:var(--muted);font-size:17px;margin-top:4px}
+.route .step{font-size:13px;font-weight:700;letter-spacing:.18em;color:#2F8FD0;text-transform:uppercase}
+.how-photo{position:relative;border-radius:34px;overflow:hidden;aspect-ratio:4/5;max-width:440px;width:100%;justify-self:end}
+.how-photo img{width:100%;height:100%;object-fit:cover}
+.how-photo figcaption{position:absolute;left:16px;right:16px;bottom:16px}
+@media (max-width:860px){.how-photo{justify-self:start;aspect-ratio:4/3;max-width:none}}
+
+/* Visítanos */
+.visit{position:relative;overflow:hidden;padding-block:80px;isolation:isolate}
+.visit-bg{position:absolute;inset:-30px;z-index:-2;background-size:cover;background-position:center 40%;filter:blur(7px)}
+.visit::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,var(--ground) 0%,rgba(241,242,244,.82) 35%,rgba(241,242,244,.7) 100%)}
+.visit .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+@media (max-width:860px){.visit .wrap{grid-template-columns:1fr}}
+.stops{display:flex;flex-direction:column;gap:22px;margin-top:30px;position:relative}
+.stops::before{content:"";position:absolute;left:31px;top:40px;bottom:40px;border-left:4px dotted rgba(15,30,61,.4)}
+.stop{display:flex;align-items:center;gap:20px;position:relative}
+.stop b{display:block;font-size:14px;letter-spacing:.14em;text-transform:uppercase}
+.stop span{font-size:18px;color:var(--muted)}
+.pin-wrap{position:relative;justify-self:center;width:min(440px,82vw);aspect-ratio:1/1.32}
+.pin{position:absolute;left:8%;top:0;width:84%;aspect-ratio:1;border:10px solid #fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);overflow:hidden;box-shadow:0 26px 50px rgba(15,30,61,.25);background:var(--celeste)}
+.pin img{position:absolute;left:-22%;top:-22%;width:144%;height:144%;max-width:none;object-fit:cover;transform:rotate(45deg)}
+.pin-shadow{position:absolute;left:36%;bottom:4%;width:28%;height:6%;border-radius:50%;background:rgba(15,30,61,.18)}
+.pin-tag{position:absolute;left:0;right:0;bottom:-6%;text-align:center;font-size:14px;font-weight:700;letter-spacing:.22em;color:var(--muted)}
+
+/* Footer */
+.foot{background:var(--navy);color:#fff;padding-block:52px 40px}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:32px;align-items:flex-start}
+.foot img{width:170px;height:auto}
+.foot p{color:rgba(255,255,255,.75);font-size:16px}
+.foot .cols{display:flex;flex-wrap:wrap;gap:40px}
+.foot b{display:block;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--ice);margin-bottom:8px}
+.foot a{text-decoration:none}
+.foot a:hover{text-decoration:underline}
+.legal{width:100%;border-top:1px solid rgba(255,255,255,.15);padding-top:22px;font-size:14px;color:rgba(255,255,255,.55)}
+/* Detalle de tour */
+.trip{cursor:pointer}
+.trip:focus-within{outline:3px solid var(--celeste);outline-offset:4px}
+.tour-hero{position:relative;isolation:isolate;overflow:hidden;min-height:600px;display:flex;align-items:flex-end}
+.tour-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.tour-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(241,242,244,.95) 0%,rgba(241,242,244,.78) 32%,rgba(241,242,244,0) 62%)}
+.tour-hero .wrap{width:100%;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:32px;align-items:end;padding-block:28px 44px;min-height:600px}
+.tour-head{align-self:start;display:flex;flex-direction:column;gap:18px;padding-top:8px}
+.back{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;min-height:44px;padding:0 18px;border-radius:999px;border:2px solid var(--navy);text-decoration:none;font-weight:700;font-size:15px;background:rgba(255,255,255,.5)}
+.back:hover{background:#fff}
+.tour-head h1{font-size:clamp(56px,8vw,104px);font-weight:800;letter-spacing:-.04em;line-height:.95}
+.tour-head .sub{font-size:20px;font-weight:700;max-width:36ch;line-height:1.35}
+.facts2{display:flex;flex-wrap:wrap;gap:10px}
+.facts2 span{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:var(--navy);color:#fff;font-size:15px;font-weight:600}
+.facts2 svg{width:18px;height:18px}
+.tour-price{align-self:end}
+.tour-price .glass{gap:14px}
+.tour-price .price b{font-size:58px}
+.tour-price p{font-size:15px;opacity:.95}
+@media (max-width:860px){
+  .tour-hero .wrap{grid-template-columns:1fr;min-height:640px}
+  .tour-hero::before{background:linear-gradient(180deg,rgba(241,242,244,.95) 0%,rgba(241,242,244,.78) 40%,rgba(241,242,244,0) 70%)}
+}
+.tour-body{padding-block:64px}
+.tour-body .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:56px;align-items:start}
+@media (max-width:900px){.tour-body .wrap{grid-template-columns:1fr;gap:40px}}
+.note{font-size:15px;color:var(--muted)}
+.days{position:relative;list-style:none;margin:28px 0 0;padding:0;display:flex;flex-direction:column;gap:30px}
+.days::before{content:"";position:absolute;left:31px;top:44px;bottom:44px;border-left:4px dotted rgba(15,30,61,.35)}
+.days li{position:relative;display:flex;gap:22px;align-items:flex-start}
+.day-n{width:64px;height:64px;flex-shrink:0;border-radius:16px;background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+.day-n small{font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--ice)}
+.day-n b{font-size:26px;font-weight:800}
+.days h3{font-size:22px;letter-spacing:-.01em;line-height:1.2}
+.days p{color:var(--muted);font-size:17px;margin-top:6px;max-width:58ch}
+.aside{position:sticky;top:calc(env(safe-area-inset-top,0px) + 90px);display:flex;flex-direction:column;gap:20px}
+@media (max-width:900px){.aside{position:static}}
+.box{background:var(--card);border-radius:28px;padding:26px;box-shadow:0 12px 32px rgba(15,30,61,.07);display:flex;flex-direction:column;gap:16px}
+.box ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.box li{display:flex;gap:12px;align-items:center;font-size:16px;font-weight:600}
+.box li .mini{width:40px;height:40px;flex-shrink:0;border-radius:12px;background:var(--navy);display:flex;align-items:center;justify-content:center}
+.box li .mini svg{width:22px;height:22px}
+.box.no li{font-weight:500;color:var(--muted)}
+.box.no li::before{content:"";width:10px;height:2px;background:var(--muted);flex-shrink:0;margin:0 15px}
+.hotels{padding-block:0 72px}
+.hotels .wrap{display:flex;flex-direction:column;gap:28px}
+.hotel-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+@media (max-width:820px){.hotel-grid{grid-template-columns:1fr}}
+.hotel{background:var(--card);border-radius:30px;overflow:hidden;box-shadow:0 12px 32px rgba(15,30,61,.07);display:flex;flex-direction:column}
+.hotel img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.hotel-in{padding:24px 26px 28px;display:flex;flex-direction:column;gap:10px}
+.hotel-in .label{color:#2F8FD0}
+.hotel-in h3{font-size:26px;letter-spacing:-.015em;line-height:1.15}
+.hotel-in p{color:var(--muted);font-size:16px}
+.stars{color:var(--gold);letter-spacing:.15em;font-size:18px}
+.tour-cta{background:var(--navy);color:#fff;padding-block:56px}
+.tour-cta .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
+.tour-cta h2{font-size:clamp(32px,4.4vw,52px);font-weight:800}
+.tour-cta p{color:rgba(255,255,255,.75);margin-top:10px;max-width:52ch}
+.glass-btn svg{width:22px;height:22px;flex-shrink:0}
+.btn svg{width:28px;height:28px}
+.facts2 svg{width:18px;height:18px;flex-shrink:0}
+.btn-light{background:#fff;color:var(--navy)}
+.btn-light:hover{background:var(--ice)}
+.tour-head,.tour-price{min-width:0}
+.tour-head .sub,.tour-head h1{overflow-wrap:anywhere}
+/* Portada protagonista */
+.hero2{position:relative;isolation:isolate;overflow:hidden;min-height:min(820px,100vh);display:flex;align-items:center;color:#fff}
+.hero2-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transform:scale(1.04);animation:drift 18s ease-in-out infinite alternate}
+@keyframes drift{to{transform:scale(1.1) translateY(-10px)}}
+.hero2::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 50% 42%,rgba(15,30,61,.5) 0%,rgba(15,30,61,.7) 55%,rgba(15,30,61,.88) 100%)}
+.hero2 .wrap{width:100%;display:flex;flex-direction:column;align-items:center;text-align:center;gap:26px;padding-block:72px 120px}
+.hero2-logo{width:min(560px,84vw);height:auto;filter:drop-shadow(0 10px 30px rgba(0,0,0,.25))}
+.hero2-line{display:flex;align-items:center;gap:18px;font-size:clamp(14px,1.6vw,18px);letter-spacing:.42em;color:var(--ice)}
+.hero2-line b{font-weight:700}
+.hero2-line span{width:min(90px,14vw);height:2px;background:var(--celeste);display:block}
+.hero2-lead{font-size:clamp(18px,2vw,22px);max-width:46ch;color:rgba(255,255,255,.88)}
+.hero2-cta{justify-content:center}
+.ghost-light{border-color:#fff;color:#fff}
+.ghost-light:hover{background:rgba(255,255,255,.12)}
+.hero2-dest{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:6px}
+.hero2-dest a{padding:10px 20px;border-radius:999px;background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.5);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);text-decoration:none;font-weight:600;font-size:16px}
+.hero2-dest a:hover{background:rgba(255,255,255,.26)}
+.hero2-plane{position:absolute;right:-6%;bottom:-4%;width:min(620px,70vw);max-width:none;pointer-events:none;opacity:.95;animation:glide 6s ease-in-out infinite alternate;filter:drop-shadow(0 20px 20px rgba(0,0,0,.3))}
+@media (max-width:700px){.hero2-plane{width:86vw;right:-22%;bottom:-2%}.hero2 .wrap{padding-block:56px 150px}}
+/* Portada 3: cielo claro */
+.hero3{position:relative;isolation:isolate;overflow:hidden;min-height:min(800px,100vh);display:flex;align-items:center;color:var(--navy)}
+.hero3-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transform:scale(1.03);animation:drift 22s ease-in-out infinite alternate}
+.hero3::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 50% 40%,rgba(255,255,255,.55) 0%,rgba(255,255,255,.18) 55%,rgba(255,255,255,0) 75%),linear-gradient(180deg,rgba(241,242,244,0) 70%,var(--ground) 100%)}
+.hero3 .wrap{width:100%;display:flex;flex-direction:column;align-items:center;text-align:center;gap:28px;padding-block:64px 130px}
+.hero3-logo{width:min(600px,86vw);height:auto;filter:drop-shadow(0 12px 28px rgba(15,30,61,.12))}
+.hero3-lead{font-size:clamp(18px,2vw,22px);max-width:46ch;color:var(--navy);font-weight:500}
+.hero3-cta{justify-content:center}
+.hero3-ghost{background:rgba(255,255,255,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.hero3-dest{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.hero3-dest a{padding:10px 20px;border-radius:999px;background:rgba(255,255,255,.55);border:1.5px solid rgba(15,30,61,.2);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);text-decoration:none;font-weight:600;font-size:16px}
+.hero3-dest a:hover{background:#fff}
+.hero3-plane{position:absolute;right:-5%;bottom:2%;width:min(600px,64vw);max-width:none;pointer-events:none;animation:glide 6s ease-in-out infinite alternate;filter:drop-shadow(0 22px 22px rgba(15,30,61,.22))}
+@media (max-width:700px){.hero3-plane{width:84vw;right:-20%;bottom:1%}.hero3 .wrap{padding-block:48px 160px}}
+/* Portada: desde la ventanilla, con olas en movimiento */
+.hero4{position:relative;isolation:isolate;overflow:hidden;min-height:min(820px,100vh);display:flex;align-items:flex-start}
+.hero4-bg{position:absolute;inset:0;z-index:-3}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.11) translate(-1.2%,-.8%)}}
+.hero4-img,.hero4-sea{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:35% center}
+.hero4-sea{filter:url(#olas);-webkit-mask-image:radial-gradient(ellipse 62% 58% at 30% 78%,#000 50%,transparent 100%);mask-image:radial-gradient(ellipse 62% 58% at 30% 78%,#000 50%,transparent 100%)}
+.hero4-veil{position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.25) 38%,rgba(255,255,255,0) 58%),linear-gradient(90deg,rgba(255,255,255,.35) 0%,rgba(255,255,255,0) 55%)}
+.hero4 .wrap{width:100%;padding-block:64px 140px}
+.hero4-copy{display:flex;flex-direction:column;gap:32px;max-width:580px}
+.hero4-logo{width:min(540px,82vw);height:auto;filter:drop-shadow(0 6px 26px rgba(255,255,255,.85))}
+.hero4-cta{align-items:center}
+button.wa-round{border:0;cursor:pointer;padding:0}
+@media (max-width:700px){.hero4{min-height:720px}.hero4-copy{align-items:center;text-align:center;margin:0 auto}.hero4-cta{justify-content:center}.hero4-img,.hero4-sea{object-position:22% center}}
+@media (prefers-reduced-motion:reduce){.hero4-bg{animation:none}.hero4-sea{display:none}}
+/* Carrusel de destinos */
+.dest{padding-block:72px 56px;overflow:hidden}
+.dest>.wrap{display:block}
+.dest-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.car-ctrl{display:flex;gap:12px}
+.car-btn{width:56px;height:56px;border-radius:50%;border:2px solid var(--navy);background:#fff;color:var(--navy);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s,color .2s}
+.car-btn:hover{background:var(--navy);color:#fff}
+.car-btn svg{width:24px;height:16px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:640px){.car-ctrl{display:none}}
+.carousel{--cw:min(430px,80vw);display:flex;gap:22px;overflow-x:auto;overflow-y:visible;scroll-snap-type:x mandatory;scrollbar-width:none;padding-block:46px 40px;padding-inline:calc(50% - var(--cw)/2);cursor:grab;outline:none;-webkit-overflow-scrolling:touch}
+.carousel::-webkit-scrollbar{display:none}
+.carousel.dragging{cursor:grabbing;scroll-snap-type:none}
+.carousel.dragging .dcard{transition:none}
+.dcard{position:relative;flex:0 0 var(--cw);height:600px;border-radius:34px;overflow:hidden;scroll-snap-align:center;isolation:isolate;display:flex;flex-direction:column;justify-content:space-between;padding:26px;transform:scale(.88) translateY(18px);transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s,filter .45s;box-shadow:0 10px 26px rgba(15,30,61,.12);filter:saturate(.85);user-select:none;-webkit-user-select:none}
+.dcard>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;pointer-events:none;-webkit-user-drag:none}
+.dcard::before{content:"";position:absolute;inset:0 0 auto;height:52%;z-index:-1;background:linear-gradient(180deg,rgba(241,242,244,.95),rgba(241,242,244,.72) 45%,rgba(241,242,244,0))}
+.dcard:hover{transform:scale(.9) translateY(4px)}
+.dcard.is-active{transform:scale(1.05) translateY(-16px);box-shadow:0 34px 60px rgba(15,30,61,.3);filter:none;z-index:2}
+.dcard .dtop{display:flex;flex-direction:column;gap:10px}
+.dcard h3{font-size:clamp(38px,4vw,50px);font-weight:800;letter-spacing:-.035em;line-height:1}
+.dcard .sub{font-weight:700;font-size:16px;line-height:1.35}
+.dcard .glass{gap:14px;padding:20px;border-radius:26px;transform:translateY(16px);opacity:0;transition:opacity .4s,transform .45s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+.dcard.is-active .glass{opacity:1;transform:none;pointer-events:auto}
+.dcard .chips span{font-size:14px;padding:7px 12px}
+.dcard .price b{font-size:46px}
+.dcard .price b.ask{font-size:26px}
+.dcard .glass-btn{min-height:46px;padding:0 18px;font-size:15px}
+.car-dots{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+.car-dots i{width:8px;height:8px;border-radius:999px;background:rgba(15,30,61,.2);transition:width .3s,background .3s}
+.car-dots i.on{width:26px;background:var(--navy)}
+@media (prefers-reduced-motion:reduce){.dcard,.dcard .glass{transition:none}}
+@media (max-width:640px){.dcard{height:560px;padding:22px}.carousel{gap:14px}}
+[hidden]{display:none!important}
+/* Botón WhatsApp redondo */
+.wa-round{width:58px;height:58px;border-radius:50%;background:#25D366;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(37,211,102,.35);transition:transform .35s cubic-bezier(.32,.72,0,1),box-shadow .35s}
+.wa-round svg{width:32px;height:32px}
+.wa-round:hover{transform:scale(1.08);box-shadow:0 14px 30px rgba(37,211,102,.45)}
+button.btn{border:0;cursor:pointer;font-family:inherit}
+.hero3 .wrap{gap:40px}
+.hero3-cta{align-items:center}
+
+/* Cotizador: hoja de vidrio */
+:root{--ease:cubic-bezier(.32,.72,0,1)}
+.cot{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.cot-backdrop{position:absolute;inset:0;background:rgba(15,30,61,0);backdrop-filter:blur(0px);-webkit-backdrop-filter:blur(0px);transition:background .5s var(--ease),backdrop-filter .5s var(--ease),-webkit-backdrop-filter .5s var(--ease)}
+.cot.is-open .cot-backdrop{background:rgba(15,30,61,.28);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.cot-sheet{position:relative;width:min(760px,100%);max-height:min(860px,100%);display:flex;flex-direction:column;border-radius:34px;overflow:hidden;color:var(--navy);
+  background:linear-gradient(160deg,rgba(255,255,255,.86),rgba(236,242,252,.78));backdrop-filter:blur(30px) saturate(1.6);-webkit-backdrop-filter:blur(30px) saturate(1.6);
+  border:1.5px solid rgba(255,255,255,.9);box-shadow:0 40px 90px rgba(15,30,61,.35),inset 0 1px 0 rgba(255,255,255,.9);
+  opacity:0;transform:translateY(34px) scale(.94);transform-origin:var(--ox,50%) var(--oy,50%);transition:opacity .45s var(--ease),transform .6s var(--ease)}
+.cot.is-open .cot-sheet{opacity:1;transform:none}
+@media (max-width:640px){
+  .cot{align-items:flex-end;padding:0}
+  .cot-sheet{width:100%;max-height:94%;border-radius:30px 30px 0 0;transform:translateY(100%);opacity:1}
+  .cot.is-open .cot-sheet{transform:none}
+}
+.cot-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:26px 28px 14px}
+.cot-head h2{font-size:clamp(30px,4vw,40px);font-weight:800;letter-spacing:-.03em}
+.cot-head .label{color:#2F8FD0}
+.cot-x{width:44px;height:44px;border-radius:50%;border:0;background:rgba(15,30,61,.08);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .3s var(--ease)}
+.cot-x:hover{background:rgba(15,30,61,.15);transform:rotate(90deg)}
+.cot-x svg{width:20px;height:20px;fill:none;stroke:var(--navy);stroke-width:2.2;stroke-linecap:round}
+.cot-body{overflow-y:auto;padding:4px 20px 18px;display:flex;flex-direction:column;gap:10px;overscroll-behavior:contain}
+
+/* Acordeón */
+.acc{border-radius:24px;background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.95);box-shadow:0 4px 18px rgba(15,30,61,.06);transition:background .4s var(--ease),box-shadow .4s var(--ease)}
+.acc.is-open{background:rgba(255,255,255,.9);box-shadow:0 14px 34px rgba(15,30,61,.12)}
+.acc-h{width:100%;display:flex;align-items:center;gap:14px;padding:16px 18px;border:0;background:none;cursor:pointer;text-align:left;font-family:inherit;color:inherit}
+.acc-h .n{width:40px;height:40px;flex-shrink:0;border-radius:12px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800}
+.acc-h .t{flex:1;min-width:0;display:flex;flex-direction:column}
+.acc-h b{font-size:18px}
+.acc-h small{font-size:14px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.acc-h .chev{width:22px;height:22px;fill:none;stroke:var(--navy);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .5s var(--ease)}
+.acc.is-open>.acc-h .chev{transform:rotate(180deg)}
+.acc-b{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s var(--ease)}
+.acc.is-open .acc-b{grid-template-rows:1fr}
+.acc-in{overflow:hidden;display:flex;flex-direction:column;gap:16px;padding:0 18px;opacity:0;transform:translateY(-6px);transition:opacity .35s var(--ease),transform .5s var(--ease),padding .55s var(--ease)}
+.acc.is-open .acc-in{opacity:1;transform:none;padding:4px 18px 20px}
+
+/* Controles */
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field label,.sub-l{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+select{appearance:none;-webkit-appearance:none;width:100%;min-height:50px;padding:0 42px 0 16px;border-radius:14px;border:1.5px solid rgba(15,30,61,.15);background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230F1E3D' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 14px center/18px;font-family:inherit;font-size:16px;color:var(--navy)}
+select:focus{outline:3px solid var(--celeste);outline-offset:1px}
+.seg{display:flex;padding:4px;border-radius:16px;background:rgba(15,30,61,.07);gap:4px}
+.seg button{flex:1;min-height:44px;border:0;border-radius:12px;background:none;font-family:inherit;font-weight:600;font-size:15px;color:var(--navy);cursor:pointer;transition:background .35s var(--ease),box-shadow .35s var(--ease)}
+.seg button[aria-checked="true"],.seg button[aria-pressed="true"]{background:#fff;box-shadow:0 4px 12px rgba(15,30,61,.12)}
+.seg-3 button{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 6px;line-height:1.2}
+.seg-3 small{font-weight:500;font-size:12px;color:var(--muted)}
+.dests{display:flex;flex-direction:column;gap:10px}
+.dest-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:10px;align-items:end;animation:pop .5s var(--ease)}
+@keyframes pop{from{opacity:0;transform:translateY(-8px) scale(.98)}}
+@media (max-width:520px){.dest-row{grid-template-columns:minmax(0,1fr) auto}.dest-row .field:first-child{grid-column:1/-1}}
+.rm{width:44px;height:50px;border-radius:14px;border:1.5px solid rgba(15,30,61,.15);background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.rm svg{width:18px;height:18px;fill:none;stroke:var(--navy);stroke-width:2;stroke-linecap:round}
+.rm[disabled]{opacity:.3;cursor:default}
+.add{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px dashed rgba(15,30,61,.35);background:none;font-family:inherit;font-weight:600;font-size:15px;color:var(--navy);cursor:pointer}
+.add svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round}
+.add[hidden]{display:none}
+
+/* Calendario */
+.months{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.months::-webkit-scrollbar{display:none}
+.months button{flex:0 0 auto;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid rgba(15,30,61,.15);background:#fff;font-family:inherit;font-weight:600;font-size:15px;color:var(--navy);cursor:pointer;transition:background .3s var(--ease),color .3s var(--ease)}
+.months button[aria-selected="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.months button small{font-weight:500;opacity:.7;margin-left:4px}
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;animation:pop .45s var(--ease)}
+.cal .dow{text-align:center;font-size:12px;font-weight:700;color:var(--muted);padding:4px 0}
+.cal button{aspect-ratio:1;max-height:52px;border:0;border-radius:12px;background:none;font-family:inherit;font-size:15px;font-weight:600;color:var(--navy);cursor:pointer;font-variant-numeric:tabular-nums;transition:background .25s var(--ease),color .25s var(--ease),transform .3s var(--ease)}
+.cal button:hover:not([disabled]){background:rgba(77,182,229,.18)}
+.cal button:active:not([disabled]){transform:scale(.92)}
+.cal button[disabled]{color:rgba(15,30,61,.25);cursor:default}
+.cal button.in{background:rgba(77,182,229,.2);border-radius:6px}
+.cal button.a,.cal button.b{color:#fff}
+.cal button.a{background:var(--navy)}
+.cal button.b{background:#2F8FD0}
+.cal-legend{display:flex;flex-wrap:wrap;gap:14px;font-size:14px;color:var(--muted);align-items:center}
+.cal-legend span{display:inline-flex;align-items:center;gap:6px}
+.cal-legend i{width:12px;height:12px;border-radius:4px;display:inline-block}
+.lg-a{background:var(--navy)}.lg-b{background:#2F8FD0}
+#cotHint{margin-left:auto;font-weight:600;color:var(--navy)}
+.dates-sum{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.dates-sum div{padding:10px 12px;border-radius:14px;background:rgba(15,30,61,.05);display:flex;flex-direction:column;gap:2px}
+.dates-sum small{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.dates-sum b{font-size:16px}
+.check{display:flex;align-items:center;gap:10px;font-size:15px;cursor:pointer}
+.check input{width:20px;height:20px;accent-color:var(--navy)}
+
+/* Pasajeros */
+.pax{display:flex;flex-direction:column;gap:2px}
+.pax-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 4px;border-bottom:1px solid rgba(15,30,61,.08)}
+.pax-row:last-child{border-bottom:0}
+.pax-row b{display:block;font-size:17px}
+.pax-row small{font-size:14px;color:var(--muted)}
+.step{display:flex;align-items:center;gap:12px}
+.step button{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(15,30,61,.2);background:#fff;font-size:22px;line-height:1;color:var(--navy);cursor:pointer;transition:transform .25s var(--ease),background .2s}
+.step button:active:not([disabled]){transform:scale(.88)}
+.step button[disabled]{opacity:.3;cursor:default}
+.step output{min-width:22px;text-align:center;font-size:18px;font-weight:800;font-variant-numeric:tabular-nums}
+.hint{font-size:14px;color:var(--muted)}
+
+/* Planes y hoteles */
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+@media (max-width:520px){.plans{grid-template-columns:1fr}}
+.opt-card{position:relative;text-align:left;border:1.5px solid rgba(15,30,61,.12);background:#fff;border-radius:18px;padding:14px 16px;font-family:inherit;color:var(--navy);cursor:pointer;display:flex;flex-direction:column;gap:4px;transition:border-color .3s var(--ease),box-shadow .35s var(--ease),transform .35s var(--ease)}
+.opt-card:hover{transform:translateY(-2px)}
+.opt-card b{font-size:16px}
+.opt-card small{font-size:13px;color:var(--muted);line-height:1.35}
+.opt-card[aria-pressed="true"]{border-color:var(--navy);box-shadow:0 0 0 2px var(--navy),0 10px 24px rgba(15,30,61,.12)}
+.opt-card .tick{position:absolute;right:12px;top:12px;width:22px;height:22px;border-radius:50%;border:1.5px solid rgba(15,30,61,.25);display:flex;align-items:center;justify-content:center;transition:background .3s var(--ease)}
+.opt-card[aria-pressed="true"] .tick{background:var(--navy);border-color:var(--navy)}
+.opt-card .tick svg{width:13px;height:13px;fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;opacity:0}
+.opt-card[aria-pressed="true"] .tick svg{opacity:1}
+.hotels-c{display:flex;flex-direction:column;gap:8px}
+.hot{border-radius:18px;background:#fff;border:1.5px solid rgba(15,30,61,.12);overflow:hidden;transition:border-color .3s,box-shadow .35s var(--ease)}
+.hot.sel{border-color:var(--navy);box-shadow:0 0 0 2px var(--navy)}
+.hot-h{width:100%;display:flex;align-items:center;gap:12px;padding:14px 16px;border:0;background:none;font-family:inherit;color:var(--navy);text-align:left;cursor:pointer}
+.hot-h .stars{color:var(--gold);letter-spacing:.1em;font-size:15px;min-width:62px}
+.hot-h b{flex:1;font-size:16px}
+.hot-h .chev{width:20px;height:20px;fill:none;stroke:var(--navy);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .5s var(--ease)}
+.hot.open .hot-h .chev{transform:rotate(180deg)}
+.hot-b{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--ease)}
+.hot.open .hot-b{grid-template-rows:1fr}
+.hot-in{overflow:hidden}
+.hot-in>div{padding:0 16px 16px;display:flex;flex-direction:column;gap:10px}
+.hot-in p{font-size:15px;color:var(--muted)}
+.hot-in ul{margin:0;padding-left:18px;font-size:14px;color:var(--muted);display:flex;flex-direction:column;gap:2px}
+.hot-pick{align-self:flex-start;min-height:42px;padding:0 18px;border-radius:999px;border:0;background:var(--navy);color:#fff;font-family:inherit;font-weight:700;font-size:14px;cursor:pointer}
+.hot.sel .hot-pick{background:#2F8FD0}
+.pax-1{margin-top:4px}
+
+/* Tours */
+.tour-group{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+.tour-group .sub-l{margin-bottom:2px}
+.tours-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+@media (max-width:520px){.tours-g{grid-template-columns:1fr}}
+
+/* Pie */
+.cot-foot{padding:16px 24px 22px;border-top:1px solid rgba(15,30,61,.08);background:rgba(255,255,255,.55);display:flex;flex-direction:column;gap:12px}
+.cot-sum{font-size:14px;color:var(--muted);line-height:1.5}
+.cot-sum b{color:var(--navy)}
+.cot-sum .ref{display:block;margin-top:2px;color:var(--navy);font-weight:700}
+.cot-actions{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
+.cot-copy{min-height:52px;padding:0 20px;border-radius:16px;border:1.5px solid rgba(15,30,61,.2);background:#fff;font-family:inherit;font-weight:700;font-size:15px;color:var(--navy);cursor:pointer}
+.cot-send{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:16px;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;font-size:16px;transition:transform .3s var(--ease)}
+.cot-send:hover{transform:translateY(-2px)}
+.cot-send svg{width:20px;height:20px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+@media (prefers-reduced-motion:reduce){.cot-sheet,.cot-backdrop,.acc-b,.acc-in,.hot-b{transition:none!important}}
+html.cot-lock,html.cot-lock body{overflow:hidden}
+/* Precios en el cotizador */
+.opt-card .tag,.hot-h .tag{font-style:normal;font-size:12px;font-weight:700;color:#2F8FD0;margin-top:4px}
+.hot-h .tag{margin:0 6px 0 0;white-space:nowrap}
+.cot-sum{display:flex;flex-direction:column;gap:10px}
+.brk{display:flex;flex-direction:column;gap:4px}
+.brk div{display:flex;justify-content:space-between;gap:12px;font-size:14px;color:var(--muted);animation:pop .4s var(--ease)}
+.brk b{color:var(--navy);font-variant-numeric:tabular-nums}
+.tot{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;padding-top:10px;border-top:1px solid rgba(15,30,61,.1)}
+.tot small{display:block;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.tot strong{font-size:40px;font-weight:800;letter-spacing:-.03em;line-height:1.05;color:var(--navy);font-variant-numeric:tabular-nums}
+.tot .pp{text-align:right}
+.tot .pp b{font-size:20px;font-variant-numeric:tabular-nums}
+.disc{font-size:12px;color:var(--muted)}
+.tot-empty{font-size:15px;color:var(--muted)}
+@media (max-width:640px){.tot strong{font-size:32px}.brk{max-height:92px;overflow:auto}}
+
+/* Chat de WhatsApp */
+.wa-chat{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:max(18px,env(safe-area-inset-bottom,0px));z-index:90;display:flex;flex-direction:column;align-items:flex-end;gap:14px;pointer-events:none}
+.wa-fab{pointer-events:auto;width:62px;height:62px;border-radius:50%;border:0;background:#25D366;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(37,211,102,.45);transition:transform .45s var(--ease)}
+.wa-fab:hover{transform:scale(1.07)}
+.wa-fab svg{width:34px;height:34px}
+.wa-chat.is-open .wa-fab{transform:rotate(90deg) scale(.92)}
+.wa-panel{pointer-events:none;width:min(360px,calc(100vw - 36px));border-radius:28px;overflow:hidden;color:var(--navy);
+  background:linear-gradient(160deg,rgba(255,255,255,.88),rgba(236,246,240,.8));backdrop-filter:blur(26px) saturate(1.6);-webkit-backdrop-filter:blur(26px) saturate(1.6);
+  border:1.5px solid rgba(255,255,255,.9);box-shadow:0 30px 70px rgba(15,30,61,.3);
+  opacity:0;transform:translateY(18px) scale(.9);transform-origin:bottom right;transition:opacity .35s var(--ease),transform .55s var(--ease)}
+.wa-chat.is-open .wa-panel{opacity:1;transform:none;pointer-events:auto}
+.wa-top{display:flex;align-items:center;gap:12px;padding:16px 18px;background:#0B6B45;color:#fff}
+.wa-av{width:44px;height:44px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
+.wa-av img{width:36px;height:auto}
+.wa-top b{display:block;font-size:16px}
+.wa-top small{font-size:13px;opacity:.85;display:flex;align-items:center;gap:6px}
+.wa-top small i{width:8px;height:8px;border-radius:50%;background:#7CFFB2;display:inline-block}
+.wa-x{margin-left:auto;width:36px;height:36px;border-radius:50%;border:0;background:rgba(255,255,255,.15);cursor:pointer;display:flex;align-items:center;justify-content:center}
+.wa-x svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:2.4;stroke-linecap:round}
+.wa-body{padding:18px;display:flex;flex-direction:column;gap:12px;background-image:radial-gradient(rgba(11,107,69,.06) 1px,transparent 1px);background-size:14px 14px}
+.wa-msg{align-self:flex-start;max-width:85%;background:#fff;border-radius:4px 18px 18px 18px;padding:12px 14px;font-size:15px;line-height:1.4;box-shadow:0 2px 8px rgba(15,30,61,.08);animation:pop .5s var(--ease) both}
+.wa-msg small{display:block;margin-top:4px;font-size:11px;color:var(--muted);text-align:right}
+.wa-quick{display:flex;flex-wrap:wrap;gap:6px}
+.wa-quick button{min-height:36px;padding:0 12px;border-radius:999px;border:1.5px solid rgba(11,107,69,.3);background:#fff;color:#0B6B45;font-family:inherit;font-weight:600;font-size:13px;cursor:pointer}
+.wa-form{display:flex;align-items:flex-end;gap:8px;padding:12px;border-top:1px solid rgba(15,30,61,.08);background:rgba(255,255,255,.7)}
+.wa-form textarea{flex:1;min-height:46px;max-height:120px;resize:none;border-radius:22px;border:1.5px solid rgba(15,30,61,.12);padding:12px 16px;font-family:inherit;font-size:15px;color:var(--navy);background:#fff}
+.wa-form textarea:focus{outline:2px solid #25D366;outline-offset:1px}
+.wa-send{width:46px;height:46px;border-radius:50%;border:0;background:#25D366;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .3s var(--ease)}
+.wa-send:active{transform:scale(.9)}
+.wa-send svg{width:20px;height:20px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.wa-note{font-size:11px;color:var(--muted);text-align:center;padding:0 12px 10px;background:rgba(255,255,255,.7)}
+@media (prefers-reduced-motion:reduce){.wa-panel,.wa-fab{transition:none}}
+
+/* ===== Portada: logo + islas flotantes ===== */
+.fh{--c:#F4EFE4;--cd:#2F6F67;position:relative;margin-top:calc(-1 * var(--hh,74px));color:var(--navy,#0F1E3D)}
+.fh-stick{position:relative;height:100svh;min-height:640px;max-height:1100px;overflow:hidden;isolation:isolate;container-type:size;background-color:var(--c);transition:background-color .9s cubic-bezier(.32,.72,0,1);touch-action:pan-y;cursor:grab;user-select:none;-webkit-user-select:none}
+.fh-glow{position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(50% 48% at 50% 64%,rgba(255,255,255,.32),transparent 72%),linear-gradient(180deg,transparent 65%,rgba(0,0,0,.08))}
+.fh-brand{position:absolute;z-index:60;left:50%;top:calc(var(--hh,74px) + 2.4cqh);transform:translateX(-50%);width:min(460px,35cqh,78cqw);height:auto;padding:0;border-radius:18px;background:rgba(255,255,255,0);box-shadow:0 0 0 rgba(15,30,61,0);pointer-events:none;-webkit-user-drag:none;transition:left .9s cubic-bezier(.32,.72,0,1),top .9s cubic-bezier(.32,.72,0,1),width .9s cubic-bezier(.32,.72,0,1),transform .9s cubic-bezier(.32,.72,0,1),padding .9s cubic-bezier(.32,.72,0,1),background-color .6s ease,box-shadow .6s ease,filter .6s ease}
+/* al pasar de Galápagos, el logo se acomoda arriba a la izquierda en una placa de vidrio */
+.fh.docked .fh-brand{left:max(24px,calc((100cqw - 1240px)/2));top:calc((var(--hh,74px) - 56px)/2);transform:translateX(0);width:120px;pointer-events:auto;cursor:pointer}
+
+/* islas: fila casi horizontal, la siguiente espera a la derecha un poco más abajo */
+.fh-isles{position:absolute;inset:0;z-index:2;pointer-events:none}
+.fh-isl{position:absolute;left:50%;top:50%;width:min(38cqw,53cqh);height:auto;transform:translate(-50%,-50%) translate(var(--x,0),var(--y,0)) scale(var(--s,1));opacity:var(--o,1);transition:transform 1s cubic-bezier(.32,.72,0,1),opacity .7s ease;filter:drop-shadow(0 36px 34px rgba(15,30,61,.22));-webkit-user-drag:none;user-select:none}
+.fh-isl[data-p="0"]{--x:0cqw;--y:15cqh}
+.fh-isl[data-p="1"]{--x:35cqw;--y:22cqh;--s:.36;--o:.95;pointer-events:auto;cursor:pointer}
+.fh-isl[data-p="-1"]{--x:-62cqw;--y:16cqh;--s:.5;--o:0}
+.fh-isl[data-p="far"]{--x:62cqw;--y:24cqh;--s:.2;--o:0}
+.fh-isl[data-p="gone"]{--x:-62cqw;--y:16cqh;--s:.3;--o:0}
+@keyframes fhFloat{0%,100%{translate:0 0;rotate:0deg}50%{translate:0 -1.6cqh;rotate:.6deg}}
+.fh-isl{animation:fhFloat 6s ease-in-out infinite}
+.fh-isl[data-k="1"],.fh-isl[data-k="4"]{animation-delay:-2s}
+.fh-isl[data-k="2"],.fh-isl[data-k="5"]{animation-delay:-4s}
+@media (prefers-reduced-motion:reduce){.fh-isl{animation:none}}
+
+/* textos */
+.fh-sw{transition:opacity .28s ease,transform .45s cubic-bezier(.32,.72,0,1)}
+.fh.out .fh-sw{opacity:0;transform:translateY(10px)}
+.fh-copy,.fh-side{cursor:auto;z-index:5;position:absolute}
+.fh-copy{left:max(24px,calc((100cqw - 1240px)/2));bottom:9cqh}
+.fh-ctr{display:flex;align-items:center;gap:8px;margin-bottom:18px}
+.fh-arw{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(15,30,61,.35);background:none;color:var(--navy,#0F1E3D);cursor:pointer;transition:background .25s,color .25s}
+.fh-arw:hover{background:var(--navy,#0F1E3D);color:#fff}
+.fh-arw svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.fh-num{margin-left:8px;font-size:13px;font-weight:700;letter-spacing:.12em;color:rgba(15,30,61,.78)}
+.fh-country{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--navy,#0F1E3D)}
+.fh-flag{display:inline-block;width:30px;height:20px;border-radius:4px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.12);flex:none}
+.fh-flag svg{display:block;width:100%;height:100%}
+.fh-copy h1{font-size:clamp(34px,3.6cqw,52px);font-weight:800;letter-spacing:-.035em;line-height:1;margin:8px 0 0;color:var(--navy,#0F1E3D)}
+.fh-cta{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.fh-btn{display:inline-flex;align-items:center;height:48px;padding:0 22px;border-radius:99px;font:inherit;font-weight:700;font-size:15px;text-decoration:none;cursor:pointer;border:0}
+.fh-btn-n{background:var(--navy,#0F1E3D);color:#fff}
+.fh-btn-g{background:rgba(255,255,255,.25);color:var(--navy,#0F1E3D);border:1.5px solid rgba(15,30,61,.4)}
+.fh-btn-g:hover{background:rgba(15,30,61,.06)}
+.fh-side{right:max(24px,calc((100cqw - 1240px)/2));top:34cqh;text-align:right}
+.fh-side small{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(15,30,61,.78)}
+.fh.nop .fh-desde{display:none}
+.fh-p{font-size:clamp(32px,3.4cqw,48px);font-weight:800;letter-spacing:-.03em;line-height:1.1;color:var(--navy,#0F1E3D)}
+.fh-d{font-size:14px;color:rgba(15,30,61,.78);margin-top:2px}
+.fh-flags{display:flex;gap:6px;justify-content:flex-end;margin-top:16px}
+.fh-flags button{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.35);border:0;cursor:pointer;transition:background .25s,transform .25s,box-shadow .25s}
+.fh-flags button.on{background:#fff;transform:scale(1.1);box-shadow:0 4px 12px rgba(15,30,61,.15)}
+.fh-flags .fh-flag{width:20px;height:14px;border-radius:3px}
+.fh-foot{position:absolute;z-index:5;left:0;right:0;bottom:22px;text-align:center;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(15,30,61,.78);pointer-events:none}
+
+/* header transparente sobre la portada (el logo grande ya está al centro) */
+.top{transition:background-color .4s,border-color .4s}
+.top.on-hero{background:transparent;border-bottom-color:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}
+.top img{transition:opacity .3s}
+.top.on-hero img{opacity:0}
+.top.on-hero{pointer-events:none}
+.top.on-hero .nav{pointer-events:auto}
+
+.fh-mp{display:none}
+@media (max-width:760px){
+  .fh-stick{min-height:600px}
+  .fh-brand{width:min(66vw,30cqh);top:calc(var(--hh,74px) + 1.2cqh)}
+  .fh.docked .fh-brand{left:16px;width:104px;top:calc((var(--hh,74px) - 57px)/2)}
+  .fh-isl{width:min(70cqw,40cqh)}
+  .fh-isl[data-p="0"]{--x:0cqw;--y:1cqh}
+  .fh-isl[data-p="1"]{--x:46cqw;--y:4cqh;--s:.3}
+  .fh-isl[data-p="-1"],.fh-isl[data-p="gone"]{--x:-95cqw}
+  .fh-copy{left:16px;right:16px;bottom:40px}
+  .fh-copy h1{font-size:32px;margin-top:6px}
+  .fh-ctr,.fh-side{display:none}
+  .fh-mp{display:block;font-size:15px;margin-top:6px;color:rgba(15,30,61,.85)}
+  .fh-mp b{font-size:22px;font-weight:800;color:var(--navy,#0F1E3D)}
+  .fh-cta{margin-top:14px}
+  .fh-btn{height:44px;padding:0 18px;font-size:14px}
+  .fh-foot{bottom:14px;font-size:10px}
+}
+
+/* fondos oscuros (paleta elegante): textos, botones y logo en blanco */
+.fh-copy h1,.fh-country,.fh-p,.fh-num,.fh-d,.fh-side small,.fh-foot,.fh-mp,.fh-mp b{transition:color .6s ease}
+.fh-brand{filter:none}
+.fh.dk .fh-brand{filter:brightness(0) invert(1)}
+.fh.dk .fh-copy h1,.fh.dk .fh-country,.fh.dk .fh-p,.fh.dk .fh-num,.fh.dk .fh-d,.fh.dk .fh-side small,.fh.dk .fh-foot,.fh.dk .fh-mp,.fh.dk .fh-mp b{color:#fff}
+.fh.dk .fh-arw{color:#fff;border-color:rgba(255,255,255,.5)}
+.fh.dk .fh-arw:hover{background:#fff;color:#0F1E3D}
+.fh.dk .fh-btn-n{background:#fff;color:#0F1E3D}
+.fh.dk .fh-btn-g{color:#fff;border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.08)}
+.fh.dk .fh-flags button{background:rgba(255,255,255,.14)}
+.fh.dk .fh-glow{background:radial-gradient(50% 48% at 50% 64%,rgba(255,255,255,.1),transparent 72%)}
+.top.on-hero .nav a:not(.pill){transition:color .6s}
+.top.on-hero.dkh .nav a:not(.pill){color:#fff}
+.top.on-hero.dkh .nav .pill{background:#fff;color:#0F1E3D}
+</style>
+</head>
+<body>
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-cal" viewBox="0 0 24 24"><path d="M3 5h18v16H3zM3 10h18M8 3v4M16 3v4M7 14h3M14 14h3M7 18h3"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></symbol>
+  <symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3 9a2 2 0 0 0 0 4v4a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-4a2 2 0 0 0 0-4V5a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1z"/><path d="M14 4v2M14 10v2M14 16v2"/></symbol>
+  <symbol id="i-plane" viewBox="0 0 24 24"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol>
+  <symbol id="i-guide" viewBox="0 0 24 24"><path d="M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M4 21v-1a6 6 0 0 1 12 0v1M18 8l3 2-3 2z"/></symbol>
+  <symbol id="i-bus" viewBox="0 0 24 24"><path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10H4zM4 11h16M7 19a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M17 19a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/></symbol>
+  <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 18V6M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5M7 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/></symbol>
+  <symbol id="i-food" viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18M9 7v4a1 1 0 0 0 2 0V7M10 11v6M15 7c-1 0-1.5 1.5-1.5 3s.5 2 1.5 2v5"/></symbol>
+  <symbol id="i-hike" viewBox="0 0 24 24"><path d="M14 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M10 22l2-7 3 3v4M8 12l2-5 4 1 3 3M12 15l-2-3"/></symbol>
+  <symbol id="i-cam" viewBox="0 0 24 24"><path d="M3 8a2 2 0 0 1 2-2h2l2-2h6l2 2h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zM12 17a4 4 0 1 0 0-8 4 4 0 0 0 0 8"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12zM12 12.6a2.6 2.6 0 1 0 0-5.2 2.6 2.6 0 0 0 0 5.2"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18M12 7v5l3 2"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2zM9 4v14M15 6v14"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM9 12l2 2 4-4"/></symbol>
+  <symbol id="i-case" viewBox="0 0 24 24"><path d="M3 7h18v13H3zM8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></symbol>
+  <symbol id="i-head" viewBox="0 0 24 24"><path d="M3 14v-2a9 9 0 0 1 18 0v2M3 14h3v6H4a1 1 0 0 1-1-1zM21 14h-3v6h2a1 1 0 0 0 1-1zM18 20a4 4 0 0 1-4 2h-2"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a href="#inicio" aria-label="Vitta Travel, inicio"><img src="img01.png" alt="Vitta Travel"></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#destinos">Destinos</a>
+      <a href="#como">Cómo trabajamos</a>
+      <a href="#visitanos">Visítanos</a>
+      <a class="pill" href="https://bit.ly/48cViHI" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="fh" id="portada">
+    <div class="fh-stick">
+      <div class="fh-glow" aria-hidden="true"></div>
+      <img class="fh-brand" src="img02.png" alt="Vitta Travel, viajar es vivir">
+
+      <div class="fh-isles">
+        <img class="fh-isl" data-k="0" src="img03.webp" alt="Galápagos">
+        <img class="fh-isl" data-k="1" src="img04.webp" alt="Cancún">
+        <img class="fh-isl" data-k="2" src="img05.webp" alt="Cartagena">
+        <img class="fh-isl" data-k="3" src="img06.webp" alt="Punta Cana">
+        <img class="fh-isl" data-k="4" src="img07.webp" alt="Machu Picchu">
+        <img class="fh-isl" data-k="5" src="img08.webp" alt="París">
+      </div>
+
+      <div class="fh-copy">
+        <div class="fh-ctr">
+          <button type="button" class="fh-arw" data-fh-prev aria-label="Destino anterior"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+          <button type="button" class="fh-arw" data-fh-next aria-label="Destino siguiente"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+          <span class="fh-num" data-f="num"></span>
+        </div>
+        <div class="fh-sw">
+          <div class="fh-country"><span class="fh-flag" data-f="flag"></span><span data-f="country"></span></div>
+          <h1 data-f="name"></h1>
+          <div class="fh-mp"><span class="fh-desde">desde </span><b data-f="price"></b> · <span data-f="dur"></span></div>
+        </div>
+        <div class="fh-cta">
+          <a class="fh-btn fh-btn-n" href="#galapagos" data-f-href>Ver tour →</a>
+          <button type="button" class="fh-btn fh-btn-g" data-cotizar="galapagos" data-f-cot>Cotiza tu viaje</button>
+        </div>
+      </div>
+
+      <div class="fh-side">
+        <div class="fh-sw"><small class="fh-desde">desde</small><div class="fh-p" data-f="price"></div><div class="fh-d" data-f="dur"></div></div>
+        <div class="fh-flags"></div>
+      </div>
+      <div class="fh-foot">← Desliza para ver más destinos →</div>
+    </div>
+  </section>
+
+
+  <section class="dest" id="destinos">
+    <div class="wrap">
+      <div class="dest-head">
+        <div class="head">
+          <div class="bar"></div>
+          <h2 class="h2">Destinos destacados</h2>
+          <p class="lead">Desliza para ver todos. Toca un destino para levantarlo y ver su información.</p>
+        </div>
+        <div class="car-ctrl">
+          <button type="button" class="car-btn" id="carPrev" aria-label="Destino anterior"><svg viewBox="0 0 30 20"><path d="M28 10H3M11 3L3 10l8 7"/></svg></button>
+          <button type="button" class="car-btn" id="carNext" aria-label="Destino siguiente"><svg viewBox="0 0 30 20"><path d="M2 10h25M19 3l8 7-8 7"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="carousel" id="carrusel" role="region" aria-label="Destinos" tabindex="0"></div>
+    <div class="wrap"><div class="car-dots" id="carDots" aria-hidden="true"></div></div>
+  </section>
+
+
+  <section class="how" id="como">
+    <div class="wrap">
+      <div class="head">
+        <div class="bar"></div>
+        <h2 class="h2">Tu viaje, en tres paradas</h2>
+        <ol class="route">
+          <li>
+            <div class="tile"><svg class="ico"><use href="#i-chat"/></svg></div>
+            <div><div class="step">Parada 1</div><h3>Cuéntanos tu viaje</h3><p>Destino, fechas, presupuesto y con quién viajas.</p></div>
+          </li>
+          <li>
+            <div class="tile"><svg class="ico"><use href="#i-map"/></svg></div>
+            <div><div class="step">Parada 2</div><h3>Recibe tu propuesta</h3><p>Un asesor arma opciones de vuelo, hotel y actividades.</p></div>
+          </li>
+          <li>
+            <div class="tile"><svg class="ico"><use href="#i-check"/></svg></div>
+            <div><div class="step">Parada 3</div><h3>Viaja tranquilo</h3><p>Te acompañamos antes, durante y después del viaje.</p></div>
+          </li>
+        </ol>
+      </div>
+      <figure class="how-photo" style="margin:0">
+        <img src="img09.jpg" alt="Cenote de agua turquesa en la península de Yucatán">
+      </figure>
+    </div>
+  </section>
+
+  <section class="visit" id="visitanos">
+    <div class="visit-bg" style="background-image:url('img10.jpg')" aria-hidden="true"></div>
+    <div class="wrap">
+      <div>
+        <div class="head">
+          <div class="bar"></div>
+          <h2 class="h2">Visítanos en La Carolina</h2>
+          <p class="lead">Planifica tu próximo viaje con un asesor, <b>en persona.</b></p>
+        </div>
+        <div class="stops">
+          <div class="stop"><div class="tile"><svg class="ico"><use href="#i-pin"/></svg></div><div><b>Ubicación</b><span>Sector La Carolina, Quito</span></div></div>
+          <div class="stop"><div class="tile"><svg class="ico"><use href="#i-clock"/></svg></div><div><b>Horario</b><span>Lunes a viernes, 9:00 a 17:00</span></div></div>
+          <div class="stop"><div class="tile"><svg class="ico"><use href="#i-send"/></svg></div><div><b>Agenda tu visita</b><span>WhatsApp <a href="https://bit.ly/48cViHI" target="_blank" rel="noopener">0939480059</a></span></div></div>
+        </div>
+      </div>
+      <div class="pin-wrap">
+        <div class="pin"><img src="img11.jpg" alt="Asesores de viaje atendiendo en la oficina"></div>
+        <div class="pin-shadow"></div>
+        <div class="pin-tag">LA CAROLINA · QUITO</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<div id="tour" hidden></div>
+<div class="cot" id="cot" hidden>
+  <div class="cot-backdrop" data-cot-close></div>
+  <div class="cot-sheet" role="dialog" aria-modal="true" aria-labelledby="cotTitle">
+    <header class="cot-head">
+      <div>
+        <div class="label">Cotizador Vitta Travel</div>
+        <h2 id="cotTitle">Cotiza tu viaje</h2>
+      </div>
+      <button type="button" class="cot-x" data-cot-close aria-label="Cerrar cotizador"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+
+    <div class="cot-body">
+      <section class="acc is-open" data-step="1">
+        <button type="button" class="acc-h" aria-expanded="true"><span class="n">1</span><span class="t"><b>Destino</b><small id="s1">Elige desde dónde y a dónde viajas</small></span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="acc-b"><div class="acc-in">
+          <div class="field">
+            <label for="cotDesde">Desde dónde viajas</label>
+            <select id="cotDesde"><option>Quito (UIO)</option><option>Guayaquil (GYE)</option><option>Cuenca (CUE)</option><option>Manta (MTA)</option><option>Otra ciudad</option></select>
+          </div>
+          <div class="seg" role="radiogroup" aria-label="Tipo de viaje" id="cotTipo">
+            <button type="button" role="radio" aria-checked="true" data-v="Ida y vuelta">Ida y vuelta</button>
+            <button type="button" role="radio" aria-checked="false" data-v="Solo ida">Solo ida</button>
+          </div>
+          <div id="cotDests" class="dests"></div>
+          <button type="button" class="add" id="cotAddDest"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>Agregar otro país o destino</button>
+        </div></div>
+      </section>
+
+      <section class="acc" data-step="2">
+        <button type="button" class="acc-h" aria-expanded="false"><span class="n">2</span><span class="t"><b>Fechas</b><small id="s2">Elige el mes y tus días de ida y vuelta</small></span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="acc-b"><div class="acc-in">
+          <div class="months" id="cotMonths" role="tablist" aria-label="Meses"></div>
+          <div class="cal-legend"><span><i class="lg-a"></i>Ida</span><span><i class="lg-b"></i>Vuelta</span><span id="cotHint">Toca el día de ida</span></div>
+          <div class="cal" id="cotCal"></div>
+          <div class="dates-sum" id="cotDatesSum"></div>
+          <label class="check"><input type="checkbox" id="cotFlex"> Mis fechas son flexibles (±3 días)</label>
+        </div></div>
+      </section>
+
+      <section class="acc" data-step="3">
+        <button type="button" class="acc-h" aria-expanded="false"><span class="n">3</span><span class="t"><b>Pasajeros</b><small id="s3">1 adulto</small></span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="acc-b"><div class="acc-in">
+          <div class="pax" id="cotPax"></div>
+          <p class="hint">Los bebés en brazos viajan sobre las piernas de un adulto y no ocupan asiento, por eso tienen otra tarifa.</p>
+        </div></div>
+      </section>
+
+      <section class="acc" data-step="4">
+        <button type="button" class="acc-h" aria-expanded="false"><span class="n">4</span><span class="t"><b>Plan y hotel</b><small id="s4">Vuelo + hotel</small></span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="acc-b"><div class="acc-in">
+          <div class="sub-l">Qué quieres incluir</div>
+          <div class="plans" id="cotPlans"></div>
+          <div class="sub-l">Duración</div>
+          <div class="seg seg-3" id="cotDur">
+            <button type="button" aria-pressed="false" data-n="3">Fin de semana largo<small>3 noches</small></button>
+            <button type="button" aria-pressed="false" data-n="7">Una semana<small>7 noches</small></button>
+            <button type="button" aria-pressed="true" data-n="0">Según mis fechas<small>Las del calendario</small></button>
+          </div>
+          <div id="cotHotelWrap">
+            <div class="sub-l">Hotel</div>
+            <div class="hotels-c" id="cotHotels"></div>
+            <div class="pax pax-1" id="cotRooms"></div>
+          </div>
+        </div></div>
+      </section>
+
+      <section class="acc" data-step="5">
+        <button type="button" class="acc-h" aria-expanded="false"><span class="n">5</span><span class="t"><b>Tours y extras</b><small id="s5">Ningún tour agregado</small></span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="acc-b"><div class="acc-in">
+          <div id="cotTours"></div>
+        </div></div>
+      </section>
+    </div>
+
+    <footer class="cot-foot">
+      <div class="cot-sum" id="cotSum"></div>
+      <div class="cot-actions">
+        <button type="button" class="cot-copy" id="cotCopy">Copiar resumen</button>
+        <a class="cot-send" id="cotSend" href="https://bit.ly/48cViHI" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>Enviar a un asesor</a>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<div class="wa-chat" id="waChat">
+  <div class="wa-panel" id="waPanel" role="dialog" aria-label="Chat de WhatsApp con Vitta Travel">
+    <div class="wa-top">
+      <div class="wa-av"><img src="img01.png" alt=""></div>
+      <div><b>Vitta Travel</b><small><i></i>Respondemos en minutos</small></div>
+      <button type="button" class="wa-x" data-wa-close aria-label="Cerrar chat"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="wa-body">
+      <div class="wa-msg">Hola, somos Vitta Travel. ¿A dónde quieres viajar? Escríbenos aquí y te respondemos por WhatsApp.<small>Asesor de viajes</small></div>
+      <div class="wa-quick" id="waQuick">
+        <button type="button">Quiero cotizar un viaje</button>
+        <button type="button">Información de Galápagos</button>
+        <button type="button">¿Cuál es su horario?</button>
+      </div>
+    </div>
+    <form class="wa-form" id="waForm">
+      <label for="waText" class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Tu mensaje</label>
+      <textarea id="waText" rows="1" placeholder="Escribe tu mensaje…"></textarea>
+      <button type="submit" class="wa-send" aria-label="Enviar por WhatsApp"><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
+    </form>
+    <div class="wa-note">Al enviar se abre WhatsApp con tu mensaje listo para 0939480059.</div>
+  </div>
+  <button type="button" class="wa-fab" id="waFab" aria-label="Abrir chat de WhatsApp" aria-expanded="false">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#fff" d="M16 3.2A12.7 12.7 0 0 0 5.1 22.4L3.4 28.6l6.4-1.7A12.7 12.7 0 1 0 16 3.2zm0 23.2c-2 0-3.9-.5-5.6-1.5l-.4-.2-3.8 1 1-3.7-.3-.4A10.5 10.5 0 1 1 16 26.4z"/><path fill="#fff" d="M21.8 18.6c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2.1-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
+  </button>
+</div>
+
+
+<footer class="foot">
+  <div class="wrap">
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:320px">
+      <img src="img12.png" alt="Vitta Travel">
+      <p>Agencia de viajes en Quito. Viajar es vivir.</p>
+    </div>
+    <div class="cols">
+      <div><b>Contacto</b><p>WhatsApp <a href="https://bit.ly/48cViHI" target="_blank" rel="noopener">0939480059</a></p></div>
+      <div><b>Oficina</b><p>Sector La Carolina, Quito</p></div>
+      <div><b>Horario</b><p>Lunes a viernes<br>9:00 a 17:00</p></div>
+    </div>
+    <div class="legal">© 2026 Vitta Travel.</div>
+  </div>
+</footer>
+<script>
+(function(){
+  var WA='https://bit.ly/48cViHI';
+  var ICON={'Guía':'i-guide','Transporte':'i-bus','Hospedaje':'i-bed','Alimentación':'i-food','Excursiones':'i-hike','Fotos':'i-cam','Vuelos':'i-plane','Traslados':'i-bus','Asistencia de viaje':'i-check','Tours en lancha':'i-map','Desayunos':'i-food','Todo incluido':'i-food','Entradas':'i-check','Tours':'i-hike','Tren':'i-bus'};
+  var INT=['Vuelos','Traslados','Hospedaje','Desayunos','Tours','Asistencia de viaje'];
+  var CAR=['Vuelos','Traslados','Hospedaje','Todo incluido','Tours','Asistencia de viaje'];
+
+  /* Para agregar un destino: copia un bloque, cambia los textos y la foto. La tarjeta y su página salen con el mismo diseño. */
+  var DESTINOS=[
+    {key:'galapagos',name:'Galápagos',country:'Ecuador',img:'img13.jpg',hero:'img14.jpg',
+     sub:'Santa Cruz, San Cristóbal, Isabela, Floreana o Pinzón',chips:['Tortugas gigantes','Las Grietas','Snorkel con lobos marinos','Tortuga Bay'],
+     price:'269',dur:'4 días / 3 noches',sal:'Salidas desde Quito y Guayaquil',
+     days:[['Llegada a Santa Cruz','Recepción en el aeropuerto de Baltra, cruce del canal de Itabaca y traslado a Puerto Ayora. Por la tarde, Estación Científica Charles Darwin y sus tortugas gigantes.'],['Tour de bahía y Las Grietas','Recorrido en lancha por la bahía: Playa de los Perros, Canal del Amor y snorkel en Las Grietas.'],['Tour diario a otra isla','Excursión a Isabela, Floreana o Pinzón según disponibilidad. Snorkel con lobos marinos y tortugas. Almuerzo incluido.'],['Tortuga Bay y regreso','Caminata a Tortuga Bay, traslado al aeropuerto y regreso al continente.']],
+     inc:['Guía','Transporte','Hospedaje','Alimentación','Excursiones','Fotos'],noinc:['Vuelos al continente','Tasa de ingreso al Parque Nacional','Tarjeta de control de tránsito'],
+     hotelImg:'img15.jpg',hotels:[['Opción turista','Hotel en Puerto Ayora',3,'Cerca del malecón y los muelles.'],['Opción superior','Hotel frente a la bahía',4,'Terraza con vista al mar y desayuno buffet.']]},
+    {key:'cancun',name:'Cancún',country:'México',img:'img16.jpg',hero:'img17.jpg',
+     sub:'Caribe mexicano: playa, cultura maya y naturaleza',chips:['Playas del Caribe','Isla Mujeres','Cenotes','Chichén Itzá'],
+     price:null,dur:'5 días / 4 noches',sal:'Salidas desde Quito',
+     days:[['Llegada a Cancún','Traslado al hotel en la zona hotelera y tarde libre de playa.'],['Isla Mujeres en catamarán','Navegación, snorkel en el arrecife y tiempo libre en Playa Norte.'],['Chichén Itzá y cenote','La pirámide de Kukulcán y baño en un cenote de agua turquesa.'],['Día libre','Playa, compras o un parque temático opcional.'],['Regreso','Desayuno y traslado al aeropuerto.']],
+     inc:CAR,noinc:['Propinas','Impuestos locales del hotel','Actividades opcionales'],
+     hotelImg:'img18.jpg',hotels:[['Opción todo incluido','Resort en la zona hotelera',4,'Comidas, bebidas y piscinas frente al mar.'],['Opción premium','Resort frente al mar',5,'Vista al Caribe, restaurantes de especialidad y spa.']]},
+    {key:'cartagena',name:'Cartagena',country:'Colombia',img:'img19.jpg',hero:'img20.jpg',
+     sub:'Ciudad amurallada, historia y mar Caribe',chips:['Ciudad amurallada','Islas del Rosario','Playa Blanca','Castillo San Felipe'],
+     price:null,dur:'4 días / 3 noches',sal:'Salidas desde Quito',
+     days:[['Llegada y ciudad amurallada','Traslado al hotel y recorrido a pie por plazas y balcones.'],['Islas del Rosario','Lancha a las islas, almuerzo típico y playa en Playa Blanca.'],['Castillo y Getsemaní','Castillo San Felipe de Barajas y tarde en Getsemaní.'],['Regreso','Desayuno y traslado al aeropuerto.']],
+     inc:['Vuelos','Traslados','Hospedaje','Alimentación','Tours en lancha','Asistencia de viaje'],noinc:['Impuesto de muelle','Propinas','Gastos personales'],
+     hotelImg:'img21.jpg',hotels:[['Opción boutique','Hotel en la ciudad amurallada',4,'Casa colonial con patio y piscina.'],['Opción playa','Hotel en Bocagrande',4,'Cerca del mar, con vista a la bahía.']]},
+    {key:'puntacana',name:'Punta Cana',country:'República Dominicana',img:'img22.jpg',
+     sub:'Playas de arena blanca y resorts todo incluido',chips:['Playa Bávaro','Isla Saona','Hoyo Azul','Catamarán'],
+     price:null,dur:'5 días / 4 noches',sal:'Salidas desde Quito',
+     days:[['Llegada a Punta Cana','Traslado al resort y tarde de playa.'],['Isla Saona','Catamarán, piscina natural y almuerzo en la isla.'],['Hoyo Azul','Cenote de agua azul en Scape Park y tarde libre.'],['Día de resort','Playa, piscina y actividades del hotel.'],['Regreso','Desayuno y traslado al aeropuerto.']],
+     inc:CAR,noinc:['Propinas','Tasas aeroportuarias locales','Actividades opcionales']},
+    {key:'machupicchu',name:'Machu Picchu',country:'Perú',img:'img23.jpg',
+     sub:'Cusco, Valle Sagrado y la ciudadela inca',chips:['Cusco colonial','Valle Sagrado','Tren a Aguas Calientes','Machu Picchu'],
+     price:null,dur:'5 días / 4 noches',sal:'Salidas desde Quito',
+     days:[['Llegada a Cusco','Traslado al hotel y descanso para aclimatarse a la altura.'],['City tour en Cusco','Plaza de Armas, Qorikancha y Sacsayhuamán.'],['Valle Sagrado','Pisac, Ollantaytambo y tren a Aguas Calientes.'],['Machu Picchu','Visita guiada a la ciudadela y regreso a Cusco.'],['Regreso','Traslado al aeropuerto.']],
+     inc:['Vuelos','Traslados','Hospedaje','Desayunos','Tren','Entradas'],noinc:['Almuerzos y cenas','Propinas','Boleto turístico de Cusco']},
+    {key:'sanandres',name:'San Andrés',country:'Colombia',img:'img24.jpg',
+     sub:'El mar de los siete colores',chips:['Johnny Cay','Acuario','Vuelta a la isla','Snorkel'],
+     price:null,dur:'4 días / 3 noches',sal:'Salidas desde Quito',
+     days:[['Llegada a San Andrés','Traslado al hotel y tarde en Spratt Bight.'],['Johnny Cay y Acuario','Lancha a los cayos y snorkel entre peces de colores.'],['Vuelta a la isla','Recorrido en chiva por la isla y el Hoyo Soplador.'],['Regreso','Desayuno y traslado al aeropuerto.']],
+     inc:CAR,noinc:['Tarjeta de turismo','Propinas','Gastos personales']},
+    {key:'aruba',name:'Aruba',country:'Caribe',img:'img25.jpg',
+     sub:'Playas tranquilas y sol todo el año',chips:['Eagle Beach','Parque Arikok','Snorkel','Oranjestad'],
+     price:null,dur:'5 días / 4 noches',sal:'Salidas desde Quito',
+     days:[['Llegada a Aruba','Traslado al hotel en Palm Beach.'],['Eagle Beach','Día de playa junto a los árboles fofoti.'],['Parque Arikok','Paisajes del desierto, cuevas y piscina natural.'],['Oranjestad','Paseo por la capital y tiempo libre.'],['Regreso','Desayuno y traslado al aeropuerto.']],
+     inc:INT,noinc:['Impuestos locales','Propinas','Actividades opcionales']},
+    {key:'panama',name:'Panamá',country:'Panamá',img:'img26.jpg',
+     sub:'Ciudad, canal y compras',chips:['Casco Viejo','Canal de Panamá','Cinta Costera','Compras'],
+     price:null,dur:'4 días / 3 noches',sal:'Salidas desde Quito',
+     days:[['Llegada a Panamá','Traslado al hotel y paseo por la Cinta Costera.'],['Canal y Casco Viejo','Esclusas de Miraflores y recorrido por el Casco Viejo.'],['Día de compras','Centros comerciales y tiempo libre.'],['Regreso','Desayuno y traslado al aeropuerto.']],
+     inc:INT,noinc:['Almuerzos y cenas','Propinas','Gastos personales']},
+    {key:'orlando',name:'Orlando',country:'Estados Unidos',img:'img27.jpg',
+     sub:'Parques temáticos para toda la familia',chips:['Parques temáticos','Outlets','Disney Springs','Kennedy Space Center'],
+     price:null,dur:'7 días / 6 noches',sal:'Salidas desde Quito',
+     days:[['Llegada a Orlando','Traslado al hotel en la zona de parques.'],['Parques temáticos','Tres días para recorrer los parques que elijas.'],['Compras','Visita a los outlets.'],['Día libre','Disney Springs o Kennedy Space Center opcional.'],['Regreso','Traslado al aeropuerto.']],
+     inc:INT,noinc:['Entradas a parques','Visa','Propinas']},
+    {key:'madrid',name:'Madrid',country:'España',img:'img28.jpg',
+     sub:'Arte, tapas y vida de ciudad',chips:['Gran Vía','Museo del Prado','Retiro','Toledo'],
+     price:null,dur:'6 días / 5 noches',sal:'Salidas desde Quito',
+     days:[['Llegada a Madrid','Traslado al hotel en el centro.'],['City tour','Gran Vía, Puerta del Sol, Plaza Mayor y Palacio Real.'],['Museos y Retiro','Museo del Prado y parque del Retiro.'],['Toledo','Excursión de un día a la ciudad de las tres culturas.'],['Día libre','Compras y tapas.'],['Regreso','Traslado al aeropuerto.']],
+     inc:INT,noinc:['Almuerzos y cenas','Entradas a museos','Seguro Schengen']},
+    {key:'paris',name:'París',country:'Francia',img:'img29.jpg',
+     sub:'La ciudad luz, a tu ritmo',chips:['Torre Eiffel','Louvre','Montmartre','Río Sena'],
+     price:null,dur:'6 días / 5 noches',sal:'Salidas desde Quito',
+     days:[['Llegada a París','Traslado al hotel.'],['City tour','Torre Eiffel, Campos Elíseos y Arco del Triunfo.'],['Louvre y Sena','Museo del Louvre y crucero por el río Sena.'],['Montmartre','Sacré-Cœur y el barrio de los pintores.'],['Día libre','Versalles opcional o compras.'],['Regreso','Traslado al aeropuerto.']],
+     inc:INT,noinc:['Almuerzos y cenas','Entradas a museos','Seguro Schengen']},
+    {key:'buenosaires',name:'Buenos Aires',country:'Argentina',img:'img30.jpg',
+     sub:'Tango, parrilla y barrios con historia',chips:['Caminito','Show de tango','Puerto Madero','Palermo'],
+     price:null,dur:'5 días / 4 noches',sal:'Salidas desde Quito',
+     days:[['Llegada a Buenos Aires','Traslado al hotel.'],['City tour','La Boca, Caminito, San Telmo y Plaza de Mayo.'],['Palermo y Recoleta','Parques, cafés y el cementerio de la Recoleta.'],['Cena con show de tango','Tarde libre y noche de tango.'],['Regreso','Traslado al aeropuerto.']],
+     inc:INT,noinc:['Almuerzos y cenas','Propinas','Gastos personales']}
+  ];
+  var TOURS={}; DESTINOS.forEach(function(d){TOURS[d.key]=d;}); window.VT_DESTINOS=DESTINOS;
+
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function icon(id){return '<svg class="ico"><use href="#'+id+'"/></svg>';}
+  function priceBlock(t){return t.price?'<div class="price">desde <b><em>$</em>'+t.price+'</b></div>':'<div class="price"><b class="ask">Cotiza tu fecha</b></div>';}
+
+  /* Tarjetas del carrusel */
+  var car=document.getElementById('carrusel'), dots=document.getElementById('carDots');
+  car.innerHTML=DESTINOS.map(function(t,i){
+    return '<article class="dcard" data-dest="'+t.key+'" data-i="'+i+'">'+
+      '<img src="'+t.img+'" alt="'+esc(t.name)+'" draggable="false">'+
+      '<div class="dtop"><div class="label">'+esc(t.country)+'</div><h3>'+esc(t.name)+'</h3><p class="sub">'+esc(t.sub)+'</p></div>'+
+      '<div class="glass"><div class="label">Qué puedes conocer</div><div class="chips">'+t.chips.map(function(c){return '<span>'+esc(c)+'</span>';}).join('')+'</div>'+
+      '<div class="price-row">'+priceBlock(t)+'<a class="glass-btn" href="#'+t.key+'">Ver tour <svg class="ico" viewBox="0 0 30 20"><path d="M2 10h25M19 3l8 7-8 7"/></svg></a></div></div>'+
+    '</article>';
+  }).join('');
+  dots.innerHTML=DESTINOS.map(function(){return '<i></i>';}).join('');
+  var cards=[].slice.call(car.querySelectorAll('.dcard')), dotEls=[].slice.call(dots.children), active=-1;
+
+  function setActive(i){
+    if(i===active) return; active=i;
+    cards.forEach(function(c,k){c.classList.toggle('is-active',k===i);});
+    dotEls.forEach(function(d,k){d.classList.toggle('on',k===i);});
+  }
+  function nearest(){
+    var mid=car.getBoundingClientRect().left+car.clientWidth/2, best=0, bd=1e9;
+    cards.forEach(function(c,k){var r=c.getBoundingClientRect();var d=Math.abs(r.left+r.width/2-mid);if(d<bd){bd=d;best=k;}});
+    return best;
+  }
+  function center(i,smooth){
+    i=Math.max(0,Math.min(cards.length-1,i));
+    var c=cards[i]; var left=c.offsetLeft+c.offsetWidth/2-car.clientWidth/2;
+    car.scrollTo({left:left,behavior:smooth===false?'auto':'smooth'}); setActive(i);
+  }
+  var ticking=false;
+  car.addEventListener('scroll',function(){ if(ticking) return; ticking=true; requestAnimationFrame(function(){ticking=false; if(!car.classList.contains('dragging')) setActive(nearest());}); },{passive:true});
+  document.getElementById('carPrev').addEventListener('click',function(){center(active-1);});
+  document.getElementById('carNext').addEventListener('click',function(){center(active+1);});
+  car.addEventListener('keydown',function(e){ if(e.key==='ArrowRight'){e.preventDefault();center(active+1);} if(e.key==='ArrowLeft'){e.preventDefault();center(active-1);} if(e.key==='Enter'&&active>=0){go(DESTINOS[active].key);} });
+
+  /* Arrastrar con el mouse */
+  var down=false, moved=false, sx=0, sl=0;
+  car.addEventListener('pointerdown',function(e){ if(e.pointerType!=='mouse'||e.button!==0) return; down=true; moved=false; sx=e.clientX; sl=car.scrollLeft; });
+  window.addEventListener('pointermove',function(e){ if(!down) return; var dx=e.clientX-sx; if(Math.abs(dx)>5){ moved=true; car.classList.add('dragging'); } if(moved){ car.scrollLeft=sl-dx; } });
+  window.addEventListener('pointerup',function(){ if(!down) return; down=false; if(moved){ car.classList.remove('dragging'); center(nearest()); setTimeout(function(){moved=false;},0); } });
+
+  /* Clic: la tarjeta se levanta; si ya está arriba, abre el tour */
+  car.addEventListener('click',function(e){
+    if(moved){ e.preventDefault(); e.stopPropagation(); return; }
+    var card=e.target.closest('.dcard'); if(!card||e.target.closest('a')) return;
+    e.stopPropagation();
+    var i=+card.getAttribute('data-i');
+    if(i===active) go(card.getAttribute('data-dest')); else center(i);
+  },true);
+
+  /* Página de tour */
+  function render(key){
+    var t=TOURS[key];
+    var priceHtml=t.price?'<div class="price">desde <b><em>$</em>'+t.price+'</b></div><p>Por persona. Valor referencial según fecha y hotel.</p>':'<div class="price"><b class="ask">Cotiza tu fecha</b></div><p>Te enviamos el precio según tus fechas y el hotel que elijas.</p>';
+    var days=t.days.map(function(d,i){return '<li><div class="day-n"><small>DÍA</small><b>'+(i+1)+'</b></div><div><h3>'+esc(d[0])+'</h3><p>'+esc(d[1])+'</p></div></li>';}).join('');
+    var inc=t.inc.map(function(x){return '<li><span class="mini">'+icon(ICON[x]||'i-check')+'</span>'+esc(x)+'</li>';}).join('');
+    var noinc=t.noinc.map(function(x){return '<li>'+esc(x)+'</li>';}).join('');
+    var hotels=t.hotels?('<section class="hotels"><div class="wrap"><div class="head"><div class="bar"></div><h2 class="h2">Hoteles</h2><p class="note">Opciones de ejemplo. Elige la categoría y te confirmamos disponibilidad.</p></div><div class="hotel-grid">'+
+      t.hotels.map(function(h,i){return '<article class="hotel"><img src="'+(i===0?t.hotelImg:(t.hero||t.img))+'" alt="'+esc(h[1])+'"><div class="hotel-in"><div class="label">'+esc(h[0])+'</div><h3>'+esc(h[1])+'</h3><div class="stars" aria-label="'+h[2]+' estrellas">'+'★'.repeat(h[2])+'</div><p>'+esc(h[3])+'</p></div></article>';}).join('')+
+      '</div></div></section>'):'';
+    document.getElementById('tour').innerHTML=
+      '<section class="tour-hero"><img src="'+(t.hero||t.img)+'" alt="'+esc(t.name)+'"><div class="wrap">'+
+        '<div class="tour-head"><a class="back" href="#volver">← Volver</a><div class="bar"></div><div class="label">'+esc(t.country)+'</div><h1>'+esc(t.name)+'</h1><p class="sub">'+esc(t.sub)+'</p>'+
+        '<div class="facts2"><span>'+icon('i-clock')+esc(t.dur)+'</span><span>'+icon('i-plane')+esc(t.sal)+'</span></div></div>'+
+        '<div class="tour-price"><div class="glass">'+priceHtml+'<div style="display:flex;flex-wrap:wrap;gap:10px"><button type="button" class="glass-btn" style="background:#fff;color:#0F1E3D;text-shadow:none;cursor:pointer;font-family:inherit" data-cotizar="'+t.key+'">'+'<svg class="ico" style="stroke:#0F1E3D"><use href="#i-cal"/></svg>Cotizar este viaje</button><a class="glass-btn" href="'+WA+'" target="_blank" rel="noopener">'+icon('i-send')+'WhatsApp</a></div></div></div>'+
+      '</div></section>'+
+      '<section class="tour-body"><div class="wrap">'+
+        '<div><div class="head"><div class="bar"></div><h2 class="h2">Itinerario</h2><p class="note">Recorrido de ejemplo. Lo ajustamos a tus fechas, presupuesto y ritmo de viaje.</p></div><ol class="days">'+days+'</ol></div>'+
+        '<aside class="aside"><div class="box"><div class="label">Incluye</div><ul>'+inc+'</ul></div><div class="box no"><div class="label">No incluye</div><ul>'+noinc+'</ul></div></aside>'+
+      '</div></section>'+hotels+
+      '<section class="tour-cta"><div class="wrap"><div><h2>¿Listo para '+esc(t.name)+'?</h2><p>Escríbenos y un asesor te arma la propuesta con tus fechas. Oficina en La Carolina, lunes a viernes de 9:00 a 17:00.</p></div>'+
+        '<a class="btn btn-light" href="'+WA+'" target="_blank" rel="noopener"><svg class="ico" style="stroke:#0F1E3D"><use href="#i-send"/></svg><span>Reservar por WhatsApp<small>0939480059</small></span></a></div></section>';
+  }
+
+  /* Navegación */
+  var home=document.getElementById('inicio'), tour=document.getElementById('tour'), header=document.querySelector('.top'), homeScroll=0;
+  function scrollToEl(el){ var y=el.getBoundingClientRect().top+window.pageYOffset-(header?header.offsetHeight:0)-8; window.scrollTo({top:Math.max(0,y),behavior:'smooth'}); }
+  function showHome(){ tour.hidden=true; home.hidden=false; }
+  function go(token){
+    if(TOURS[token]){ if(!home.hidden) homeScroll=window.pageYOffset; render(token); home.hidden=true; tour.hidden=false; window.scrollTo(0,0); return; }
+    if(token==='volver'){ showHome(); window.scrollTo(0,homeScroll); return; }
+    var wasTour=!tour.hidden; showHome();
+    if(!token||token==='inicio'||token==='portada'){ window.scrollTo({top:0,behavior:wasTour?'auto':'smooth'}); return; }
+    var el=document.getElementById(token);
+    if(el){ if(wasTour) window.scrollTo(0,0); requestAnimationFrame(function(){ scrollToEl(el); }); }
+  }
+  document.addEventListener('click',function(e){ var a=e.target.closest('a[href^="#"]'); if(a){ e.preventDefault(); go(a.getAttribute('href').slice(1)); } });
+  window.addEventListener('hashchange',function(){ go((location.hash||'').slice(1)); });
+
+  requestAnimationFrame(function(){ center(0,false); });
+  window.addEventListener('resize',function(){ center(active<0?0:active,false); });
+  var start=(location.hash||'').slice(1); if(start) go(start);
+})();
+</script>
+
+<script>
+/* Portada flotante */
+(function(){
+  var fh=document.querySelector('.fh'); if(!fh) return;
+  var stick=fh.querySelector('.fh-stick'), header=document.querySelector('.top'), home=document.getElementById('inicio');
+  var F={
+   ec:'<svg viewBox="0 0 30 20"><rect width="30" height="10" fill="#FFD100"/><rect y="10" width="30" height="5" fill="#034EA2"/><rect y="15" width="30" height="5" fill="#ED1C24"/><circle cx="15" cy="10" r="2.6" fill="#8C6D3F"/></svg>',
+   mx:'<svg viewBox="0 0 30 20"><rect width="10" height="20" fill="#006847"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#CE1126"/><circle cx="15" cy="10" r="2.4" fill="#8C6D3F"/></svg>',
+   co:'<svg viewBox="0 0 30 20"><rect width="30" height="10" fill="#FCD116"/><rect y="10" width="30" height="5" fill="#003893"/><rect y="15" width="30" height="5" fill="#CE1126"/></svg>',
+   do:'<svg viewBox="0 0 30 20"><rect width="30" height="20" fill="#fff"/><rect width="13" height="8" fill="#002D62"/><rect x="17" width="13" height="8" fill="#CE1126"/><rect y="12" width="13" height="8" fill="#CE1126"/><rect x="17" y="12" width="13" height="8" fill="#002D62"/></svg>',
+   pe:'<svg viewBox="0 0 30 20"><rect width="10" height="20" fill="#D91023"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#D91023"/></svg>',
+   fr:'<svg viewBox="0 0 30 20"><rect width="10" height="20" fill="#002395"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#ED2939"/></svg>'};
+  var D=[
+   {k:'galapagos',name:'Galápagos',country:'Ecuador',f:'ec',sub:'Lobos marinos, tortugas gigantes y aguas turquesa.',price:'$269',dur:'4 días · 3 noches',c:'#F4EFE4',cd:'#2F6F67'},
+   {k:'cancun',name:'Cancún',country:'México',f:'mx',sub:'Playas blancas y ruinas mayas frente al Caribe.',price:'A consultar',dur:'5 días · 4 noches',c:'#1C2E4A',dk:1,cd:'#1F5E68'},
+   {k:'cartagena',name:'Cartagena',country:'Colombia',f:'co',sub:'Balcones con flores y atardeceres sobre la muralla.',price:'A consultar',dur:'4 días · 3 noches',c:'#B9AA98',cd:'#9A3B22'},
+   {k:'puntacana',name:'Punta Cana',country:'Rep. Dominicana',f:'do',sub:'Palmeras, hamacas y mar cristalino, todo incluido.',price:'A consultar',dur:'5 días · 4 noches',c:'#4A5868',dk:1,cd:'#1F4F73'},
+   {k:'machupicchu',name:'Machu Picchu',country:'Perú',f:'pe',sub:'Terrazas de piedra entre montañas sagradas.',price:'A consultar',dur:'5 días · 4 noches',c:'#2E3833',dk:1,cd:'#45543A'},
+   {k:'paris',name:'París',country:'Francia',f:'fr',sub:'Cafés, bulevares y la Torre Eiffel al atardecer.',price:'A consultar',dur:'7 días · 6 noches',c:'#D9D4CC',cd:'#8A4E4A'}];
+  /* usa el precio del sitio si existe */
+  if(window.VT_DESTINOS) D.forEach(function(d){ var s=window.VT_DESTINOS.filter(function(x){return x.key===d.k})[0]; if(s&&s.price) d.price='$'+s.price; });
+  var N=D.length, isl=[].slice.call(fh.querySelectorAll('.fh-isl')), i=null, tm;
+  var flags=fh.querySelector('.fh-flags');
+  D.forEach(function(d,k){ var b=document.createElement('button'); b.type='button'; b.title=d.name; b.setAttribute('aria-label',d.name); b.innerHTML='<span class="fh-flag">'+F[d.f]+'</span>'; b.onclick=function(){ scrollTo(k); }; flags.appendChild(b); });
+  function pad(n){ return (n<10?'0':'')+n; }
+  function fill(){ var d=D[Math.max(i,0)];
+    fh.style.setProperty('--c',d.c); fh.style.setProperty('--cd',d.cd); fh.classList.toggle('dk',!!d.dk); if(header) header.classList.toggle('dkh',!!d.dk);
+    fh.classList.toggle('nop',d.price.charAt(0)!=='$');
+    fh.querySelectorAll('[data-f]').forEach(function(el){ var f=el.getAttribute('data-f'); el.innerHTML=f==='flag'?F[d.f]:f==='num'?pad(Math.max(i,0)+1)+' / '+pad(N):d[f]; });
+    fh.querySelector('[data-f-href]').setAttribute('href','#'+d.k);
+    fh.querySelector('[data-f-cot]').setAttribute('data-cotizar',d.k);
+    [].forEach.call(flags.children,function(b,k){ b.classList.toggle('on',k===i); });
+  }
+  function set(n){ n=((n%N)+N)%N; if(n===i) return; var first=i===null; i=n; fh.classList.toggle('docked',i!==0);
+    isl.forEach(function(e,k){ var d=((k-i)%N+N)%N; if(d>N/2) d-=N; e.setAttribute('data-p', d===0||d===1||d===-1 ? String(d) : d>1 ? 'far' : 'gone'); });
+    if(first){ fill(); return; }
+    fh.classList.add('out'); clearTimeout(tm); tm=setTimeout(function(){ fill(); fh.classList.remove('out'); },300);
+  }
+  function scrollTo(k){ set(k); }
+  isl.forEach(function(e,k){ e.addEventListener('click',function(){ if(e.getAttribute('data-p')==='1') set(k); }); });
+  fh.querySelector('.fh-brand').addEventListener('click',function(){ if(i!==0) set(0); });
+  fh.querySelector('[data-fh-prev]').onclick=function(){ set(i-1); };
+  fh.querySelector('[data-fh-next]').onclick=function(){ set(i+1); };
+  /* lados = cambiar de isla; arriba/abajo = bajar la página */
+  var lock=0;
+  function step(dir){ var now=Date.now(); if(now<lock) return; lock=now+750; set(i+dir); }
+  stick.addEventListener('wheel',function(e){ if(Math.abs(e.deltaX)>Math.abs(e.deltaY)&&Math.abs(e.deltaX)>6){ e.preventDefault(); step(e.deltaX>0?1:-1); } },{passive:false});
+  var sx=0,sy=0,down=false,mouse=false;
+  stick.addEventListener('pointerdown',function(e){ if(e.target.closest('button,a')) return; down=true; mouse=e.pointerType==='mouse'; sx=e.clientX; sy=e.clientY; });
+  window.addEventListener('pointerup',function(e){ if(!down) return; down=false; var dx=e.clientX-sx, dy=e.clientY-sy; if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.2){ step(dx<0?1:-1); } });
+  stick.addEventListener('touchstart',function(e){ sx=e.touches[0].clientX; sy=e.touches[0].clientY; },{passive:true});
+  stick.addEventListener('touchend',function(e){ if(mouse) return; var dx=e.changedTouches[0].clientX-sx, dy=e.changedTouches[0].clientY-sy; if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)*1.2){ down=false; step(dx<0?1:-1); } },{passive:true});
+  document.addEventListener('keydown',function(e){ if(e.target.closest&&e.target.closest('input,textarea,select')) return; var r=fh.getBoundingClientRect(); if(r.bottom<100||r.top>window.innerHeight/2) return; if(e.key==='ArrowRight') set(i+1); if(e.key==='ArrowLeft') set(i-1); });
+  function measure(){ if(header) document.documentElement.style.setProperty('--hh',header.offsetHeight+'px'); }
+  var ticking=false;
+  function onScroll(){ ticking=false; if(home&&home.hidden){ header&&header.classList.remove('on-hero','intro'); return; }
+    var r=fh.getBoundingClientRect(), onHero=r.bottom>(header?header.offsetHeight:0)+4;
+    if(header){ header.classList.toggle('on-hero',onHero); header.classList.remove('intro'); }
+  }
+  window.addEventListener('scroll',function(){ if(!ticking){ ticking=true; requestAnimationFrame(onScroll); } },{passive:true});
+  window.addEventListener('resize',function(){ measure(); onScroll(); });
+  document.addEventListener('click',function(){ setTimeout(onScroll,60); });
+  set(0);
+  measure(); onScroll();
+})();
+</script>
+<script>
+(function(){
+  var DEST=window.VT_DESTINOS||[];
+  var root=document.getElementById('cot'), sheet=root.querySelector('.cot-sheet');
+  var MESES=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  var MCORTO=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+  var today=new Date(); today.setHours(0,0,0,0);
+  var S={desde:'Quito (UIO)',tipo:'Ida y vuelta',dests:[{pais:'',key:''}],month:0,ida:null,vuelta:null,flex:false,
+         pax:{ad:2,ni:0,be:0},plan:'hotel',dur:0,hotel:'sup',rooms:1,tours:{}};
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function $(id){return document.getElementById(id);}
+  function fmt(d){return d? d.getDate()+' '+MCORTO[d.getMonth()]+' '+d.getFullYear():'—';}
+  function nights(){return (S.ida&&S.vuelta)?Math.round((S.vuelta-S.ida)/864e5):0;}
+  var TICK='<span class="tick"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span>';
+
+  /* ---------- Abrir / cerrar con animación ---------- */
+  var lastBtn=null, closing=null;
+  function open(btn,preset){
+    lastBtn=btn||null;
+    if(preset){ var d=DEST.filter(function(x){return x.key===preset;})[0]; if(d){ S.dests=[{pais:d.country,key:d.key}]; renderDests(); renderTours(); update(); } }
+    if(btn&&btn.getBoundingClientRect){ var r=btn.getBoundingClientRect(); sheet.style.setProperty('--ox',(r.left+r.width/2-window.innerWidth/2+sheet.offsetWidth/2)+'px'); sheet.style.setProperty('--oy','90%'); }
+    clearTimeout(closing); root.hidden=false; document.documentElement.classList.add('cot-lock');
+    requestAnimationFrame(function(){ requestAnimationFrame(function(){ root.classList.add('is-open'); }); });
+    setTimeout(function(){ var f=root.querySelector('.acc.is-open .acc-in select, .acc.is-open .acc-in button'); if(f) f.focus({preventScroll:true}); },450);
+  }
+  function close(){
+    root.classList.remove('is-open'); document.documentElement.classList.remove('cot-lock');
+    closing=setTimeout(function(){ root.hidden=true; if(lastBtn) lastBtn.focus({preventScroll:true}); },560);
+  }
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-cotizar]'); if(b){ e.preventDefault(); open(b,b.getAttribute('data-cotizar')); return; }
+    if(e.target.closest('[data-cot-close]')) close();
+  });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&!root.hidden) close(); });
+
+  /* ---------- Acordeón (uno abierto a la vez) ---------- */
+  var accs=[].slice.call(root.querySelectorAll('.acc'));
+  accs.forEach(function(a){ a.querySelector('.acc-h').addEventListener('click',function(){
+    var was=a.classList.contains('is-open');
+    accs.forEach(function(x){ x.classList.remove('is-open'); x.querySelector('.acc-h').setAttribute('aria-expanded','false'); });
+    if(!was){ a.classList.add('is-open'); a.querySelector('.acc-h').setAttribute('aria-expanded','true');
+      setTimeout(function(){ a.scrollIntoView({behavior:'smooth',block:'nearest'}); },320); }
+  }); });
+
+  /* ---------- 1. Destino ---------- */
+  var paises=[]; DEST.forEach(function(d){ if(paises.indexOf(d.country)<0) paises.push(d.country); });
+  function renderDests(){
+    $('cotDests').innerHTML=S.dests.map(function(r,i){
+      var opts=DEST.filter(function(d){return !r.pais||d.country===r.pais;});
+      return '<div class="dest-row" data-i="'+i+'">'+
+        '<div class="field"><label for="cp'+i+'">País</label><select id="cp'+i+'" data-k="pais"><option value="">Cualquier país</option>'+paises.map(function(p){return '<option'+(p===r.pais?' selected':'')+'>'+esc(p)+'</option>';}).join('')+'<option value="Otro"'+(r.pais==='Otro'?' selected':'')+'>Otro país</option></select></div>'+
+        '<div class="field"><label for="cd'+i+'">Destino '+(S.dests.length>1?(i+1):'')+'</label><select id="cd'+i+'" data-k="key"><option value="">Elige el destino</option>'+opts.map(function(d){return '<option value="'+d.key+'"'+(d.key===r.key?' selected':'')+'>'+esc(d.name)+'</option>';}).join('')+'<option value="otro"'+(r.key==='otro'?' selected':'')+'>Otro destino (te asesoramos)</option></select></div>'+
+        '<button type="button" class="rm" data-rm="'+i+'" aria-label="Quitar destino"'+(S.dests.length<2?' disabled':'')+'><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>';
+    }).join('');
+    $('cotAddDest').hidden=S.dests.length>=3;
+    var ks=keysSel(); var hint=document.getElementById('cotFlyHint'); if(!hint){ hint=document.createElement('p'); hint.id='cotFlyHint'; hint.className='hint'; $('cotAddDest').parentNode.insertBefore(hint,$('cotAddDest').nextSibling); }
+    hint.textContent= ks.length ? ks.map(function(k){ var d=DEST.filter(function(x){return x.key===k;})[0]; return 'Vuelo a '+(d?d.name:'otro destino')+': aprox. '+money((TAR.vuelo[k]||TAR.vuelo.otro)+(TAR.origen[S.desde]||0))+' ida y vuelta por adulto'; }).join(' · ') : '';
+  }
+  $('cotDests').addEventListener('change',function(e){
+    var s=e.target, i=+s.closest('.dest-row').getAttribute('data-i'), k=s.getAttribute('data-k');
+    S.dests[i][k]=s.value;
+    if(k==='pais'){ var cur=DEST.filter(function(d){return d.key===S.dests[i].key;})[0]; if(cur&&s.value&&cur.country!==s.value) S.dests[i].key=''; renderDests(); }
+    if(k==='key'){ var d=DEST.filter(function(x){return x.key===s.value;})[0]; if(d){ S.dests[i].pais=d.country; renderDests(); } }
+    renderTours(); renderHotels(); update();
+  });
+  $('cotDests').addEventListener('click',function(e){ var b=e.target.closest('[data-rm]'); if(!b||b.disabled) return; S.dests.splice(+b.getAttribute('data-rm'),1); renderDests(); renderTours(); update(); });
+  $('cotAddDest').addEventListener('click',function(){ if(S.dests.length<3){ S.dests.push({pais:'',key:''}); renderDests(); update(); } });
+  $('cotDesde').addEventListener('change',function(){ S.desde=this.value; renderDests(); update(); });
+  [].slice.call($('cotTipo').children).forEach(function(b){ b.addEventListener('click',function(){
+    [].slice.call($('cotTipo').children).forEach(function(x){x.setAttribute('aria-checked',x===b?'true':'false');});
+    S.tipo=b.getAttribute('data-v'); if(S.tipo==='Solo ida') S.vuelta=null; renderCal(); update();
+  }); });
+
+  /* ---------- 2. Fechas: calendario de todo el año ---------- */
+  var monthsList=[]; for(var m=0;m<12;m++){ monthsList.push(new Date(today.getFullYear(),today.getMonth()+m,1)); }
+  function renderMonths(){
+    $('cotMonths').innerHTML=monthsList.map(function(d,i){ return '<button type="button" role="tab" aria-selected="'+(i===S.month)+'" data-m="'+i+'">'+MESES[d.getMonth()].replace(/^./,function(c){return c.toUpperCase();})+'<small>'+d.getFullYear()+'</small></button>'; }).join('');
+  }
+  $('cotMonths').addEventListener('click',function(e){ var b=e.target.closest('[data-m]'); if(!b) return; S.month=+b.getAttribute('data-m'); renderMonths(); renderCal(); b.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'}); });
+  function renderCal(){
+    var base=monthsList[S.month], y=base.getFullYear(), mo=base.getMonth(), first=(new Date(y,mo,1).getDay()+6)%7, n=new Date(y,mo+1,0).getDate();
+    var h=['L','M','M','J','V','S','D'].map(function(d){return '<div class="dow">'+d+'</div>';}).join('');
+    for(var i=0;i<first;i++) h+='<div></div>';
+    for(var d=1;d<=n;d++){
+      var dt=new Date(y,mo,d), cls='', dis=dt<today;
+      if(S.ida&&+dt===+S.ida) cls='a'; else if(S.vuelta&&+dt===+S.vuelta) cls='b'; else if(S.ida&&S.vuelta&&dt>S.ida&&dt<S.vuelta) cls='in';
+      h+='<button type="button" data-d="'+d+'" class="'+cls+'"'+(dis?' disabled':'')+' aria-label="'+d+' de '+MESES[mo]+'">'+d+'</button>';
+    }
+    var cal=$('cotCal'); cal.innerHTML=h; cal.style.animation='none'; cal.offsetHeight; cal.style.animation='';
+    $('cotHint').textContent = S.tipo==='Solo ida' ? 'Toca el día de ida' : (!S.ida||S.vuelta ? 'Toca el día de ida' : 'Ahora toca el día de vuelta');
+    $('cotDatesSum').innerHTML='<div><small>Ida</small><b>'+fmt(S.ida)+'</b></div>'+(S.tipo==='Solo ida'?'<div><small>Vuelta</small><b>No aplica</b></div>':'<div><small>Vuelta</small><b>'+fmt(S.vuelta)+'</b></div>')+'<div><small>Noches</small><b>'+(nights()||'—')+'</b></div>';
+  }
+  $('cotCal').addEventListener('click',function(e){
+    var b=e.target.closest('[data-d]'); if(!b||b.disabled) return;
+    var base=monthsList[S.month], dt=new Date(base.getFullYear(),base.getMonth(),+b.getAttribute('data-d'));
+    if(S.tipo==='Solo ida'){ S.ida=dt; S.vuelta=null; }
+    else if(!S.ida||S.vuelta||dt<=S.ida){ S.ida=dt; S.vuelta=null; if(S.dur){ S.vuelta=new Date(+dt+S.dur*864e5); } }
+    else { S.vuelta=dt; setDur(0); }
+    renderCal(); update();
+  });
+  $('cotFlex').addEventListener('change',function(){ S.flex=this.checked; update(); });
+
+  /* ---------- 3. Pasajeros ---------- */
+  var PAX=[['ad','Adultos','12 años o más',1,9],['ni','Niños','De 2 a 11 años, con asiento',0,8],['be','Bebés en brazos','Menores de 2 años, sin asiento',0,9]];
+  function renderPax(){
+    $('cotPax').innerHTML=PAX.map(function(p){
+      var v=S.pax[p[0]], max=p[0]==='be'?S.pax.ad:p[4];
+      return '<div class="pax-row"><div><b>'+p[1]+'</b><small>'+p[2]+'</small></div><div class="step"><button type="button" data-p="'+p[0]+'" data-s="-1" aria-label="Quitar '+p[1]+'"'+(v<=p[3]?' disabled':'')+'>−</button><output aria-live="polite">'+v+'</output><button type="button" data-p="'+p[0]+'" data-s="1" aria-label="Agregar '+p[1]+'"'+(v>=max?' disabled':'')+'>+</button></div></div>';
+    }).join('');
+  }
+  $('cotPax').addEventListener('click',function(e){
+    var b=e.target.closest('[data-p]'); if(!b||b.disabled) return; var k=b.getAttribute('data-p');
+    S.pax[k]+= +b.getAttribute('data-s'); if(S.pax.be>S.pax.ad) S.pax.be=S.pax.ad; renderPax(); update();
+  });
+
+  /* ---------- Tarifas de ejemplo (USD). Cámbialas por las reales de Vitta Travel ---------- */
+  var TAR={
+    vuelo:{galapagos:380,cancun:650,cartagena:420,puntacana:700,machupicchu:450,sanandres:480,aruba:700,panama:380,orlando:750,madrid:1100,paris:1250,buenosaires:850,otro:700},
+    nivel:{galapagos:1.2,cancun:1.1,cartagena:0.9,puntacana:1.1,machupicchu:0.8,sanandres:0.9,aruba:1.4,panama:0.9,orlando:1,madrid:1.2,paris:1.5,buenosaires:0.8,otro:1},
+    origen:{'Quito (UIO)':0,'Guayaquil (GYE)':0,'Cuenca (CUE)':40,'Manta (MTA)':50,'Otra ciudad':60},
+    hotel:{tur:70,sup:120,todo:220,lujo:320},
+    nino:0.85, bebe:0.10, soloIda:0.55, tour:60, completo:45, nochesDefecto:4,
+    extras:{'Seguro de viaje':35,'Traslados aeropuerto':30,'Maleta extra':60}
+  };
+  function money(n){ return '$'+Math.round(n).toLocaleString('es-EC'); }
+  function keysSel(){ return S.dests.map(function(r){return r.key;}).filter(Boolean); }
+  function calc(){
+    var ks=keysSel(); if(!ks.length) return null;
+    var p=S.pax, seats=p.ad+p.ni, ida=S.tipo==='Solo ida'?TAR.soloIda:1;
+    var n=nights()||S.dur||TAR.nochesDefecto, out={vuelos:0,hotel:0,servicios:0,tours:0,extras:0,noches:n};
+    ks.forEach(function(k){ var b=TAR.vuelo[k]||TAR.vuelo.otro; out.vuelos+=b*ida*(p.ad+p.ni*TAR.nino+p.be*TAR.bebe); });
+    out.vuelos+=(TAR.origen[S.desde]||0)*seats*ks.length;
+    if(S.plan!=='vuelo'){ ks.forEach(function(k){ out.hotel+=TAR.hotel[S.hotel]*(TAR.nivel[k]||1)*(n/ks.length)*S.rooms; }); }
+    if(S.plan==='completo') out.servicios=TAR.completo*seats;
+    Object.keys(S.tours).forEach(function(id){ var name=id.split('|')[1];
+      if(id.indexOf('extra|')===0){ out.extras+=(TAR.extras[name]||0)*(name==='Seguro de viaje'?seats+p.be:seats); }
+      else out.tours+=TAR.tour*seats; });
+    out.total=out.vuelos+out.hotel+out.servicios+out.tours+out.extras; out.pp=out.total/Math.max(1,seats);
+    return out;
+  }
+  function hotelNight(code){ var ks=keysSel(), lv=ks.length?(TAR.nivel[ks[0]]||1):1; return TAR.hotel[code]*lv; }
+
+  /* ---------- 4. Plan, duración y hotel ---------- */
+  var PLANS=[['vuelo','Solo vuelo','Boletos de ida y vuelta.'],['hotel','Vuelo + hotel','Boletos y hospedaje.'],['completo','Paquete completo','Vuelo, hotel, traslados y tours.']];
+  var HOTELES=[['tur','Turista',3,'Cómodo y bien ubicado, ideal para recorrer.',['Desayuno incluido','Wi-Fi','Cerca de los puntos turísticos']],
+               ['sup','Superior',4,'Más espacio, piscina y mejores vistas.',['Desayuno buffet','Piscina','Habitación amplia']],
+               ['todo','Todo incluido',4,'Comidas y bebidas incluidas, sin pensar en gastos.',['Desayuno, almuerzo y cena','Bebidas','Actividades del hotel']],
+               ['lujo','Boutique / Lujo',5,'Atención personalizada y experiencias exclusivas.',['Vista privilegiada','Spa','Servicio a la habitación']]];
+  function renderPlans(){
+    $('cotPlans').innerHTML=PLANS.map(function(p){ return '<button type="button" class="opt-card" data-plan="'+p[0]+'" aria-pressed="'+(S.plan===p[0])+'">'+TICK+'<b>'+p[1]+'</b><small>'+p[2]+'</small><em class="tag">'+(p[0]==='vuelo'?'Sin hospedaje':p[0]==='hotel'?'Vuelo + noches de hotel':'+'+money(TAR.completo)+' por persona')+'</em></button>'; }).join('');
+    $('cotHotelWrap').hidden = S.plan==='vuelo';
+  }
+  $('cotPlans').addEventListener('click',function(e){ var b=e.target.closest('[data-plan]'); if(!b) return; S.plan=b.getAttribute('data-plan'); renderPlans(); update(); });
+  function setDur(n){ S.dur=n; [].slice.call($('cotDur').children).forEach(function(b){ b.setAttribute('aria-pressed', (+b.getAttribute('data-n'))===n?'true':'false'); }); }
+  $('cotDur').addEventListener('click',function(e){ var b=e.target.closest('[data-n]'); if(!b) return; var n=+b.getAttribute('data-n'); setDur(n);
+    if(n&&S.ida&&S.tipo!=='Solo ida'){ S.vuelta=new Date(+S.ida+n*864e5); } renderCal(); update(); });
+  var openHotel=null;
+  function renderHotels(){
+    $('cotHotels').innerHTML=HOTELES.map(function(h){
+      return '<div class="hot'+(S.hotel===h[0]?' sel':'')+(openHotel===h[0]?' open':'')+'" data-h="'+h[0]+'"><button type="button" class="hot-h" aria-expanded="'+(openHotel===h[0])+'"><span class="stars" aria-label="'+h[2]+' estrellas">'+'★'.repeat(h[2])+'</span><b>'+h[1]+'</b><em class="tag">aprox. '+money(hotelNight(h[0]))+' / noche</em>'+(S.hotel===h[0]?'<small style="font-weight:700;color:#2F8FD0">Elegido</small>':'')+'<svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>'+
+        '<div class="hot-b"><div class="hot-in"><div><p>'+h[3]+'</p><ul>'+h[4].map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul><button type="button" class="hot-pick" data-pick="'+h[0]+'">'+(S.hotel===h[0]?'Elegido':'Elegir este hotel')+'</button></div></div></div></div>';
+    }).join('');
+    $('cotRooms').innerHTML='<div class="pax-row"><div><b>Habitaciones</b><small>Las ajustamos según los pasajeros</small></div><div class="step"><button type="button" data-r="-1" aria-label="Quitar habitación"'+(S.rooms<=1?' disabled':'')+'>−</button><output>'+S.rooms+'</output><button type="button" data-r="1" aria-label="Agregar habitación"'+(S.rooms>=6?' disabled':'')+'>+</button></div></div>';
+  }
+  $('cotHotels').addEventListener('click',function(e){
+    var pick=e.target.closest('[data-pick]'); if(pick){ S.hotel=pick.getAttribute('data-pick'); renderHotels(); update(); return; }
+    var hd=e.target.closest('.hot-h'); if(!hd) return; var k=hd.parentNode.getAttribute('data-h');
+    var cards=[].slice.call($('cotHotels').children);
+    openHotel= openHotel===k?null:k;
+    cards.forEach(function(c){ var o=c.getAttribute('data-h')===openHotel; c.classList.toggle('open',o); c.querySelector('.hot-h').setAttribute('aria-expanded',o); });
+  });
+  $('cotRooms').addEventListener('click',function(e){ var b=e.target.closest('[data-r]'); if(!b||b.disabled) return; S.rooms+= +b.getAttribute('data-r'); renderHotels(); update(); });
+
+  /* ---------- 5. Tours y extras ---------- */
+  var EXTRAS=[['seguro','Seguro de viaje','Asistencia médica y de equipaje'],['traslado','Traslados aeropuerto','Ida y vuelta al hotel'],['maleta','Maleta extra','Equipaje adicional en bodega']];
+  function renderTours(){
+    var groups=S.dests.map(function(r){ return DEST.filter(function(d){return d.key===r.key;})[0]; }).filter(Boolean);
+    var h=groups.map(function(d){
+      return '<div class="tour-group"><div class="sub-l">Tours en '+esc(d.name)+'</div><div class="tours-g">'+d.chips.map(function(c){ var id=d.key+'|'+c;
+        return '<button type="button" class="opt-card" data-t="'+esc(id)+'" aria-pressed="'+(!!S.tours[id])+'">'+TICK+'<b>'+esc(c)+'</b><small>Agregar tour</small><em class="tag">+'+money(TAR.tour)+' por persona</em></button>'; }).join('')+'</div></div>';
+    }).join('');
+    if(!groups.length) h='<p class="hint">Elige un destino en el paso 1 para ver sus tours.</p>';
+    h+='<div class="tour-group"><div class="sub-l">Extras</div><div class="tours-g">'+EXTRAS.map(function(x){ var id='extra|'+x[1];
+      return '<button type="button" class="opt-card" data-t="'+esc(id)+'" aria-pressed="'+(!!S.tours[id])+'">'+TICK+'<b>'+x[1]+'</b><small>'+x[2]+'</small><em class="tag">+'+money(TAR.extras[x[1]]||0)+' por persona</em></button>'; }).join('')+'</div></div>';
+    $('cotTours').innerHTML=h;
+  }
+  $('cotTours').addEventListener('click',function(e){ var b=e.target.closest('[data-t]'); if(!b) return; var id=b.getAttribute('data-t'); if(S.tours[id]) delete S.tours[id]; else S.tours[id]=1; b.setAttribute('aria-pressed',!!S.tours[id]); update(); });
+
+  /* ---------- Resumen ---------- */
+  function destNames(){ return S.dests.map(function(r){ if(r.key==='otro') return 'Otro destino'+(r.pais&&r.pais!=='Otro'?' en '+r.pais:''); var d=DEST.filter(function(x){return x.key===r.key;})[0]; return d?d.name:''; }).filter(Boolean); }
+  function paxTxt(){ var p=S.pax, a=[p.ad+' adulto'+(p.ad>1?'s':'')]; if(p.ni) a.push(p.ni+' niño'+(p.ni>1?'s':'')); if(p.be) a.push(p.be+' bebé'+(p.be>1?'s':'')+' en brazos'); return a.join(', '); }
+  function tourList(){ return Object.keys(S.tours).map(function(k){return k.split('|')[1];}); }
+  function planTxt(){ var p=PLANS.filter(function(x){return x[0]===S.plan;})[0][1]; if(S.plan!=='vuelo'){ var h=HOTELES.filter(function(x){return x[0]===S.hotel;})[0]; p+=' · Hotel '+h[1]+' · '+S.rooms+' hab.'; } return p; }
+  function summaryText(){
+    var L=['Hola Vitta Travel, quiero cotizar este viaje:','• Desde: '+S.desde,'• Destino: '+(destNames().join(' + ')||'Por definir'),'• Tipo: '+S.tipo,
+      '• Fechas: '+(S.ida?fmt(S.ida):'Por definir')+(S.tipo==='Ida y vuelta'?' al '+(S.vuelta?fmt(S.vuelta):'por definir'):'')+(nights()?' ('+nights()+' noches)':'')+(S.flex?' · flexibles':''),
+      '• Pasajeros: '+paxTxt(),'• Plan: '+planTxt()];
+    var t=tourList(); if(t.length) L.push('• Tours y extras: '+t.join(', '));
+    var c=calc(); if(c) L.push('• Total aproximado del cotizador: '+money(c.total)+' ('+money(c.pp)+' por persona con asiento)');
+    return L.join('\n');
+  }
+  function update(){
+    var dn=destNames();
+    $('s1').textContent=(dn.length?dn.join(' + '):'Elige a dónde vas')+' · desde '+S.desde.split(' (')[0];
+    $('s2').textContent=S.ida?(fmt(S.ida)+(S.tipo==='Ida y vuelta'?' → '+(S.vuelta?fmt(S.vuelta):'elige la vuelta'):' · solo ida')):'Elige el mes y tus días';
+    $('s3').textContent=paxTxt();
+    $('s4').textContent=planTxt();
+    var t=tourList(); $('s5').textContent=t.length?t.length+' agregado'+(t.length>1?'s':'')+': '+t.join(', '):'Ningún tour agregado';
+    var seats=S.pax.ad+S.pax.ni, ref='';
+    S.dests.forEach(function(r){ var d=DEST.filter(function(x){return x.key===r.key;})[0]; if(d&&d.price){ ref+='<span class="ref">'+esc(d.name)+': desde $'+d.price+' por persona · referencial para '+seats+' pasajero'+(seats>1?'s':'')+' con asiento: desde $'+(d.price*seats).toLocaleString('es-EC')+'</span>'; } });
+    var c=calc();
+    if(!c){ $('cotSum').innerHTML='<div class="tot-empty">Elige un destino y verás el precio aproximado al instante.</div>'; }
+    else {
+      var rows=[['Vuelos'+(S.tipo==='Solo ida'?' (solo ida)':''),c.vuelos],['Hotel · '+c.noches+' noche'+(c.noches>1?'s':'')+' · '+S.rooms+' hab.',c.hotel],['Traslados y asistencia del paquete',c.servicios],['Tours',c.tours],['Extras',c.extras]].filter(function(r){return r[1]>0;});
+      $('cotSum').innerHTML='<div class="brk">'+rows.map(function(r){return '<div><span>'+r[0]+'</span><b>'+money(r[1])+'</b></div>';}).join('')+'</div>'+
+        '<div class="tot"><div><small>Total aproximado</small><strong id="cotTot">'+money(prevTot)+'</strong></div><div class="pp"><small>Por persona</small><b>'+money(c.pp)+'</b></div></div>'+
+        '<div class="disc">Precio de referencia en USD. Un asesor te confirma el valor final según disponibilidad'+(nights()?'':' (calculado con '+c.noches+' noches; elige tus fechas para afinarlo)')+'.</div>';
+      tween($('cotTot'),prevTot,c.total); prevTot=c.total;
+    }
+    $('cotSend').href='https://wa.me/593939480059?text='+encodeURIComponent(summaryText());
+  }
+  var prevTot=0, raf=null;
+  function tween(el,a,b){ cancelAnimationFrame(raf); var t0=null, d=650;
+    function step(ts){ if(!t0) t0=ts; var k=Math.min(1,(ts-t0)/d), e=1-Math.pow(1-k,4); el.textContent=money(a+(b-a)*e); if(k<1) raf=requestAnimationFrame(step); }
+    raf=requestAnimationFrame(step); }
+  $('cotCopy').addEventListener('click',function(){
+    var b=this, txt=summaryText();
+    function done(){ b.textContent='Copiado'; setTimeout(function(){ b.textContent='Copiar resumen'; },1600); }
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(done,function(){ b.textContent='No se pudo copiar'; }); } else { b.textContent='No se pudo copiar'; }
+  });
+
+  renderDests(); renderMonths(); renderCal(); renderPax(); renderPlans(); renderHotels(); renderTours(); update();
+})();
+</script>
+
+<script>
+(function(){
+  var box=document.getElementById('waChat'), fab=document.getElementById('waFab'), txt=document.getElementById('waText');
+  var NUM='593939480059';
+  function open(){ box.classList.add('is-open'); fab.setAttribute('aria-expanded','true'); setTimeout(function(){ txt.focus({preventScroll:true}); },350); }
+  function close(){ box.classList.remove('is-open'); fab.setAttribute('aria-expanded','false'); }
+  fab.addEventListener('click',function(e){ e.stopPropagation(); box.classList.contains('is-open')?close():open(); });
+  document.addEventListener('click',function(e){
+    var trig=e.target.closest('a[href="https://bit.ly/48cViHI"], [data-wa]');
+    if(trig && !trig.closest('#waChat')){ e.preventDefault(); e.stopPropagation(); open(); return; }
+    if(e.target.closest('[data-wa-close]')){ close(); return; }
+    if(box.classList.contains('is-open') && !e.target.closest('#waChat')) close();
+  },true);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
+  document.getElementById('waQuick').addEventListener('click',function(e){ var b=e.target.closest('button'); if(!b) return; txt.value=b.textContent; txt.focus(); });
+  txt.addEventListener('input',function(){ txt.style.height='auto'; txt.style.height=Math.min(120,txt.scrollHeight)+'px'; });
+  txt.addEventListener('keydown',function(e){ if(e.key==='Enter'&&!e.shiftKey){ e.preventDefault(); document.getElementById('waForm').requestSubmit(); } });
+  document.getElementById('waForm').addEventListener('submit',function(e){
+    e.preventDefault(); var m=txt.value.trim()||'Hola Vitta Travel, quiero información para un viaje.';
+    var a=document.createElement('a'); a.href='https://wa.me/'+NUM+'?text='+encodeURIComponent(m); a.target='_blank'; a.rel='noopener'; document.body.appendChild(a); a.click(); a.remove();
+    txt.value=''; txt.style.height='';
+  });
+})();
+</script>
+
+</body>
+</html>
