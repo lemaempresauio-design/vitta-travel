@@ -16,11 +16,12 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://lemaempresauio-design.github.io/vitta-travel/vista-previa.jpg">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vitta Travel</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Vitta Travel, agencia de viajes en La Carolina, Quito. Paquetes a Galápagos, Cancún y más. Viajar es vivir.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap">
 <style>
 /* Layout: paneles de foto redondeados, barra celeste sobre cada titular, cuadros marino con íconos, tarjetas glass sobre foto a pantalla completa */
 :root{
@@ -537,9 +538,9 @@ html.cot-lock,html.cot-lock body{overflow:hidden}
 
 /* islas: fila casi horizontal, la siguiente espera a la derecha un poco más abajo */
 .fh-isles{position:absolute;inset:0;z-index:2;pointer-events:none}
-.fh-isl{position:absolute;left:50%;top:50%;width:min(38cqw,53cqh);height:auto;transform:translate(-50%,-50%) translate(var(--x,0),var(--y,0)) scale(var(--s,1));opacity:var(--o,1);transition:transform 1s cubic-bezier(.32,.72,0,1),opacity .7s ease;filter:drop-shadow(0 36px 34px rgba(15,30,61,.22));-webkit-user-drag:none;user-select:none}
-.fh-isl[data-p="0"]{--x:0cqw;--y:15cqh}
-.fh-isl[data-p="1"]{--x:35cqw;--y:22cqh;--s:.36;--o:.95;pointer-events:auto;cursor:pointer}
+.fh-isl{position:absolute;left:50%;top:50%;width:min(44cqw,62cqh);height:auto;transform:translate(-50%,-50%) translate(var(--x,0),var(--y,0)) scale(var(--s,1));opacity:var(--o,1);transition:transform 1s cubic-bezier(.32,.72,0,1),opacity .7s ease;filter:drop-shadow(0 36px 34px rgba(15,30,61,.22));-webkit-user-drag:none;user-select:none}
+.fh-isl[data-p="0"]{--x:0cqw;--y:4cqh}
+.fh-isl[data-p="1"]{--x:35cqw;--y:9cqh;--s:.4;--o:.95;pointer-events:auto;cursor:pointer}
 .fh-isl[data-p="-1"]{--x:-62cqw;--y:16cqh;--s:.5;--o:0}
 .fh-isl[data-p="far"]{--x:62cqw;--y:24cqh;--s:.2;--o:0}
 .fh-isl[data-p="gone"]{--x:-62cqw;--y:16cqh;--s:.3;--o:0}
@@ -553,7 +554,7 @@ html.cot-lock,html.cot-lock body{overflow:hidden}
 .fh-sw{transition:opacity .28s ease,transform .45s cubic-bezier(.32,.72,0,1)}
 .fh.out .fh-sw{opacity:0;transform:translateY(10px)}
 .fh-copy,.fh-side{cursor:auto;z-index:5;position:absolute}
-.fh-copy{left:max(24px,calc((100cqw - 1240px)/2));bottom:9cqh}
+.fh-copy{left:max(24px,calc((100cqw - 1240px)/2));bottom:14cqh}
 .fh-ctr{display:flex;align-items:center;gap:8px;margin-bottom:18px}
 .fh-arw{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(15,30,61,.35);background:none;color:var(--navy,#0F1E3D);cursor:pointer;transition:background .25s,color .25s}
 .fh-arw:hover{background:var(--navy,#0F1E3D);color:#fff}
@@ -568,16 +569,16 @@ html.cot-lock,html.cot-lock body{overflow:hidden}
 .fh-btn-n{background:var(--navy,#0F1E3D);color:#fff}
 .fh-btn-g{background:rgba(255,255,255,.25);color:var(--navy,#0F1E3D);border:1.5px solid rgba(15,30,61,.4)}
 .fh-btn-g:hover{background:rgba(15,30,61,.06)}
-.fh-side{right:max(24px,calc((100cqw - 1240px)/2));top:34cqh;text-align:right}
+.fh-side{right:max(24px,calc((100cqw - 1240px)/2));top:20cqh;text-align:right}
 .fh-side small{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(15,30,61,.78)}
-.fh.nop .fh-desde{display:none}
+.fh.nop .fh-desde{visibility:hidden}
 .fh-p{font-size:clamp(32px,3.4cqw,48px);font-weight:800;letter-spacing:-.03em;line-height:1.1;color:var(--navy,#0F1E3D)}
 .fh-d{font-size:14px;color:rgba(15,30,61,.78);margin-top:2px}
 .fh-flags{display:flex;gap:6px;justify-content:flex-end;margin-top:16px}
 .fh-flags button{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.35);border:0;cursor:pointer;transition:background .25s,transform .25s,box-shadow .25s}
 .fh-flags button.on{background:#fff;transform:scale(1.1);box-shadow:0 4px 12px rgba(15,30,61,.15)}
 .fh-flags .fh-flag{width:20px;height:14px;border-radius:3px}
-.fh-foot{position:absolute;z-index:5;left:0;right:0;bottom:22px;text-align:center;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(15,30,61,.78);pointer-events:none}
+.fh-foot{display:none}
 
 /* header transparente sobre la portada (el logo grande ya está al centro) */
 .top{transition:background-color .4s,border-color .4s}
@@ -592,7 +593,7 @@ html.cot-lock,html.cot-lock body{overflow:hidden}
   .fh-stick{min-height:600px}
   .fh-brand{width:min(66vw,30cqh);top:calc(var(--hh,74px) + 1.2cqh)}
   .fh.docked .fh-brand{left:16px;width:104px;top:calc((var(--hh,74px) - 57px)/2)}
-  .fh-isl{width:min(70cqw,40cqh)}
+  .fh-isl{width:min(78cqw,45cqh)}
   .fh-isl[data-p="0"]{--x:0cqw;--y:1cqh}
   .fh-isl[data-p="1"]{--x:46cqw;--y:4cqh;--s:.3}
   .fh-isl[data-p="-1"],.fh-isl[data-p="gone"]{--x:-95cqw}
@@ -620,6 +621,354 @@ html.cot-lock,html.cot-lock body{overflow:hidden}
 .top.on-hero .nav a:not(.pill){transition:color .6s}
 .top.on-hero.dkh .nav a:not(.pill){color:#fff}
 .top.on-hero.dkh .nav .pill{background:#fff;color:#0F1E3D}
+
+/* flechas junto a la isla + puntos de posición */
+.fh-side-arw{position:absolute;z-index:6;top:65cqh;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(255,255,255,.7);background:rgba(255,255,255,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 8px 22px rgba(15,30,61,.14);color:var(--navy,#0F1E3D);cursor:pointer;transition:background .25s,transform .25s,color .4s,border-color .4s}
+.fh-side-arw:hover{background:#fff;transform:translateY(-50%) scale(1.06)}
+.fh-side-arw svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.fh-side-l{left:calc(50% - min(19cqw,26.5cqh) - 76px)}
+.fh-side-r{left:calc(50% + min(19cqw,26.5cqh) + 24px)}
+.fh-dots{position:absolute;z-index:6;left:50%;top:calc(54cqh + min(20cqw,28cqh) + 14px);transform:translateX(-50%);display:flex;gap:8px;pointer-events:none}
+.fh-dots i{width:8px;height:8px;border-radius:99px;background:rgba(15,30,61,.22);transition:width .45s cubic-bezier(.32,.72,0,1),background .4s}
+.fh-dots i.on{width:28px;background:var(--navy,#0F1E3D)}
+.fh.dk .fh-side-arw{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.35);color:#fff}
+.fh.dk .fh-side-arw:hover{background:rgba(255,255,255,.26)}
+.fh.dk .fh-dots i{background:rgba(255,255,255,.3)}
+.fh.dk .fh-dots i.on{background:#fff}
+@media (max-width:760px){
+  .fh-side-arw{top:51cqh;width:42px;height:42px}
+  .fh-side-l{left:10px}
+  .fh-side-r{left:auto;right:10px}
+  .fh-dots{top:calc(51cqh + min(33cqw,19cqh) + 4px)}
+}
+
+
+.fh-nrow{position:relative}
+.fh-dots-m{display:none}
+@media (max-width:760px){
+  .fh-dots{display:none}
+  .fh-dots-m{display:flex;position:absolute;left:auto;right:0;top:50%;transform:translateY(-50%);margin-top:4px;gap:6px}
+  .fh-dots-m i{width:6px;height:6px}
+  .fh-dots-m i.on{width:20px}
+}
+
+/* ===== Pantalla inicial: logo + planeta ===== */
+.fh-copy,.fh-side{transition:opacity .45s cubic-bezier(.32,.72,0,1),transform .6s cubic-bezier(.32,.72,0,1)}
+.fh.intro-on .fh-copy,.fh.intro-on .fh-side{opacity:0;transform:translateY(12px);pointer-events:none}
+.fh.intro-on .fh-brand{left:max(44px,4cqw,calc((100cqw - 1240px)/2));top:13cqh;transform:translateX(0);width:min(430px,31cqw,44cqh)}
+.fh-intro{position:absolute;z-index:5;left:max(44px,4cqw,calc((100cqw - 1240px)/2));top:43cqh;width:min(540px,42cqw);opacity:0;transform:translateX(-24px);pointer-events:none;transition:opacity .5s cubic-bezier(.32,.72,0,1),transform .7s cubic-bezier(.32,.72,0,1);cursor:auto}
+.fh.intro-on .fh-intro{opacity:1;transform:none;pointer-events:auto;transition-delay:.12s}
+.fh-ih{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:clamp(52px,5.6cqw,86px);line-height:.98;letter-spacing:-.01em;color:#0F1E3D}
+.fh-ih i{color:#B08A3E}
+.fh-ip{font-size:17px;line-height:1.6;color:#4A5568;margin:20px 0 26px;max-width:440px}
+.fh-ib{display:flex;gap:12px;flex-wrap:wrap}
+.fh-planet{width:min(48cqw,70cqh)}
+.fh-planet[data-p="0"]{--x:19cqw;--y:2cqh}
+.fh-planet[data-p="1"]{--s:.3}
+.fh.intro-on .fh-isl[data-p="1"]:not(.fh-planet){--x:48cqw;--y:24cqh;--s:.32}
+.fh.intro-on .fh-dots:not(.fh-dots-m){top:auto;bottom:6cqh}
+@media (max-width:760px){
+  .fh.intro-on .fh-brand{left:50%;transform:translateX(-50%);top:calc(var(--hh,74px) + 1cqh);width:min(68vw,28cqh)}
+  .fh-intro{left:16px;right:16px;top:auto;bottom:96px;width:auto;text-align:center;transform:translateY(16px)}
+  .fh-ih{font-size:clamp(34px,9.6vw,42px)}
+  .fh-ip{display:none}
+  .fh-ib{justify-content:center;margin-top:18px}
+  .fh-planet{width:min(84cqw,44cqh)}
+  .fh-planet[data-p="0"]{--x:0cqw;--y:-2cqh}
+  .fh.intro-on .fh-isl[data-p="1"]:not(.fh-planet){--x:50cqw;--y:2cqh;--s:.3}
+  .fh.intro-on .fh-dots:not(.fh-dots-m){display:flex;top:auto;bottom:52px}
+}
+
+/* ===== Buscador de vuelos ===== */
+.vs{padding-block:64px 8px;position:relative;z-index:3}
+.vs-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:22px}
+.vs-kicker{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#B08A3E;margin-bottom:6px}
+.vs-title{font-size:clamp(28px,3.2vw,40px);font-weight:800;letter-spacing:-.03em;line-height:1.05;color:var(--navy)}
+.vs-tabs{display:flex;gap:4px;padding:5px;border-radius:99px;background:rgba(15,30,61,.06)}
+.vs-tab{font:inherit;font-size:14px;font-weight:600;color:var(--muted);background:none;border:0;padding:10px 18px;border-radius:99px;cursor:pointer;transition:background .25s,color .25s,box-shadow .25s}
+.vs-tab.is-on{background:#fff;color:var(--navy);box-shadow:0 4px 14px rgba(15,30,61,.12)}
+.vs-card{background:#fff;border-radius:28px;padding:22px;box-shadow:0 24px 60px rgba(15,30,61,.10),0 0 0 1px rgba(15,30,61,.05)}
+.vs-card.shake{animation:vsShake .35s}
+@keyframes vsShake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.vs-leg{position:relative;display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:10px}
+.vs-leg+.vs-leg{margin-top:14px;padding-top:14px;border-top:1px dashed rgba(15,30,61,.12)}
+.vs-legn{grid-column:1/-1;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B08A3E}
+.vs-route{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.vs-dates{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.vs-f{position:relative;min-width:0}
+.vs-f>label:not(.vs-in){display:block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 6px 4px}
+.vs-in{display:flex;align-items:center;gap:10px;width:100%;height:58px;padding:0 16px;border-radius:16px;background:#F4F5F7;border:1.5px solid transparent;font:inherit;font-size:16px;color:var(--navy);cursor:text;transition:border-color .2s,background .2s,box-shadow .2s}
+.vs-in:hover{background:#EEF0F3}
+.vs-in:focus-within,button.vs-in[aria-expanded=true]{background:#fff;border-color:var(--navy);box-shadow:0 0 0 4px rgba(15,30,61,.08)}
+.vs-in svg{width:20px;height:20px;flex:none;fill:none;stroke:#B08A3E;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.vs-in input[type=text]{flex:1;min-width:0;border:0;background:none;font:inherit;color:inherit;outline:none;height:100%}
+.vs-in input::placeholder{color:#8A93A6}
+.vs-f.is-err .vs-in{border-color:#D9534F;background:#FDF3F2}
+.vs-d .vs-in{position:relative;cursor:pointer}
+.vs-d .vs-in span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vs-d .vs-in span.ph{color:#8A93A6}
+.vs-d input[type=date]{position:absolute;inset:0;opacity:0;width:100%;height:100%;cursor:pointer;border:0}
+.vs-d.is-off .vs-in{opacity:.45;cursor:not-allowed}
+.vs-swap{position:absolute;left:50%;top:calc(50% + 10px);transform:translate(-50%,-50%);z-index:2;width:36px;height:36px;border-radius:50%;border:1.5px solid rgba(15,30,61,.12);background:#fff;display:grid;place-items:center;cursor:pointer;box-shadow:0 4px 12px rgba(15,30,61,.1);transition:transform .35s cubic-bezier(.32,.72,0,1)}
+.vs-swap:hover{transform:translate(-50%,-50%) rotate(180deg)}
+.vs-swap svg{width:16px;height:16px;fill:none;stroke:var(--navy);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.vs-sug{position:absolute;left:0;right:0;top:calc(100% + 6px);z-index:30;list-style:none;margin:0;padding:6px;background:#fff;border-radius:16px;box-shadow:0 20px 50px rgba(15,30,61,.18),0 0 0 1px rgba(15,30,61,.06);max-height:320px;overflow:auto}
+.vs-sug li{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:10px;cursor:pointer}
+.vs-sug li:hover{background:#F4F5F7}
+.vs-sug li b{font-size:13px;letter-spacing:.06em;color:#fff;background:var(--navy);border-radius:6px;padding:4px 7px}
+.vs-sug li span{display:flex;flex-direction:column;font-size:15px;color:var(--navy);font-weight:600}
+.vs-sug li small{font-size:12px;color:var(--muted);font-weight:500}
+.vs-sug li.no{font-size:13px;color:var(--muted);cursor:default}
+.vs-rm{position:absolute;right:-8px;top:-4px;width:28px;height:28px;border-radius:50%;border:0;background:#F4F5F7;color:var(--navy);font-size:18px;cursor:pointer}
+.vs-add{margin-top:12px;font:inherit;font-size:14px;font-weight:700;color:var(--navy);background:none;border:1.5px dashed rgba(15,30,61,.25);border-radius:12px;padding:10px 16px;cursor:pointer}
+.vs-row2{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:end;margin-top:12px}
+.vs-pax button.vs-in{cursor:pointer;text-align:left}
+.vs-pop{position:absolute;left:0;top:calc(100% + 8px);z-index:30;width:min(360px,calc(100vw - 32px));padding:18px;border-radius:20px;background:#fff;box-shadow:0 24px 60px rgba(15,30,61,.2),0 0 0 1px rgba(15,30,61,.06)}
+.vs-step{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(15,30,61,.07)}
+.vs-step b{display:block;font-size:15px;color:var(--navy)}
+.vs-step small{font-size:12px;color:var(--muted)}
+.vs-ctl{display:flex;align-items:center;gap:12px}
+.vs-ctl button{width:34px;height:34px;border-radius:50%;border:1.5px solid rgba(15,30,61,.2);background:#fff;font-size:18px;color:var(--navy);cursor:pointer}
+.vs-ctl span{min-width:16px;text-align:center;font-weight:700;color:var(--navy)}
+.vs-cls{padding-top:12px}
+.vs-cls>b{font-size:13px;color:var(--navy)}
+.vs-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.vs-chips button{font:inherit;font-size:13px;font-weight:600;padding:8px 12px;border-radius:99px;border:1.5px solid rgba(15,30,61,.15);background:#fff;color:var(--navy);cursor:pointer}
+.vs-chips button.is-on{background:var(--navy);border-color:var(--navy);color:#fff}
+.vs-ok{width:100%;margin-top:14px;height:44px;border:0;border-radius:12px;background:var(--navy);color:#fff;font:inherit;font-weight:700;cursor:pointer}
+.vs-go{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:58px;padding:0 30px;border:0;border-radius:16px;background:var(--navy);color:#fff;font:inherit;font-size:16px;font-weight:700;cursor:pointer;box-shadow:0 10px 24px rgba(15,30,61,.25);transition:transform .2s,box-shadow .2s}
+.vs-go:hover{transform:translateY(-1px);box-shadow:0 14px 30px rgba(15,30,61,.3)}
+.vs-go svg{width:20px;height:20px;fill:none;stroke:#C9A45C;stroke-width:2.2;stroke-linecap:round}
+.vs-adv-t{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font:inherit;font-size:14px;font-weight:700;color:var(--navy);background:none;border:0;cursor:pointer;padding:4px}
+.vs-adv-t svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.2;transition:transform .35s cubic-bezier(.32,.72,0,1)}
+.vs-adv-t.is-open svg{transform:rotate(180deg)}
+.vs-adv{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.32,.72,0,1)}
+.vs-adv.is-open{grid-template-rows:1fr}
+.vs-adv-in{overflow:hidden;display:flex;flex-wrap:wrap;align-items:flex-end;gap:12px 22px}
+.vs-adv.is-open .vs-adv-in{padding-top:12px}
+.vs-chk{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--navy);cursor:pointer;height:44px}
+.vs-chk input{width:18px;height:18px;accent-color:#0F1E3D}
+.vs-sel{min-width:220px}
+.vs-sel select.vs-in{height:46px;appearance:auto;cursor:pointer}
+.vs-note{margin:14px 4px 0;font-size:13px;color:var(--muted)}
+@media (max-width:900px){
+  .vs-leg{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .vs{padding-block:44px 0}
+  .vs-tabs{width:100%}
+  .vs-tab{flex:1;padding:10px 6px;font-size:13px}
+  .vs-card{padding:16px;border-radius:22px}
+  .vs-route{grid-template-columns:1fr}
+  .vs-swap{left:auto;right:14px;top:50%;transform:translateY(-50%) rotate(90deg)}
+  .vs-swap:hover{transform:translateY(-50%) rotate(270deg)}
+  .vs-row2{grid-template-columns:1fr}
+  .vs-go{width:100%}
+}
+
+/* ===== Vitta Love Experience ===== */
+.lv{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(165deg,#13244A 0%,#0B1833 38%,#071126 72%,#030914 100%);color:#F6EDE4;padding-block:96px 100px}
+
+.lv-k{font-size:12px;letter-spacing:.34em;text-transform:uppercase;font-weight:700;color:#D9B26E}
+.lv-hd{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:40px}
+.lv-t{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:clamp(46px,5.4vw,76px);line-height:1;margin-top:14px;color:#F6EDE4;letter-spacing:-.01em}
+.lv-t i{color:#D9B26E}
+.lv-sub{max-width:420px;font-size:17px;line-height:1.6;color:rgba(246,237,228,.78)}
+.lv-tabs{display:flex;gap:6px;padding:6px;border-radius:99px;background:rgba(255,255,255,.08);width:max-content;max-width:100%;margin-bottom:30px;overflow-x:auto;scrollbar-width:none}
+.lv-tabs::-webkit-scrollbar{display:none}
+.lv-tabs button{font:inherit;font-size:14px;font-weight:600;color:rgba(246,237,228,.75);background:none;border:0;padding:11px 22px;border-radius:99px;cursor:pointer;white-space:nowrap;transition:background .3s,color .3s}
+.lv-tabs button.is-on{background:#F6EDE4;color:#0F1E3D}
+.lv-grid{display:grid;gap:22px;grid-template-columns:1.25fr 1fr 1fr}
+.lv-grid.n4{grid-template-columns:repeat(2,1fr)}
+.lv-grid.n4 .lv-c{height:430px}
+.lv-grid.all{grid-template-columns:repeat(3,1fr)}
+.lv-grid.all .lv-c{height:440px}
+.lv-grid.all .lv-c:first-child,.lv-grid.all .lv-c:last-child{grid-column:span 2}
+.lv-c{position:relative;display:block;width:100%;height:540px;border:0;padding:0;border-radius:26px;overflow:hidden;color:#fff;text-align:left;cursor:pointer;font:inherit;background:#0F1E3D;box-shadow:0 24px 50px rgba(4,10,24,.35)}
+.lv-grid.anim .lv-c{animation:lvIn .6s cubic-bezier(.32,.72,0,1) both}
+.lv-grid.anim .lv-c:nth-child(2){animation-delay:.06s}.lv-grid.anim .lv-c:nth-child(3){animation-delay:.12s}.lv-grid.anim .lv-c:nth-child(4){animation-delay:.18s}
+@keyframes lvIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.lv-c img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.lv-c:hover img{transform:scale(1.05)}
+.lv-c::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,24,50,0) 38%,rgba(8,18,42,.9))}
+.lv-ci{position:absolute;z-index:2;left:26px;right:26px;bottom:26px;display:flex;flex-direction:column}
+.lv-tag{align-self:flex-start;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;padding:7px 12px;border-radius:99px;background:rgba(255,255,255,.18);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);margin-bottom:14px}
+.lv-cn{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:38px;line-height:1}
+.lv-ce{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:18px;opacity:.9;margin:10px 0 16px;line-height:1.3}
+.lv-row{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.3);padding-top:14px;font-size:14px}
+.lv-row b{font-size:22px}
+.lv-lk{color:#E7C98C;font-weight:700}
+.lv-more{display:flex;justify-content:center;margin-top:28px}
+.lv-dots{display:flex;justify-content:center;gap:8px;margin-top:30px}
+.lv-dots i{width:8px;height:8px;border-radius:99px;background:rgba(246,237,228,.28);transition:width .4s cubic-bezier(.32,.72,0,1),background .3s}
+.lv-dots i.on{width:28px;background:#D9B26E}
+.lv-all{font:inherit;font-weight:700;font-size:15px;color:#F6EDE4;background:none;border:1.5px solid rgba(246,237,228,.6);border-radius:99px;height:50px;padding:0 26px;cursor:pointer;transition:background .25s,color .25s}
+.lv-all:hover{background:#F6EDE4;color:#0F1E3D}
+
+/* página de experiencia */
+.lp{background:#F6F1E7;min-height:100vh}
+.lp-hero{position:relative;height:min(640px,78vh);color:#fff;margin-top:calc(-1 * var(--hh,74px))}
+.lp-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%}
+.lp-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,24,50,.45),rgba(12,24,50,.1) 40%,rgba(10,22,48,.9))}
+.lp-back{position:absolute;z-index:3;left:max(16px,calc((100% - var(--wrap,1240px))/2 + 32px));top:calc(var(--hh,74px) + 16px);font:inherit;font-size:14px;font-weight:700;color:#fff;padding:10px 18px;border-radius:99px;border:0;background:rgba(255,255,255,.2);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);cursor:pointer}
+.lp-hi{position:absolute;z-index:2;left:0;right:0;bottom:64px}
+.lp-k{color:#E2BE7E}
+.lp-hi h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:clamp(52px,7vw,92px);line-height:.95;margin:14px 0 16px;max-width:900px}
+.lp-hi p{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:clamp(20px,2vw,26px);opacity:.92;max-width:760px}
+.lp-body{padding-block:64px 90px}
+.lp-intro{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;margin-bottom:54px}
+.lp-intro p{font-size:18px;line-height:1.7;color:#4A5568}
+.lp-chips{display:flex;flex-wrap:wrap;gap:10px;align-content:flex-start}
+.lp-chips span{padding:10px 16px;border-radius:99px;background:#fff;border:1px solid rgba(15,30,61,.1);font-size:14px;font-weight:600;color:var(--navy)}
+.lp-h{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:clamp(38px,4vw,52px);color:#0F1E3D;margin-bottom:30px}
+.lp-tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.lp-tiers.n4{grid-template-columns:repeat(4,1fr)}
+.lp-t{background:#fff;border-radius:28px;padding:32px 30px;box-shadow:0 20px 50px rgba(15,30,61,.07);display:flex;flex-direction:column;color:var(--navy)}
+.lp-t.lux{background:linear-gradient(160deg,#13244A,#071126);color:#fff;transform:translateY(-14px);box-shadow:0 30px 60px rgba(15,30,61,.35)}
+.lp-badge{align-self:flex-start;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;background:#C9A45C;color:var(--navy);padding:6px 12px;border-radius:99px;margin-bottom:12px}
+.lp-ic{font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:#B08A3E}
+.lp-t.lux .lp-ic{color:#E2BE7E}
+.lp-t h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:32px;margin:8px 0 4px}
+.lp-pr{font-size:42px;font-weight:800;letter-spacing:-.03em;margin:6px 0 18px}
+.lp-pr small{font-size:14px;font-weight:600;opacity:.6;letter-spacing:0}
+.lp-pr .lp-fr{font-size:15px;opacity:.7}
+.lp-t ul{list-style:none;flex:1;margin:0;padding:0}
+.lp-t li{padding:10px 0;border-top:1px solid rgba(15,30,61,.08);font-size:15px;display:flex;gap:10px;line-height:1.4}
+.lp-t.lux li{border-color:rgba(255,255,255,.12)}
+.lp-t li::before{content:"✦";color:#C08A4E;flex:none}
+.lp-btn{margin-top:22px;display:flex;align-items:center;justify-content:center;height:50px;border-radius:99px;border:1.5px solid #0F1E3D;color:#0F1E3D;font-weight:700;font-size:15px;text-decoration:none;transition:background .25s,color .25s}
+.lp-btn:hover{background:#0F1E3D;color:#fff}
+.lp-t.lux .lp-btn{background:#D9B26E;border-color:#D9B26E;color:#0F1E3D}
+.lp-note{margin-top:34px;font-size:14px;color:#4A5568;text-align:center}
+
+@media (max-width:980px){
+  .lv-grid,.lv-grid.n4,.lv-grid.all{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-inline:-16px;padding-inline:16px;gap:14px}
+  .lv-grid::-webkit-scrollbar{display:none}
+  .lv-c,.lv-grid.all .lv-c{flex:0 0 min(78vw,340px);height:460px;scroll-snap-align:start}
+  .lp-intro{grid-template-columns:1fr;gap:26px}
+  .lp-tiers,.lp-tiers.n4{grid-template-columns:1fr;gap:16px}
+  .lp-t.lux{transform:none}
+}
+@media (max-width:560px){
+  .lv{padding-block:70px 74px}
+  .lv-cn{font-size:32px}
+  .lp-hi{bottom:40px}
+}
+
+/* ===== Galápagos: paquetes ===== */
+.gp{background:#F6F1E7;color:#0F1E3D;padding-bottom:0}
+.gp a.lp-back{text-decoration:none}
+.gp-hero{height:min(680px,82vh)}
+.gp-hero::after{background:linear-gradient(180deg,rgba(7,17,38,.5),rgba(7,17,38,.08) 38%,rgba(7,17,38,.88))}
+.gp-hero .lp-hi{bottom:72px}
+.gp-hero .lp-hi p{font-family:"Plus Jakarta Sans",sans-serif;font-style:normal;font-size:18px;line-height:1.55;max-width:560px}
+.gp-facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.gp-facts span{padding:10px 16px;border-radius:99px;background:rgba(255,255,255,.16);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:14px;font-weight:600}
+.gp-facts b{font-size:16px;color:#E7C98C}
+.gp-k{color:#B08A3E}
+.gp-tabs{position:relative;z-index:3;margin-top:-46px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gp-tab{position:relative;font:inherit;text-align:left;border:1.5px solid transparent;border-radius:24px;background:#fff;padding:22px 24px;cursor:pointer;display:grid;grid-template-columns:1fr auto;align-items:end;gap:2px 12px;box-shadow:0 20px 44px rgba(15,30,61,.12);color:#0F1E3D;transition:transform .35s cubic-bezier(.32,.72,0,1),background .3s,color .3s,box-shadow .3s}
+.gp-tab:hover{transform:translateY(-3px)}
+.gp-tab b{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:30px;line-height:1;grid-column:1}
+.gp-tab span{grid-column:1;font-size:14px;opacity:.7;font-weight:600}
+.gp-tab i{grid-column:2;grid-row:1/3;font-style:normal;font-weight:800;font-size:18px;color:#B08A3E;white-space:nowrap}
+.gp-tab em{position:absolute;top:-11px;left:22px;font-style:normal;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;background:#C9A45C;color:#0F1E3D;padding:5px 11px;border-radius:99px}
+.gp-tab.is-on{background:linear-gradient(160deg,#13244A,#071126);color:#fff;box-shadow:0 26px 56px rgba(7,17,38,.35)}
+.gp-tab.is-on i{color:#E7C98C}
+.gp-body{transition:opacity .22s ease,transform .3s cubic-bezier(.32,.72,0,1)}
+.gp-body.out{opacity:0;transform:translateY(10px)}
+.gp-sec{padding-top:72px}
+.gp-intro{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:start}
+.gp-h{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:clamp(40px,4.4vw,60px);line-height:1.02;margin:14px 0 18px;letter-spacing:-.01em}
+.gp-es{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:22px;line-height:1.35;color:#8A6A2C;max-width:460px}
+.gp-intro p:not(.gp-es){font-size:17px;line-height:1.7;color:#4A5568;margin-bottom:16px}
+.gp-intro .lp-chips{margin-top:20px}
+.gp-hh{color:#0F1E3D}
+.gp .lp-tiers{align-items:stretch}
+.gp .lp-t.gp-rec{border:1.5px solid #C9A45C}
+.gp .lp-t li::before{color:#B08A3E}
+.gp-para{background:#fff;border-radius:28px;padding:34px 38px;display:grid;grid-template-columns:.8fr 1.6fr;gap:30px;align-items:center;box-shadow:0 20px 50px rgba(15,30,61,.06)}
+.gp-para h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:34px;line-height:1.05}
+.gp-para ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px 28px}
+.gp-para li{font-size:15px;line-height:1.45;padding-left:22px;position:relative;color:#2A3550}
+.gp-para li::before{content:"✦";position:absolute;left:0;color:#B08A3E}
+.gp-it{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.75fr);gap:48px;align-items:start}
+.gp-days{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px}
+.gp-days>li{display:grid;grid-template-columns:72px 1fr;gap:20px;background:#fff;border-radius:24px;padding:24px 26px;box-shadow:0 14px 36px rgba(15,30,61,.05)}
+.gp-dn{width:64px;height:64px;border-radius:18px;background:linear-gradient(160deg,#13244A,#071126);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+.gp-dn small{font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.7}
+.gp-dn b{font-size:28px;font-weight:800;margin-top:3px}
+.gp-dc h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:26px;line-height:1.1;margin:4px 0 12px}
+.gp-r{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:9px 0;border-top:1px solid rgba(15,30,61,.07)}
+.gp-r span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#8A93A6;padding-top:3px}
+.gp-r span.v{color:#B08A3E}
+.gp-r p{font-size:15px;line-height:1.55;color:#2A3550}
+.gp-aside{position:sticky;top:calc(var(--hh,74px) + 20px);display:flex;flex-direction:column;gap:16px;padding-top:84px}
+.gp-box{background:#fff;border-radius:24px;padding:26px 26px 18px;box-shadow:0 14px 36px rgba(15,30,61,.05)}
+.gp-box ul{list-style:none;margin:10px 0 0;padding:0}
+.gp-box li{font-size:14.5px;line-height:1.45;padding:10px 0 10px 26px;border-top:1px solid rgba(15,30,61,.07);position:relative;color:#2A3550}
+.gp-box li::before{position:absolute;left:0;top:10px;font-weight:800}
+.gp-ok li::before{content:"✓";color:#2F8A6B}
+.gp-no li::before{content:"–";color:#B05A4E}
+.gp-fly{border-radius:30px;padding:40px 44px;background:linear-gradient(160deg,#13244A,#071126);color:#fff;display:grid;grid-template-columns:1.5fr .8fr;gap:40px;align-items:center;box-shadow:0 30px 60px rgba(7,17,38,.25)}
+.gp-fly .lv-k{color:#E7C98C}
+.gp-fly h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:40px;margin:10px 0 10px}
+.gp-fly p{font-size:16px;line-height:1.6;opacity:.82;max-width:560px}
+.gp-fly-p{border-left:1px solid rgba(255,255,255,.18);padding-left:36px;display:flex;flex-direction:column;gap:4px}
+.gp-fly-p small{font-size:13px;opacity:.7}
+.gp-fly-p b{font-size:40px;font-weight:800;letter-spacing:-.02em;color:#E7C98C}
+.gp-why{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.gp-why>div{background:#fff;border-radius:22px;padding:24px 22px;box-shadow:0 14px 36px rgba(15,30,61,.05)}
+.gp-why span{font-family:"Cormorant Garamond",Georgia,serif;font-size:30px;color:#B08A3E}
+.gp-why h3{font-size:16px;font-weight:700;margin:8px 0 8px;line-height:1.3}
+.gp-why p{font-size:14px;line-height:1.5;color:#4A5568}
+.gp-acc{display:flex;flex-direction:column;gap:12px}
+.gp-acc details{background:#fff;border-radius:22px;padding:4px 26px;box-shadow:0 14px 36px rgba(15,30,61,.05)}
+.gp-acc summary{cursor:pointer;list-style:none;font-weight:700;font-size:17px;padding:18px 0;display:flex;justify-content:space-between;align-items:center}
+.gp-acc summary::-webkit-details-marker{display:none}
+.gp-acc summary::after{content:"+";font-size:24px;font-weight:400;color:#B08A3E;transition:transform .3s}
+.gp-acc details[open] summary::after{transform:rotate(45deg)}
+.gp-acc ul{margin:0 0 18px;padding-left:18px;color:#2A3550;font-size:15px;line-height:1.7}
+.gp-end{margin-top:88px;background:linear-gradient(165deg,#13244A 0%,#0B1833 45%,#030914 100%);color:#F6EDE4;padding-block:90px;text-align:center}
+.gp-end .lv-k{color:#D9B26E}
+.gp-end h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:clamp(36px,4.4vw,58px);line-height:1.08;max-width:900px;margin:16px auto 16px}
+.gp-end h2 i{color:#D9B26E}
+.gp-end p{font-size:17px;opacity:.8}
+.gp-end-b{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.gp-cta,.gp-cta2{font:inherit;font-weight:700;font-size:15px;height:52px;padding:0 28px;border-radius:99px;display:inline-flex;align-items:center;cursor:pointer;text-decoration:none}
+.gp-cta{background:#D9B26E;color:#071126;border:0}
+.gp-cta2{border:1.5px solid rgba(246,237,228,.55);color:#F6EDE4}
+@media (max-width:980px){
+  .gp-tabs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:min(78vw,300px);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-top:14px;padding-bottom:16px;margin-top:-56px}
+  .gp-tabs::-webkit-scrollbar{display:none}
+  .gp-tab{scroll-snap-align:start;padding:18px 20px}
+  .gp-tab b{font-size:26px}
+  .gp-intro,.gp-it,.gp-para,.gp-fly{grid-template-columns:1fr;gap:26px}
+  .gp-aside{position:static;padding-top:0}
+  .gp-para ul{grid-template-columns:1fr}
+  .gp-why{grid-template-columns:1fr 1fr}
+  .gp-fly-p{border-left:0;border-top:1px solid rgba(255,255,255,.18);padding:20px 0 0}
+}
+@media (max-width:560px){
+  .gp-sec{padding-top:52px}
+  .gp-hero .lp-hi{bottom:84px}
+  .gp-hero .lp-hi p{font-size:16px}
+  .gp-days>li{grid-template-columns:1fr;gap:14px;padding:20px}
+  .gp-dn{width:auto;height:auto;flex-direction:row;gap:8px;justify-content:flex-start;background:none;color:#B08A3E;align-items:baseline}
+  .gp-dn b{font-size:22px;margin:0}
+  .gp-r{grid-template-columns:1fr;gap:4px}
+  .gp-why{grid-template-columns:1fr}
+  .gp-para,.gp-fly{padding:28px 24px}
+  .gp-fly h3{font-size:32px}
+  .gp-end{padding-block:70px}
+}
+
+/* ===== Navegación (misma animación del cotizador, en horizontal) ===== */
+html.vt-anim{overflow-x:clip}
+html.vt-anim body>footer,html.vt-anim main~footer{visibility:hidden}
+.vt-under{position:fixed!important;left:0;right:0;z-index:1;pointer-events:none;will-change:filter}
+.vt-over{position:fixed!important;left:0;right:0;top:0;bottom:0;z-index:40;overflow-y:auto;overflow-x:hidden;padding-top:var(--hh,74px);background:#F6F1E7;will-change:transform,opacity;box-shadow:0 30px 80px rgba(15,30,61,.25)}
+@media (prefers-reduced-motion:reduce){.vt-under,.vt-over{transition:none!important}}
 </style>
 </head>
 <body>
@@ -666,6 +1015,7 @@ html.cot-lock,html.cot-lock body{overflow:hidden}
       <img class="fh-brand" src="img02.png" alt="Vitta Travel, viajar es vivir">
 
       <div class="fh-isles">
+        <img class="fh-isl fh-planet" src="planeta.webp" alt="El mundo entero">
         <img class="fh-isl" data-k="0" src="img03.webp" alt="Galápagos">
         <img class="fh-isl" data-k="1" src="img04.webp" alt="Cancún">
         <img class="fh-isl" data-k="2" src="img05.webp" alt="Cartagena">
@@ -674,6 +1024,11 @@ html.cot-lock,html.cot-lock body{overflow:hidden}
         <img class="fh-isl" data-k="5" src="img08.webp" alt="París">
       </div>
 
+      <div class="fh-intro">
+        <h2 class="fh-ih">El mundo entero,<br><i>a un viaje</i></h2>
+        <p class="fh-ip">Diseñamos cada viaje como una experiencia: destinos, hoteles y momentos pensados para ti.</p>
+        <div class="fh-ib"><button type="button" class="fh-btn fh-btn-n" data-cotizar>Cotiza tu viaje</button><button type="button" class="fh-btn fh-btn-g" data-fh-go>Ver destinos →</button></div>
+      </div>
       <div class="fh-copy">
         <div class="fh-ctr">
           <button type="button" class="fh-arw" data-fh-prev aria-label="Destino anterior"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
@@ -682,7 +1037,7 @@ html.cot-lock,html.cot-lock body{overflow:hidden}
         </div>
         <div class="fh-sw">
           <div class="fh-country"><span class="fh-flag" data-f="flag"></span><span data-f="country"></span></div>
-          <h1 data-f="name"></h1>
+          <div class="fh-nrow"><h1 data-f="name"></h1><div class="fh-dots fh-dots-m" aria-hidden="true"></div></div>
           <div class="fh-mp"><span class="fh-desde">desde </span><b data-f="price"></b> · <span data-f="dur"></span></div>
         </div>
         <div class="fh-cta">
@@ -695,7 +1050,71 @@ html.cot-lock,html.cot-lock body{overflow:hidden}
         <div class="fh-sw"><small class="fh-desde">desde</small><div class="fh-p" data-f="price"></div><div class="fh-d" data-f="dur"></div></div>
         <div class="fh-flags"></div>
       </div>
-      <div class="fh-foot">← Desliza para ver más destinos →</div>
+      <div class="fh-dots" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <section class="vs" id="buscar" aria-label="Buscador de vuelos">
+    <div class="wrap">
+      <div class="vs-head">
+        <div>
+          <div class="vs-kicker">Vuelos</div>
+          <h2 class="vs-title">¿A dónde quieres ir?</h2>
+        </div>
+        <div class="vs-tabs" role="tablist">
+          <button type="button" class="vs-tab is-on" data-trip="rt" role="tab">Ida y vuelta</button>
+          <button type="button" class="vs-tab" data-trip="ow" role="tab">Solo ida</button>
+          <button type="button" class="vs-tab" data-trip="md" role="tab">Multidestino</button>
+        </div>
+      </div>
+
+      <form class="vs-card" id="vsForm" novalidate>
+        <div class="vs-legs" id="vsLegs"></div>
+        <button type="button" class="vs-add" id="vsAdd" hidden>+ Agregar otro tramo</button>
+
+        <div class="vs-row2">
+          <div class="vs-f vs-pax" id="vsPaxF">
+            <label>Pasajeros y clase</label>
+            <button type="button" class="vs-in" id="vsPaxBtn" aria-expanded="false">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+              <span id="vsPaxTxt">1 viajero, Económica</span>
+            </button>
+            <div class="vs-pop" id="vsPop" hidden>
+              <div class="vs-step"><div><b>Adultos</b><small>12 años o más</small></div><div class="vs-ctl"><button type="button" data-p="ad" data-d="-1" aria-label="Menos adultos">−</button><span id="vsAd">1</span><button type="button" data-p="ad" data-d="1" aria-label="Más adultos">+</button></div></div>
+              <div class="vs-step"><div><b>Niños</b><small>2 a 11 años</small></div><div class="vs-ctl"><button type="button" data-p="ni" data-d="-1" aria-label="Menos niños">−</button><span id="vsNi">0</span><button type="button" data-p="ni" data-d="1" aria-label="Más niños">+</button></div></div>
+              <div class="vs-step"><div><b>Bebés</b><small>Menores de 2, en brazos</small></div><div class="vs-ctl"><button type="button" data-p="be" data-d="-1" aria-label="Menos bebés">−</button><span id="vsBe">0</span><button type="button" data-p="be" data-d="1" aria-label="Más bebés">+</button></div></div>
+              <div class="vs-cls">
+                <b>Clase</b>
+                <div class="vs-chips" id="vsCls">
+                  <button type="button" class="is-on" data-c="Económica">Económica</button>
+                  <button type="button" data-c="Premium">Premium</button>
+                  <button type="button" data-c="Ejecutiva">Ejecutiva</button>
+                  <button type="button" data-c="Primera">Primera</button>
+                </div>
+              </div>
+              <button type="button" class="vs-ok" id="vsPaxOk">Listo</button>
+            </div>
+          </div>
+          <button type="submit" class="vs-go">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <span>Buscar vuelos</span>
+          </button>
+        </div>
+
+        <button type="button" class="vs-adv-t" id="vsAdvT" aria-expanded="false">Búsqueda avanzada <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="vs-adv" id="vsAdv">
+          <div class="vs-adv-in">
+            <label class="vs-chk"><input type="checkbox" id="vsDirect"><span>Solo vuelos directos</span></label>
+            <label class="vs-chk"><input type="checkbox" id="vsBag"><span>Con maleta documentada</span></label>
+            <label class="vs-chk"><input type="checkbox" id="vsFlex"><span>Fechas flexibles (±3 días)</span></label>
+            <div class="vs-f vs-sel">
+              <label for="vsAir">Aerolínea preferida</label>
+              <select id="vsAir" class="vs-in"><option>Cualquiera</option><option>LATAM</option><option>Avianca</option><option>Copa Airlines</option><option>American Airlines</option><option>Iberia</option><option>Air Europa</option><option>Aeroméxico</option></select>
+            </div>
+          </div>
+        </div>
+        <p class="vs-note">Te respondemos por WhatsApp con las mejores opciones y precios del día.</p>
+      </form>
     </div>
   </section>
 
@@ -716,6 +1135,26 @@ html.cot-lock,html.cot-lock body{overflow:hidden}
     </div>
     <div class="carousel" id="carrusel" role="region" aria-label="Destinos" tabindex="0"></div>
     <div class="wrap"><div class="car-dots" id="carDots" aria-hidden="true"></div></div>
+  </section>
+
+  <section class="lv" id="love" aria-label="Vitta Love Experience">
+    <div class="wrap">
+      <div class="lv-hd">
+        <div>
+          <div class="lv-k">Vitta Love Experience</div>
+          <h2 class="lv-t">Momentos que se<br>recuerdan <i>para siempre</i></h2>
+        </div>
+        <p class="lv-sub">Propuestas, celebraciones y viajes en pareja diseñados en cada detalle, para que ustedes solo tengan que vivirlos.</p>
+      </div>
+      <div class="lv-tabs" role="tablist">
+        <button type="button" class="is-on" data-lvm="antes">Antes del sí</button>
+        <button type="button" data-lvm="novia">Celebrando a la novia</button>
+        <button type="button" data-lvm="juntos">Viajar juntos</button>
+      </div>
+      <div class="lv-grid" id="lvGrid"></div>
+      <div class="lv-dots" id="lvDots" aria-hidden="true"></div>
+      <div class="lv-more"><button type="button" class="lv-all" id="lvAll">Ver las 10 experiencias</button></div>
+    </div>
   </section>
 
 
@@ -897,6 +1336,100 @@ html.cot-lock,html.cot-lock body{overflow:hidden}
   </div>
 </footer>
 <script>
+/* Galápagos: 3 paquetes con versiones Plata / Oro / Platino */
+(function(){
+  var WHY=[['Precios directos','La mejor relación costo-beneficio del país, sin intermediarios.'],['Aéreo y terrestre en una sola reserva','Emitimos tus boletos y coordinamos toda la logística en las islas.'],['Diseño a tu medida','Desde escapadas económicas hasta viajes de lujo.'],['Oficina en Quito','Asesores que te acompañan antes, durante y después del viaje.'],['Aliados locales de confianza','Operadores navieros, naturalistas y hoteles seleccionados.']];
+  var NOINC=['Ticket aéreo Quito/Guayaquil – Galápagos (lo cotizamos y emitimos aparte)','Tarjeta de Control de Tránsito TMT ($20)','Entrada al Parque Nacional ($30 nacionales / $200 extranjeros)','Tasa de muelle ($5) y bus de transbordo en Baltra ($5)','Almuerzos no especificados y cenas','Propinas, seguro de viaje y consumos personales'];
+  var P=[
+   {k:'express',tab:'Express',n:'Galápagos Express',dur:'4 días · 3 noches',from:399,
+    t:'La esencia de las Islas Encantadas en 4 días',es:'Un viaje no se mide en días, sino en los momentos que te quitan el aliento para siempre.',
+    intro:['Hay lugares en el planeta que parecen detenidos en el tiempo, donde la naturaleza no solo te rodea, sino que te acoge. Planificar Galápagos no debería ser un rompecabezas logístico, sino el inicio de una aventura transformadora.','Caminar junto a tortugas gigantes, nadar en aguas turquesa rodeado de lobos marinos o descansar en la arena coralina de Tortuga Bay. Este itinerario condensa lo mejor del archipiélago en 4 días perfectos: exploración, confort y tiempo libre. Deja la logística en nuestras manos; tú solo dedícate a vivirlo.'],
+    chips:['Tortugas gigantes','Túneles de lava','Snorkel con lobos marinos','Tortuga Bay','Las Grietas'],
+    tiers:[['Plata','Tarifa más competitiva',399,['3 noches en hotel 3★ en Puerto Ayora con desayuno','Traslados aeropuerto – hotel – aeropuerto','Parte Alta: tortugas gigantes y túneles de lava','Tour de Bahía con snorkel en Lobería / Punta Estrada','Tortuga Bay y Las Grietas','Guía naturalista certificado']],
+           ['Oro','Navegación a isla deshabitada',599,['Hotel 3★ superior / 4★ con desayuno','Parte Alta y Estación Charles Darwin','Yate a Seymour Norte, Bartolomé, Plazas o Santa Fe','Almuerzo a bordo y snorkel','Tortuga Bay y Las Grietas','Traslados incluidos']],
+           ['Platino','Lujo y atención personalizada',950,['Hotel boutique de lujo o eco-lodge','Traslados privados en todo el viaje','Parte Alta en privado','Tour navegable VIP a isla deshabitada','Excursiones guiadas exclusivas','Servicio concierge']]],
+    days:[['El despegue al Edén & gigantes de la Parte Alta',[['Mañana','Vuelo desde Quito o Guayaquil a Baltra. Te recibe nuestro equipo y cruzas en ferry a Santa Cruz.'],['Tarde','Caminata entre tortugas gigantes en libertad en una reserva privada y túneles de lava. Almuerzo campestre incluido.'],['Noche','Check-in en Puerto Ayora, Estación Científica Charles Darwin y paseo por el malecón.']]],
+          ['Aventura marina & snorkel',[['Plata','Tour de Bahía: La Lobería, Punta Estrada y Canal de los Tiburones, con snorkel junto a lobos marinos.'],['Oro · Platino','Día completo en yate a isla deshabitada (Seymour, Bartolomé, Plazas o Santa Fe) con caminata guiada, almuerzo a bordo y snorkel.'],['Noche','Tarde libre para la gastronomía local.']]],
+          ['Arena blanca en Tortuga Bay & Las Grietas',[['Mañana','Sendero entre cactus gigantes hasta Tortuga Bay: Playa Brava y Playa Mansa.'],['Tarde','Taxi acuático a Las Grietas, piscina natural de agua cristalina entre cañones de lava.'],['Noche','Artesanías y la Calle de los Kioskos.']]],
+          ['Despedida de las Islas Encantadas',[['Mañana','Desayuno, últimas fotos y compras en Puerto Ayora.'],['Tarde','Traslado a Baltra y vuelo de regreso. Fin de los servicios.']]]],
+    inc:['Traslados terrestres y marítimos Baltra – hotel – Baltra','3 noches en Puerto Ayora con desayunos','Almuerzo en la Parte Alta + almuerzo del día 2 según versión','Parte Alta, Charles Darwin, tour marino, Tortuga Bay y Las Grietas','Guía naturalista certificado y equipo de snorkel'],
+    noinc:NOINC},
+   {k:'bestseller',tab:'Bestseller',badge:'Más vendido',n:'Galápagos Bestseller',dur:'5 días · 4 noches',from:499,
+    t:'La experiencia completa de las Islas Encantadas',es:'Hay viajes que se recuerdan… y viajes que se quedan a vivir en ti para siempre.',
+    intro:['Cinco días es la duración perfecta para ir más allá de una escapada rápida y sumergirte en la biodiversidad del archipiélago sin prisas. Es la opción preferida de nuestros viajeros: la tierra firme de Santa Cruz y dos jornadas inolvidables de exploración marina.','Tortugas gigantes en bosques místicos, cañones de lava volcánica, playas vírgenes y santuarios marinos con tintoreras, lobos marinos y aves endémicas. El equilibrio justo entre excursiones de primer nivel y tiempo libre a tu ritmo.'],
+    chips:['Doble experiencia marina','Tortugas gigantes','Isla Pinzón o Tintoreras','Tortuga Bay','Las Grietas'],
+    para:['Familias y parejas que buscan el itinerario más equilibrado','Viajeros que quieren snorkel en varios puntos del archipiélago','Quienes tienen una semana de vacaciones y quieren aprovecharla al máximo','Amantes de la fotografía, la naturaleza y la vida marina'],
+    tiers:[['Plata','Itinerario amplio, mejor precio',499,['4 noches en hotel 3★ en Puerto Ayora con desayuno','Traslados aeropuerto – hotel – aeropuerto','Parte Alta: tortugas gigantes y túneles de lava','Tour de Bahía con snorkel','Isla Pinzón o Tintoreras','Tortuga Bay, Las Grietas y guía certificado']],
+           ['Oro','Hotel superior y yate',750,['Hotel 3★ superior / 4★ con desayuno','Parte Alta y Estación Charles Darwin','Yate a isla deshabitada con almuerzo y snorkel','Segunda excursión marina destacada','Tortuga Bay y Las Grietas','Traslados incluidos']],
+           ['Platino','Boutique y experiencias exclusivas',1180,['Hotel boutique de lujo o eco-lodge','Traslados privados en todo el viaje','Parte Alta en privado','Tour navegable VIP a isla deshabitada','Excursiones guiadas exclusivas','Servicio concierge']]],
+    days:[['El despegue al Edén & gigantes de la Parte Alta',[['Mañana','Vuelo a Baltra, recepción de nuestro equipo y ferry a Santa Cruz.'],['Tarde','Tortugas gigantes en libertad y túneles de lava. Almuerzo campestre incluido.'],['Noche','Check-in en Puerto Ayora, Charles Darwin y malecón.']]],
+          ['Aventura marina I: navegación & snorkel',[['Plata','Tour de Bahía: La Lobería, Punta Estrada y Canal de los Tiburones con snorkel.'],['Oro · Platino','Yate de día completo a Seymour Norte, Bartolomé, Plazas o Santa Fe, con almuerzo a bordo y snorkel profundo.'],['Noche','Tarde libre para la gastronomía local.']]],
+          ['Aventura marina II: fauna destacada',[['Mañana','Segunda experiencia de snorkel: Isla Pinzón o día completo en Isabela (Tintoreras / Túneles) según tu versión.'],['Tarde','Snorkel junto a tortugas marinas, mantarrayas y tintoreras. Almuerzo incluido.'],['Noche','Noche libre en el pueblo.']]],
+          ['Arena blanca en Tortuga Bay & Las Grietas',[['Mañana','Sendero de cactus gigantes hasta Tortuga Bay para descansar y disfrutar el paisaje.'],['Tarde','Taxi acuático a Las Grietas para nadar y hacer snorkel.'],['Noche','Última cena en la Calle de los Kioskos.']]],
+          ['Despedida de las Islas Encantadas',[['Mañana','Desayuno, fotos y compras en Puerto Ayora.'],['Tarde','Traslado a Baltra y vuelo de regreso. Fin de los servicios.']]]],
+    inc:['Traslados terrestres y marítimos Baltra – hotel – Baltra','4 noches en Puerto Ayora con desayunos','Almuerzo en la Parte Alta + 2 almuerzos en las excursiones marinas','Parte Alta, Charles Darwin, 2 tours marinos, Tortuga Bay y Las Grietas','Guía naturalista certificado y equipo de snorkel'],
+    noinc:NOINC},
+   {k:'hopping',tab:'Island Hopping',n:'Island Hopping Galápagos Total',dur:'7 días · 6 noches',from:699,
+    t:'La gran aventura multidestino: Santa Cruz e Isabela',es:'No te limites a mirar las islas desde la orilla… vive dentro de ellas.',
+    intro:['Para quienes buscan la inmersión definitiva: 7 días para vivir la verdadera esencia del archipiélago durmiendo en dos islas, la vibrante Santa Cruz y la salvaje Isabela.','Campos de lava reciente, la caldera del Volcán Sierra Negra, laberintos marinos con mantarrayas y pingüinos en Los Túneles y las playas tranquilas de Puerto Villamil. Todo con traslados inter-islas precisos y seguros.'],
+    chips:['Dos islas','Volcán Sierra Negra','Los Túneles','Pingüinos de Galápagos','Tintoreras'],
+    para:['Aventureros que quieren dormir en dos islas y conocer Isabela','Amantes del trekking y la geología','Quienes buscan el snorkel más completo: Los Túneles y Tintoreras','Vacaciones largas entre expedición activa y playa'],
+    tiers:[['Plata','Dos islas al mejor precio',699,['6 noches en hoteles 3★ en Santa Cruz e Isabela con desayuno','Traslados y lanchas inter-islas','Parte Alta de Santa Cruz','Isabela: Centro de Crianza y Muro de las Lágrimas','Snorkel en Tintoreras / Los Túneles','Tortuga Bay, Las Grietas y guía certificado']],
+           ['Oro','Confort superior y excursiones estelares',980,['Hoteles 3★ superior / 4★ en ambas islas','Lanchas rápidas inter-islas','Caminata al Volcán Sierra Negra','Snorkel en Los Túneles','Yate a isla deshabitada con almuerzo','Parte Alta, Tortuga Bay y Las Grietas']],
+           ['Platino','Boutique frente al mar, atención VIP',1590,['Hoteles boutique de lujo en ambas islas','Traslados privados en todo el viaje','Vuelo en avioneta o lancha VIP entre islas','Sierra Negra en privado','Tour navegable VIP a isla deshabitada','Servicio concierge']]],
+    days:[['Arribo a Santa Cruz & gigantes de la Parte Alta',[['Mañana','Vuelo a Baltra, recepción y traslado a Santa Cruz.'],['Tarde','Tortugas gigantes en libertad y túneles de lava. Almuerzo campestre incluido.'],['Noche','Check-in en Puerto Ayora, Charles Darwin y malecón.']]],
+          ['Navegación a Isabela & Tintoreras',[['Mañana','Lancha rápida a Isabela (aprox. 2 horas). Check-in en Puerto Villamil.'],['Tarde','Islote Tintoreras: tiburones de aleta blanca, iguanas marinas y lobos marinos. Snorkel en la bahía.'],['Noche','Calles de arena de Puerto Villamil y cena frente al mar.']]],
+          ['Volcán Sierra Negra & Los Túneles',[['Mañana','Caminata por el borde de una de las calderas más grandes del mundo y la lava reciente de Volcán Chico.'],['Tarde','Snorkel en Los Túneles, arcos de lava sobre el mar con pingüinos, caballitos de mar y tortugas. Box lunch incluido.'],['Noche','Noche libre en Isabela.']]],
+          ['Regreso a Santa Cruz & Playa Mansa',[['Mañana','Lancha rápida de regreso a Puerto Ayora.'],['Tarde','Tortuga Bay: sol, arena blanca y Playa Mansa.'],['Noche','Noche libre en Puerto Ayora.']]],
+          ['Excursión marina',[['Plata','Tour de Bahía: La Lobería, Las Grietas y Punta Estrada con snorkel.'],['Oro · Platino','Yate de día completo a isla deshabitada con caminata, almuerzo a bordo y snorkel.'],['Noche','Tiempo libre en Puerto Ayora.']]],
+          ['Las Grietas & tarde de compras',[['Mañana','Nado y snorkel en el cañón de Las Grietas.'],['Tarde','Artesanías, galerías de arte o descanso en el hotel.'],['Noche','Cena de despedida en los Kioskos.']]],
+          ['Despedida de las Islas Encantadas',[['Mañana','Desayuno y últimos recuerdos.'],['Tarde','Traslado al Canal de Itabaca y Baltra para el vuelo de regreso. Fin de los servicios.']]]],
+    inc:['Traslados y lancha rápida Santa Cruz – Isabela – Santa Cruz','6 noches entre Santa Cruz e Isabela con desayunos','Almuerzo en la Parte Alta + almuerzos de los días 3 y 5 según excursión','Parte Alta, Charles Darwin, Tintoreras, Sierra Negra, Los Túneles, Tortuga Bay, Las Grietas y tour marino','Guía naturalista certificado y equipo de snorkel'],
+    noinc:NOINC.slice(0,3).concat(['Impuesto de entrada a Isabela ($10 nacionales / $20 extranjeros)','Tasa de muelle ($5) y taxis acuáticos inter-islas ($1 a $2 c/u)']).concat(NOINC.slice(4))}
+  ];
+  var cur=0;
+  function money(n){ return '$'+String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.'); }
+  function wa(p,t){ var m='Hola Vitta Travel 🌊 Me interesa '+p.n+' ('+p.dur+'), versión '+t[0]+' (desde '+money(t[2])+' USD por persona). ¿Me ayudan con fechas y disponibilidad?'; return 'https://wa'+'.me/593939480059?text='+encodeURIComponent(m); }
+  function li(a){ return a.map(function(x){return '<li>'+x+'</li>';}).join(''); }
+  function body(p){
+    return '<div class="gp-sec gp-intro wrap"><div><div class="lv-k gp-k">'+p.n+' · '+p.dur+'</div><h2 class="gp-h">'+p.t+'</h2><p class="gp-es">“'+p.es+'”</p></div>'+
+        '<div>'+p.intro.map(function(x){return '<p>'+x+'</p>';}).join('')+'<div class="lp-chips">'+p.chips.map(function(c){return '<span>'+c+'</span>';}).join('')+'</div></div></div>'+
+      '<div class="gp-sec wrap"><h2 class="lp-h gp-hh">Elige tu versión</h2><div class="lp-tiers">'+p.tiers.map(function(t,i){ var lux=i===2;
+        return '<div class="lp-t'+(lux?' lux':'')+(i===1?' gp-rec':'')+'">'+(i===1?'<span class="lp-badge">Recomendada</span>':'')+'<div class="lp-ic">'+t[0]+'</div><h3>'+t[1]+'</h3><div class="lp-pr"><small class="lp-fr">desde </small>'+money(t[2])+' <small>USD</small></div><ul>'+li(t[3])+'</ul><a class="lp-btn" href="'+wa(p,t)+'" target="_blank" rel="noopener">Reservar '+t[0]+'</a></div>'; }).join('')+'</div>'+
+        '<p class="lp-note">Precios por persona, porción terrestre. Valores referenciales sujetos a fecha y disponibilidad.</p></div>'+
+      (p.para?'<div class="gp-sec wrap"><div class="gp-para"><h3>¿Para quién es este viaje?</h3><ul>'+li(p.para)+'</ul></div></div>':'')+
+      '<div class="gp-sec wrap gp-it"><div><h2 class="lp-h gp-hh">Itinerario día a día</h2><ol class="gp-days">'+p.days.map(function(d,i){
+          return '<li><div class="gp-dn"><small>Día</small><b>'+(i+1)+'</b></div><div class="gp-dc"><h3>'+d[0]+'</h3>'+d[1].map(function(r){return '<div class="gp-r"><span'+(/Plata|Oro/.test(r[0])?' class="v"':'')+'>'+r[0]+'</span><p>'+r[1]+'</p></div>';}).join('')+'</div></li>'; }).join('')+'</ol></div>'+
+        '<aside class="gp-aside"><div class="gp-box"><div class="lp-ic">Incluye</div><ul class="gp-ok">'+li(p.inc)+'</ul></div><div class="gp-box"><div class="lp-ic">No incluye</div><ul class="gp-no">'+li(p.noinc)+'</ul></div></aside></div>';
+  }
+  function tabs(){ return P.map(function(p,i){ return '<button type="button" class="gp-tab'+(i===cur?' is-on':'')+'" data-gpk="'+i+'">'+(p.badge?'<em>'+p.badge+'</em>':'')+'<b>'+p.tab+'</b><span>'+p.dur+'</span><i>desde '+money(p.from)+'</i></button>'; }).join(''); }
+  window.VTPk={galapagos:function(t){ cur=0;
+    return '<article class="gp">'+
+      '<header class="lp-hero gp-hero"><img src="'+(t.hero||t.img)+'" alt="Galápagos"><a class="lp-back" href="#volver">← Volver</a>'+
+        '<div class="lp-hi wrap"><div class="lv-k lp-k">Ecuador · Islas Encantadas</div><h1>Galápagos</h1><p>Tres formas de vivir el lugar más mágico del planeta. Salidas confirmadas desde Quito y Guayaquil.</p>'+
+        '<div class="gp-facts"><span>Desde <b>'+money(P[0].from)+'</b> por persona</span><span>4 a 7 días</span><span>Salidas desde UIO y GYE</span></div></div></header>'+
+      '<nav class="gp-tabs wrap" aria-label="Paquetes">'+tabs()+'</nav>'+
+      '<div class="gp-body" id="gpBody">'+body(P[cur])+'</div>'+
+      '<div class="gp-sec wrap"><div class="gp-fly"><div><div class="lv-k">Servicio adicional</div><h3>Emitimos tus boletos aéreos</h3><p>Salidas desde Quito (UIO) o Guayaquil (GYE). Elegimos el vuelo que mejor calce con tus actividades en la isla y gestionamos tu equipaje.</p></div><div class="gp-fly-p"><small>Aéreo aprox. por persona</small><b>$190 – $260</b><small>Sujeto a disponibilidad de la aerolínea</small></div></div></div>'+
+      '<div class="gp-sec wrap"><h2 class="lp-h gp-hh">¿Por qué viajar con Vitta Travel?</h2><div class="gp-why">'+WHY.map(function(w,i){return '<div><span>0'+(i+1)+'</span><h3>'+w[0]+'</h3><p>'+w[1]+'</p></div>';}).join('')+'</div></div>'+
+      '<div class="gp-sec wrap"><h2 class="lp-h gp-hh">Condiciones</h2><div class="gp-acc">'+
+        '<details open><summary>Reserva y pago</summary><ul><li><b>Anticipo:</b> 50% del paquete terrestre al confirmar.</li><li><b>Saldo:</b> 50% restante hasta 30 días antes del viaje.</li><li>Los boletos aéreos se pagan al 100% al momento de la emisión, según la aerolínea.</li></ul></details>'+
+        '<details><summary>Políticas de cancelación (porción terrestre)</summary><ul><li><b>Más de 30 días antes:</b> reembolso total menos 15% de gastos administrativos.</li><li><b>Entre 15 y 29 días:</b> penalidad del 50%.</li><li><b>Menos de 14 días o no show:</b> penalidad del 100%.</li><li>Los boletos aéreos emitidos se rigen por las políticas de la aerolínea (LATAM, Avianca, Aeroregional).</li></ul></details></div></div>'+
+      '<section class="gp-end"><div class="wrap"><p class="lv-k">Vitta Travel</p><h2>Los mejores recuerdos de tu vida merecen nacer en el lugar <i>más mágico del planeta</i>.</h2><p>Diseñamos viajes accesibles sin sacrificar la calidad que mereces.</p>'+
+        '<div class="gp-end-b"><button type="button" class="gp-cta" data-cotizar="galapagos">Cotizar este viaje</button><a class="gp-cta2" href="https://bit.ly/48cViHI" target="_blank" rel="noopener">WhatsApp 0939480059</a></div></div></section>'+
+    '</article>';
+  }};
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-gpk]'); if(!b) return;
+    var i=+b.getAttribute('data-gpk'); if(i===cur) return; cur=i;
+    [].forEach.call(document.querySelectorAll('.gp-tab'),function(x,k){x.classList.toggle('is-on',k===i);});
+    var g=document.getElementById('gpBody'); g.classList.add('out');
+    b.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'}); setTimeout(function(){ g.innerHTML=body(P[cur]); g.classList.remove('out'); },220);
+  });
+})();
+</script>
+
+<script>
 (function(){
   var WA='https://bit.ly/48cViHI';
   var ICON={'Guía':'i-guide','Transporte':'i-bus','Hospedaje':'i-bed','Alimentación':'i-food','Excursiones':'i-hike','Fotos':'i-cam','Vuelos':'i-plane','Traslados':'i-bus','Asistencia de viaje':'i-check','Tours en lancha':'i-map','Desayunos':'i-food','Todo incluido':'i-food','Entradas':'i-check','Tours':'i-hike','Tren':'i-bus'};
@@ -907,7 +1440,7 @@ html.cot-lock,html.cot-lock body{overflow:hidden}
   var DESTINOS=[
     {key:'galapagos',name:'Galápagos',country:'Ecuador',img:'img13.jpg',hero:'img14.jpg',
      sub:'Santa Cruz, San Cristóbal, Isabela, Floreana o Pinzón',chips:['Tortugas gigantes','Las Grietas','Snorkel con lobos marinos','Tortuga Bay'],
-     price:'269',dur:'4 días / 3 noches',sal:'Salidas desde Quito y Guayaquil',
+     price:'399',dur:'4 días / 3 noches',sal:'Salidas desde Quito y Guayaquil',
      days:[['Llegada a Santa Cruz','Recepción en el aeropuerto de Baltra, cruce del canal de Itabaca y traslado a Puerto Ayora. Por la tarde, Estación Científica Charles Darwin y sus tortugas gigantes.'],['Tour de bahía y Las Grietas','Recorrido en lancha por la bahía: Playa de los Perros, Canal del Amor y snorkel en Las Grietas.'],['Tour diario a otra isla','Excursión a Isabela, Floreana o Pinzón según disponibilidad. Snorkel con lobos marinos y tortugas. Almuerzo incluido.'],['Tortuga Bay y regreso','Caminata a Tortuga Bay, traslado al aeropuerto y regreso al continente.']],
      inc:['Guía','Transporte','Hospedaje','Alimentación','Excursiones','Fotos'],noinc:['Vuelos al continente','Tasa de ingreso al Parque Nacional','Tarjeta de control de tránsito'],
      hotelImg:'img15.jpg',hotels:[['Opción turista','Hotel en Puerto Ayora',3,'Cerca del malecón y los muelles.'],['Opción superior','Hotel frente a la bahía',4,'Terraza con vista al mar y desayuno buffet.']]},
@@ -1027,6 +1560,7 @@ html.cot-lock,html.cot-lock body{overflow:hidden}
   /* Página de tour */
   function render(key){
     var t=TOURS[key];
+    if(window.VTPk&&VTPk[key]){ document.getElementById('tour').innerHTML=VTPk[key](t); return; }
     var priceHtml=t.price?'<div class="price">desde <b><em>$</em>'+t.price+'</b></div><p>Por persona. Valor referencial según fecha y hotel.</p>':'<div class="price"><b class="ask">Cotiza tu fecha</b></div><p>Te enviamos el precio según tus fechas y el hotel que elijas.</p>';
     var days=t.days.map(function(d,i){return '<li><div class="day-n"><small>DÍA</small><b>'+(i+1)+'</b></div><div><h3>'+esc(d[0])+'</h3><p>'+esc(d[1])+'</p></div></li>';}).join('');
     var inc=t.inc.map(function(x){return '<li><span class="mini">'+icon(ICON[x]||'i-check')+'</span>'+esc(x)+'</li>';}).join('');
@@ -1053,12 +1587,12 @@ html.cot-lock,html.cot-lock body{overflow:hidden}
   function scrollToEl(el){ var y=el.getBoundingClientRect().top+window.pageYOffset-(header?header.offsetHeight:0)-8; window.scrollTo({top:Math.max(0,y),behavior:'smooth'}); }
   function showHome(){ tour.hidden=true; home.hidden=false; }
   function go(token){
-    if(TOURS[token]){ if(!home.hidden) homeScroll=window.pageYOffset; render(token); home.hidden=true; tour.hidden=false; window.scrollTo(0,0); return; }
-    if(token==='volver'){ showHome(); window.scrollTo(0,homeScroll); return; }
+    if(TOURS[token]){ if(!home.hidden) homeScroll=window.pageYOffset; render(token); if(window.VTNav) VTNav.push(); else { home.hidden=true; tour.hidden=false; window.scrollTo(0,0); } return; }
+    if(token==='volver'){ if(window.VTNav) VTNav.pop(homeScroll); else { showHome(); window.scrollTo(0,homeScroll); } return; }
     var wasTour=!tour.hidden; showHome();
     if(!token||token==='inicio'||token==='portada'){ window.scrollTo({top:0,behavior:wasTour?'auto':'smooth'}); return; }
     var el=document.getElementById(token);
-    if(el){ if(wasTour) window.scrollTo(0,0); requestAnimationFrame(function(){ scrollToEl(el); }); }
+    if(el){ if(wasTour) window.scrollTo({top:0,behavior:'instant'}); requestAnimationFrame(function(){ scrollToEl(el); }); }
   }
   document.addEventListener('click',function(e){ var a=e.target.closest('a[href^="#"]'); if(a){ e.preventDefault(); go(a.getAttribute('href').slice(1)); } });
   window.addEventListener('hashchange',function(){ go((location.hash||'').slice(1)); });
@@ -1082,27 +1616,33 @@ html.cot-lock,html.cot-lock body{overflow:hidden}
    pe:'<svg viewBox="0 0 30 20"><rect width="10" height="20" fill="#D91023"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#D91023"/></svg>',
    fr:'<svg viewBox="0 0 30 20"><rect width="10" height="20" fill="#002395"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#ED2939"/></svg>'};
   var D=[
-   {k:'galapagos',name:'Galápagos',country:'Ecuador',f:'ec',sub:'Lobos marinos, tortugas gigantes y aguas turquesa.',price:'$269',dur:'4 días · 3 noches',c:'#F4EFE4',cd:'#2F6F67'},
+   {k:'intro',intro:1,c:'#FFFFFF',cd:'#0F1E3D',price:''},
+   {k:'galapagos',name:'Galápagos',country:'Ecuador',f:'ec',sub:'Lobos marinos, tortugas gigantes y aguas turquesa.',price:'$399',dur:'4 días · 3 noches',c:'#F4EFE4',cd:'#2F6F67'},
    {k:'cancun',name:'Cancún',country:'México',f:'mx',sub:'Playas blancas y ruinas mayas frente al Caribe.',price:'A consultar',dur:'5 días · 4 noches',c:'#1C2E4A',dk:1,cd:'#1F5E68'},
    {k:'cartagena',name:'Cartagena',country:'Colombia',f:'co',sub:'Balcones con flores y atardeceres sobre la muralla.',price:'A consultar',dur:'4 días · 3 noches',c:'#B9AA98',cd:'#9A3B22'},
    {k:'puntacana',name:'Punta Cana',country:'Rep. Dominicana',f:'do',sub:'Palmeras, hamacas y mar cristalino, todo incluido.',price:'A consultar',dur:'5 días · 4 noches',c:'#4A5868',dk:1,cd:'#1F4F73'},
    {k:'machupicchu',name:'Machu Picchu',country:'Perú',f:'pe',sub:'Terrazas de piedra entre montañas sagradas.',price:'A consultar',dur:'5 días · 4 noches',c:'#2E3833',dk:1,cd:'#45543A'},
    {k:'paris',name:'París',country:'Francia',f:'fr',sub:'Cafés, bulevares y la Torre Eiffel al atardecer.',price:'A consultar',dur:'7 días · 6 noches',c:'#D9D4CC',cd:'#8A4E4A'}];
   /* usa el precio del sitio si existe */
-  if(window.VT_DESTINOS) D.forEach(function(d){ var s=window.VT_DESTINOS.filter(function(x){return x.key===d.k})[0]; if(s&&s.price) d.price='$'+s.price; });
+  if(window.VT_DESTINOS) D.forEach(function(d){ if(d.intro) return; var s=window.VT_DESTINOS.filter(function(x){return x.key===d.k})[0]; if(s&&s.price) d.price='$'+s.price; });
   var N=D.length, isl=[].slice.call(fh.querySelectorAll('.fh-isl')), i=null, tm;
   var flags=fh.querySelector('.fh-flags');
-  D.forEach(function(d,k){ var b=document.createElement('button'); b.type='button'; b.title=d.name; b.setAttribute('aria-label',d.name); b.innerHTML='<span class="fh-flag">'+F[d.f]+'</span>'; b.onclick=function(){ scrollTo(k); }; flags.appendChild(b); });
+  D.forEach(function(d,k){ if(d.intro) return; var b=document.createElement('button'); b.type='button'; b.title=d.name; b.setAttribute('aria-label',d.name); b.innerHTML='<span class="fh-flag">'+F[d.f]+'</span>'; b.onclick=function(){ set(k); }; flags.appendChild(b); });
   function pad(n){ return (n<10?'0':'')+n; }
   function fill(){ var d=D[Math.max(i,0)];
+    fh.classList.toggle('intro',!!d.intro);
+    if(d.intro){ fh.style.setProperty('--c',d.c); fh.style.setProperty('--cd',d.cd); fh.classList.remove('dk'); if(header) header.classList.remove('dkh');
+      [].forEach.call(flags.children,function(b){ b.classList.remove('on'); });
+      [].forEach.call(fh.querySelectorAll('.fh-dots'),function(dd){ [].forEach.call(dd.children,function(b,k){ b.classList.toggle('on',k===0); }); }); return; }
     fh.style.setProperty('--c',d.c); fh.style.setProperty('--cd',d.cd); fh.classList.toggle('dk',!!d.dk); if(header) header.classList.toggle('dkh',!!d.dk);
     fh.classList.toggle('nop',d.price.charAt(0)!=='$');
-    fh.querySelectorAll('[data-f]').forEach(function(el){ var f=el.getAttribute('data-f'); el.innerHTML=f==='flag'?F[d.f]:f==='num'?pad(Math.max(i,0)+1)+' / '+pad(N):d[f]; });
+    fh.querySelectorAll('[data-f]').forEach(function(el){ var f=el.getAttribute('data-f'); el.innerHTML=f==='flag'?F[d.f]:f==='num'?pad(i)+' / '+pad(N-1):d[f]; });
     fh.querySelector('[data-f-href]').setAttribute('href','#'+d.k);
     fh.querySelector('[data-f-cot]').setAttribute('data-cotizar',d.k);
-    [].forEach.call(flags.children,function(b,k){ b.classList.toggle('on',k===i); });
+    [].forEach.call(flags.children,function(b,k){ b.classList.toggle('on',k+1===i); });
+    [].forEach.call(fh.querySelectorAll('.fh-dots'),function(dd){ [].forEach.call(dd.children,function(b,k){ b.classList.toggle('on',k===i); }); });
   }
-  function set(n){ n=((n%N)+N)%N; if(n===i) return; var first=i===null; i=n; fh.classList.toggle('docked',i!==0);
+  function set(n){ n=((n%N)+N)%N; if(n===i) return; var first=i===null; i=n; fh.classList.toggle('docked',i!==0); fh.classList.toggle('intro-on',i===0);
     isl.forEach(function(e,k){ var d=((k-i)%N+N)%N; if(d>N/2) d-=N; e.setAttribute('data-p', d===0||d===1||d===-1 ? String(d) : d>1 ? 'far' : 'gone'); });
     if(first){ fill(); return; }
     fh.classList.add('out'); clearTimeout(tm); tm=setTimeout(function(){ fill(); fh.classList.remove('out'); },300);
@@ -1112,6 +1652,8 @@ html.cot-lock,html.cot-lock body{overflow:hidden}
   fh.querySelector('.fh-brand').addEventListener('click',function(){ if(i!==0) set(0); });
   fh.querySelector('[data-fh-prev]').onclick=function(){ set(i-1); };
   fh.querySelector('[data-fh-next]').onclick=function(){ set(i+1); };
+  fh.querySelector('[data-fh-go]').onclick=function(){ set(1); };
+  [].forEach.call(fh.querySelectorAll('.fh-dots'),function(dots){ D.forEach(function(){ dots.appendChild(document.createElement('i')); }); });
   /* lados = cambiar de isla; arriba/abajo = bajar la página */
   var lock=0;
   function step(dir){ var now=Date.now(); if(now<lock) return; lock=now+750; set(i+dir); }
@@ -1135,6 +1677,263 @@ html.cot-lock,html.cot-lock body{overflow:hidden}
   measure(); onScroll();
 })();
 </script>
+
+<script>
+/* Buscador de vuelos */
+(function(){
+  var form=document.getElementById('vsForm'); if(!form) return;
+  var AP=[
+   ['UIO','Quito','Ecuador'],['GYE','Guayaquil','Ecuador'],['CUE','Cuenca','Ecuador'],['MEC','Manta','Ecuador'],['GPS','Galápagos (Baltra)','Ecuador'],['SCY','Galápagos (San Cristóbal)','Ecuador'],
+   ['CUN','Cancún','México'],['MEX','Ciudad de México','México'],['CTG','Cartagena','Colombia'],['BOG','Bogotá','Colombia'],['MDE','Medellín','Colombia'],['ADZ','San Andrés','Colombia'],
+   ['PUJ','Punta Cana','Rep. Dominicana'],['CUZ','Cusco','Perú'],['LIM','Lima','Perú'],['PTY','Panamá','Panamá'],['AUA','Aruba','Aruba'],['MCO','Orlando','Estados Unidos'],
+   ['MIA','Miami','Estados Unidos'],['JFK','Nueva York','Estados Unidos'],['MAD','Madrid','España'],['BCN','Barcelona','España'],['CDG','París','Francia'],['FCO','Roma','Italia'],
+   ['EZE','Buenos Aires','Argentina'],['SCL','Santiago','Chile'],['GRU','São Paulo','Brasil'],['GIG','Río de Janeiro','Brasil']];
+  var PIN='<svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>';
+  var CAL='<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>';
+  var trip='rt', legs=[{from:'UIO · Quito',to:'',d1:'',d2:''}], pax={ad:1,ni:0,be:0}, cls='Económica';
+  var box=document.getElementById('vsLegs'), addB=document.getElementById('vsAdd');
+  var today=new Date(); today.setMinutes(today.getMinutes()-today.getTimezoneOffset()); var MIN=today.toISOString().slice(0,10);
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function fmt(v){ if(!v) return ''; var p=v.split('-'); var M=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic']; return (+p[2])+' '+M[+p[1]-1]+' '+p[0]; }
+  function field(lbl,k,i,ph,icon,cls2){ return '<div class="vs-f '+(cls2||'')+'"><label>'+lbl+'</label><div class="vs-in">'+icon+'<input type="text" autocomplete="off" data-k="'+k+'" data-i="'+i+'" placeholder="'+ph+'" value="'+esc(legs[i][k])+'"></div><ul class="vs-sug" hidden></ul></div>'; }
+  function dfield(lbl,k,i,dis){ var v=legs[i][k]; return '<div class="vs-f vs-d'+(dis?' is-off':'')+'"><label>'+lbl+'</label><label class="vs-in">'+CAL+'<span class="'+(v?'':'ph')+'">'+(v?fmt(v):(dis?'—':'Elige una fecha'))+'</span><input type="date" data-k="'+k+'" data-i="'+i+'" min="'+MIN+'" value="'+v+'"'+(dis?' disabled':'')+'></label></div>'; }
+  function render(){
+    box.innerHTML=legs.map(function(l,i){
+      var h='<div class="vs-leg">'+(trip==='md'?'<div class="vs-legn">Tramo '+(i+1)+'</div>':'');
+      h+='<div class="vs-route">'+field('Desde','from',i,'Ciudad o aeropuerto',PIN)+'<button type="button" class="vs-swap" data-swap="'+i+'" aria-label="Intercambiar origen y destino"><svg viewBox="0 0 24 24"><path d="M7 7h12l-3-3M17 17H5l3 3"/></svg></button>'+field('Hasta','to',i,'Ciudad o aeropuerto',PIN)+'</div>';
+      h+='<div class="vs-dates">'+dfield(trip==='md'?'Fecha':'Ida','d1',i,false)+(trip==='md'?'':dfield('Vuelta','d2',i,trip==='ow'))+'</div>';
+      if(trip==='md'&&i>1) h+='<button type="button" class="vs-rm" data-rm="'+i+'" aria-label="Quitar tramo">×</button>';
+      return h+'</div>';
+    }).join('');
+    addB.hidden=!(trip==='md'&&legs.length<4);
+  }
+  /* pestañas */
+  [].forEach.call(document.querySelectorAll('.vs-tab'),function(t){ t.addEventListener('click',function(){
+    trip=t.getAttribute('data-trip');
+    [].forEach.call(document.querySelectorAll('.vs-tab'),function(x){x.classList.toggle('is-on',x===t)});
+    if(trip==='md'){ while(legs.length<2) legs.push({from:legs[legs.length-1].to||'',to:'',d1:'',d2:''}); } else legs=legs.slice(0,1);
+    render();
+  }); });
+  addB.addEventListener('click',function(){ var last=legs[legs.length-1]; legs.push({from:last.to||'',to:'',d1:'',d2:''}); render(); });
+  /* sugerencias */
+  function sug(inp){
+    var ul=inp.closest('.vs-f').querySelector('.vs-sug'), q=inp.value.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+    var list=AP.filter(function(a){ var s=(a[0]+' '+a[1]+' '+a[2]).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,''); return !q||s.indexOf(q)>-1; }).slice(0,7);
+    ul.innerHTML=list.map(function(a){return '<li data-v="'+a[0]+' · '+esc(a[1])+'"><b>'+a[0]+'</b><span>'+esc(a[1])+'<small>'+esc(a[2])+'</small></span></li>';}).join('')||'<li class="no">Escribe la ciudad; si no está, igual la cotizamos.</li>';
+    ul.hidden=false;
+  }
+  function closeSug(){ [].forEach.call(box.querySelectorAll('.vs-sug'),function(u){u.hidden=true}); }
+  box.addEventListener('focusin',function(e){ var t=e.target; if(t.matches('input[type=text]')){ t.select&&t.select(); sug(t);} });
+  box.addEventListener('input',function(e){ var t=e.target; if(t.matches('input[type=text]')){ legs[+t.dataset.i][t.dataset.k]=t.value; t.closest('.vs-f').classList.remove('is-err'); sug(t);} });
+  box.addEventListener('mousedown',function(e){ var li=e.target.closest('.vs-sug li[data-v]'); if(!li) return; e.preventDefault();
+    var inp=li.closest('.vs-f').querySelector('input'); inp.value=li.dataset.v; legs[+inp.dataset.i][inp.dataset.k]=li.dataset.v; closeSug();
+    var nx=inp.dataset.k==='from'?box.querySelector('input[data-k=to][data-i="'+inp.dataset.i+'"]'):null; if(nx&&!nx.value) nx.focus(); else inp.blur(); });
+  box.addEventListener('focusout',function(e){ if(e.target.matches('input[type=text]')) setTimeout(closeSug,120); });
+  /* fechas */
+  box.addEventListener('change',function(e){ var t=e.target; if(t.type!=='date') return; var L=legs[+t.dataset.i]; L[t.dataset.k]=t.value;
+    if(t.dataset.k==='d1'&&L.d2&&L.d2<L.d1) L.d2=''; render(); });
+  box.addEventListener('click',function(e){
+    var lab=e.target.closest('.vs-d .vs-in'); if(lab){ var di=lab.querySelector('input'); if(!di.disabled){ if(di.dataset.k==='d2'&&legs[+di.dataset.i].d1) di.min=legs[+di.dataset.i].d1; try{di.showPicker()}catch(x){} } }
+    var sw=e.target.closest('[data-swap]'); if(sw){ var L=legs[+sw.dataset.swap], tmp=L.from; L.from=L.to; L.to=tmp; render(); }
+    var rm=e.target.closest('[data-rm]'); if(rm){ legs.splice(+rm.dataset.rm,1); render(); }
+  });
+  /* pasajeros */
+  var pop=document.getElementById('vsPop'), pb=document.getElementById('vsPaxBtn');
+  function paxTxt(){ var n=pax.ad+pax.ni+pax.be; document.getElementById('vsPaxTxt').textContent=n+(n===1?' viajero, ':' viajeros, ')+cls;
+    document.getElementById('vsAd').textContent=pax.ad; document.getElementById('vsNi').textContent=pax.ni; document.getElementById('vsBe').textContent=pax.be; }
+  function openPop(o){ pop.hidden=!o; pb.setAttribute('aria-expanded',o); }
+  pb.addEventListener('click',function(){ openPop(pop.hidden); });
+  document.getElementById('vsPaxOk').addEventListener('click',function(){ openPop(false); });
+  pop.addEventListener('click',function(e){ var b=e.target.closest('[data-p]'); if(b){ var k=b.dataset.p, v=pax[k]+(+b.dataset.d);
+      var lim={ad:[1,9],ni:[0,8],be:[0,pax.ad]}[k]; pax[k]=Math.max(lim[0],Math.min(lim[1],v)); if(pax.be>pax.ad) pax.be=pax.ad; paxTxt(); }
+    var c=e.target.closest('[data-c]'); if(c){ cls=c.dataset.c; [].forEach.call(pop.querySelectorAll('[data-c]'),function(x){x.classList.toggle('is-on',x===c)}); paxTxt(); } });
+  document.addEventListener('click',function(e){ if(!pop.hidden&&!e.target.closest('#vsPaxF')) openPop(false); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ openPop(false); closeSug(); } });
+  /* búsqueda avanzada */
+  var advT=document.getElementById('vsAdvT'), adv=document.getElementById('vsAdv');
+  advT.addEventListener('click',function(){ var o=!adv.classList.contains('is-open'); adv.classList.toggle('is-open',o); advT.setAttribute('aria-expanded',o); advT.classList.toggle('is-open',o); });
+  /* enviar */
+  form.addEventListener('submit',function(e){ e.preventDefault(); var ok=true;
+    legs.forEach(function(L,i){ ['from','to','d1'].concat(trip==='rt'?['d2']:[]).forEach(function(k){ if(!L[k]){ ok=false; var el=box.querySelector('[data-k='+k+'][data-i="'+i+'"]'); if(el) el.closest('.vs-f').classList.add('is-err'); } }); });
+    if(!ok){ form.classList.remove('shake'); void form.offsetWidth; form.classList.add('shake'); return; }
+    var t={rt:'Ida y vuelta',ow:'Solo ida',md:'Multidestino'}[trip], m='Hola Vitta Travel, quiero cotizar un vuelo ✈️\n\nTipo: '+t+'\n';
+    legs.forEach(function(L,i){ m+=(trip==='md'?'Tramo '+(i+1)+': ':'')+L.from+' → '+L.to+'\n'+(trip==='md'?'Fecha: ':'Ida: ')+fmt(L.d1)+(trip==='rt'?'\nVuelta: '+fmt(L.d2):'')+'\n'; });
+    m+='Pasajeros: '+pax.ad+' adulto'+(pax.ad>1?'s':'')+(pax.ni?', '+pax.ni+' niño'+(pax.ni>1?'s':''):'')+(pax.be?', '+pax.be+' bebé'+(pax.be>1?'s':''):'')+'\nClase: '+cls;
+    var ex=[]; if(document.getElementById('vsDirect').checked) ex.push('solo directos'); if(document.getElementById('vsBag').checked) ex.push('con maleta documentada'); if(document.getElementById('vsFlex').checked) ex.push('fechas flexibles ±3 días');
+    var air=document.getElementById('vsAir').value; if(air!=='Cualquiera') ex.push('aerolínea: '+air);
+    if(ex.length) m+='\nPreferencias: '+ex.join(', ');
+    window.open('https://wa'+'.me/593939480059?text='+encodeURIComponent(m),'_blank','noopener');
+  });
+  render(); paxTxt();
+})();
+</script>
+
+
+<script>
+/* Vitta Love Experience */
+(function(){
+  var grid=document.getElementById('lvGrid'); if(!grid) return;
+  var L=[
+   {k:'sunset',m:'antes',name:'Sunset Romance',img:'love-sunset.jpg',tag:'',
+    es:'Algunas historias de amor brillan más cuando el sol comienza a despedirse.',
+    intro:'Convertimos un atardecer en un recuerdo: un espacio romántico preparado para ustedes, un brindis y la mejor luz del día. Ideal para aniversarios, sorpresas o una pedida de mano sencilla.',
+    types:['🌊 Beach Sunset','🏔 Mountain Sunset','🌿 Garden Sunset','🏛 Rooftop Sunset','💎 Signature Sunset'],
+    tiers:[['Essential','Sencilla y especial',99,['Espacio romántico y decoración básica','Brindis para dos','Fotografía móvil','Coordinación','Unas 2 horas']],
+           ['Premium','Para celebrar',199,['Todo lo de Essential','Decoración premium','Tabla de snacks gourmet','20 fotografías profesionales','Regalo especial']],
+           ['Luxury','Inolvidable',399,['Todo lo de Premium','Cena privada','Flores naturales y setup luxury','Fotografía ampliada y video resumen','Regalo luxury']]]},
+   {k:'lovestory',m:'antes',name:'Love Story Bridal',img:'love-lovestory.jpg',tag:'',
+    es:'Toda historia de amor merece ser contada antes de comenzar un nuevo capítulo.',
+    intro:'Una sesión pre-boda pensada como experiencia: asesoría de estilo, locaciones con significado y tiempo para disfrutarse. Las fotos sirven para el save the date, las invitaciones, redes y el video de la recepción.',
+    types:['📸 Save the date','💌 Invitaciones digitales','📱 Redes sociales','🎞 Video de recepción'],
+    tiers:[['Essential','Primera sesión',179,['Sesión fotográfica profesional','20 fotografías editadas','Una locación','Moodboard y guía de vestuario','Unas 2 horas']],
+           ['Bridal','La más completa',379,['Maquillaje y peinado para la novia','Grooming para el novio','50 fotografías editadas','Dos locaciones y snack romántico','Foto impresa premium']],
+           ['Luxury','Premium',699,['Todo lo de Bridal','Sesión golden hour','Video resumen y tomas con drone','Álbum digital premium','Coordinador exclusivo y regalo']]]},
+   {k:'proposal',m:'antes',name:'Proposal Luxury',img:'love-proposal.jpg',tag:'La más pedida',
+    es:'Una pregunta puede durar unos segundos. El recuerdo puede durar toda una vida.',
+    intro:'Diseñamos tu propuesta a partir de su historia: los lugares que los marcaron y cómo se imaginan ese momento. Coordinamos flores, decoración, fotografía y tiempos. Tú solo tienes que disfrutarlo.',
+    types:['🌹 Romantic Garden','🌅 Sunset Proposal','🏔 Mountain Love','🌊 Beach Proposal','🏛 Rooftop Luxury','💎 Signature'],
+    tiers:[['Essential','Íntima y elegante',199,['Decoración romántica y 24 rosas','Cartel personalizado y pétalos','Brindis para dos','20 fotografías editadas','Asesoría previa']],
+           ['Premium','Más elaborada',519,['Decoración premium y 40 rosas','Photocall romántico y cena','Video corto','40 fotografías editadas','Coordinador exclusivo y sorpresa']],
+           ['Luxury','Extraordinaria',975,['Arco floral, 80 rosas y letras luminosas','Cena privada','Fotografía y video profesional','Tomas con drone y álbum digital','Coordinación VIP y regalo especial']]]},
+   {k:'weekend',m:'novia',name:'Bridal Weekend',img:'love-weekend.jpg',tag:'',
+    es:'Antes de dar el "Sí, acepto", regálate un momento para respirar, celebrar y disfrutar.',
+    intro:'Un fin de semana de bienestar para que la novia descanse del estrés de la organización y llegue a su boda renovada. Puede vivirlo sola, con su mejor amiga, con su familia o con su grupo.',
+    types:['🌷 Solo la novia','👭 Novia + mejor amiga','👩‍👩‍👧 Novia + familia','✨ Bridal Tribe'],
+    tiers:[['Essential','Pausa y descanso',299,['1 noche de hospedaje y desayuno','Circuito wellness','Kit de bienvenida','Detalle especial para la novia','Coordinación']],
+           ['Premium','Más exclusiva',549,['Todo lo de Essential','Masaje relajante e hidroterapia','Cena especial','Sesión fotográfica','Late check-out y regalo']],
+           ['Luxury','De lujo',949,['Todo lo de Premium','Suite premium','Tratamiento facial y spa ampliado','Brunch especial','Fotografía premium y beauty kit']]]},
+   {k:'shower',m:'novia',name:'Bridal Shower Premium',img:'love-shower.jpg',tag:'',
+    es:'Antes del gran día, celebremos a la mujer que está a punto de comenzar una nueva historia.',
+    intro:'Transformamos el bridal shower en un evento elegante y emotivo. Nos ocupamos de la decoración, la comida, la fotografía y la coordinación para que la familia y las amigas solo disfruten.',
+    types:['🌷 Clásico','🍾 Chic Brunch','🌸 Garden Party','💎 Glam Experience','✨ Temático'],
+    tiers:[['Essential','Íntimo',399,['Decoración temática y mesa principal','Photocall y música ambiental','Fotografía básica','Coordinación','Hasta 15 invitadas']],
+           ['Premium','Familiar',799,['Todo lo de Essential','Brunch o coffee break','Juegos y dinámicas','Fotografía profesional y souvenirs','Hasta 30 invitadas']],
+           ['Luxury','Exclusivo',1499,['Todo lo de Premium','Decoración luxury y candy bar','Catering premium y beauty corner','Video resumen y bridal throne','Hasta 50 invitadas']]]},
+   {k:'despedida',m:'novia',name:'Despedida VIP Platinum',img:'love-despedida.jpg',tag:'',
+    es:'Antes de caminar hacia el altar, es momento de celebrar y crear recuerdos inolvidables.',
+    intro:'Una despedida de soltera elegante, segura y organizada de principio a fin: hospedaje, cena, actividades y fotografía. La novia solo se preocupa por una cosa: disfrutar.',
+    types:['🏨 Weekend Escape','🌊 Beach Celebration','🌿 Wellness','✨ Glam Party','💎 Signature'],
+    tiers:[['Essential','Íntima',599,['Hospedaje y cena grupal','Área privada y decoración temática','Kit de bienvenida','Actividades grupales','Hasta 8 participantes']],
+           ['Premium','Ampliada',1199,['Todo lo de Essential','Transporte privado','Spa grupal y brunch','Sesión fotográfica y photocall','Hasta 12 participantes']],
+           ['Platinum','Exclusiva',2199,['Todo lo de Premium','Suite privada y beauty experience','Cena premium y decoración luxury','Video resumen y concierge','Hasta 15 participantes']]]},
+   {k:'flores',m:'juntos',name:'Ruta Romántica de las Flores',img:'love-flores.jpg',tag:'',
+    es:'Entre colores, aromas y paisajes, florecen los recuerdos que duran para siempre.',
+    intro:'Un recorrido en pareja por plantaciones de rosas y paisajes de la sierra ecuatoriana, con paradas pensadas para conversar, brindar y llevarse fotos hermosas.',
+    types:['🌺 Flower Garden','🌿 Nature Escape','🌅 Sunset Flowers','💍 Proposal Flowers'],
+    tiers:[['Essential','Medio día',149,['Recorrido guiado','Visita a plantaciones seleccionadas','Snack romántico','Fotografías básicas','Coordinación']],
+           ['Premium','Especial',299,['Todo lo de Essential','Picnic romántico','Brindis especial','20 fotografías profesionales','Regalo para la pareja']],
+           ['Luxury','Para pedir la mano',599,['Todo lo de Premium','Decoración especial','Sunset experience','Fotografía ampliada y video','Coordinación personalizada']]]},
+   {k:'escape',m:'juntos',name:'Escape Romántico',img:'love-escape.jpg',tag:'',
+    es:'El amor también necesita tiempo para detenerse, respirar y volver a encontrarse.',
+    intro:'Una escapada para desconectarse de la rutina y reconectar. Elegimos el lugar, preparamos la habitación y organizamos cenas y actividades. Ustedes solo llegan y disfrutan.',
+    types:['🏔 Escape Andino','🌿 Escape Wellness','🌊 Escape Costa','🌺 Escape Colonial','💎 Signature'],
+    tiers:[['Essential','Escapada corta',279,['1 noche de hospedaje','Desayuno para dos','Decoración romántica','Bienvenida especial','Coordinación']],
+           ['Premium','Aniversarios',499,['Todo lo de Essential','Cena romántica y espumante','Sesión fotográfica','Late check-out','Regalo especial']],
+           ['Luxury','Extraordinaria',899,['Todo lo de Premium','Suite premium','Spa y masaje para dos','Sunset experience','Concierge personalizado']]]},
+   {k:'luna',m:'juntos',name:'Luna de Miel Ecuador',img:'love-honey.jpg',tag:'',
+    es:'El "sí, acepto" fue solo el comienzo. Ahora toca escribir los primeros recuerdos juntos.',
+    intro:'Lunas de miel por Ecuador diseñadas a la medida: playa, haciendas en la sierra, lodges en la Amazonía o la magia de Galápagos. Se pueden combinar destinos y extender los días.',
+    types:['🌊 Beach Honeymoon','🏔 Mountain Honeymoon','🌿 Adventure Honeymoon','🏝 Island Honeymoon'],
+    from:true,
+    tiers:[['Costa Romántica','Playa y atardeceres',699,['Hospedaje y desayunos','Actividades románticas','Decoración especial','Coordinación']],
+           ['Sierra Encantada','Haciendas y montaña',899,['Hospedaje boutique','Experiencias culturales','Cena especial','Coordinación']],
+           ['Amazonía Mágica','Naturaleza y aventura',1299,['Lodge amazónico y alimentación','Excursiones','Actividades para parejas','Coordinación']],
+           ['Galápagos Exclusivo','La más especial',2499,['Hospedaje','Excursiones seleccionadas','Experiencias románticas','Coordinación integral']]]},
+   {k:'forever',m:'juntos',name:'Forever Begins Here',img:'love-forever.jpg',tag:'La más exclusiva',
+    es:'Algunas historias de amor merecen algo más que una celebración. Merecen algo extraordinario.',
+    intro:'Nuestra experiencia más exclusiva, diseñada desde cero: propuestas, lunas de miel, aniversarios o renovación de votos con concierge, hospedaje de lujo y producción audiovisual.',
+    types:['💍 Forever Proposal','✈️ Forever Honeymoon','💎 Forever Anniversary','👑 Forever Vows','✨ Forever Experience'],
+    from:true,
+    tiers:[['Signature','Celebración privada',1999,['Diseño personalizado','Concierge romántico','Hospedaje premium','Experiencia gastronómica','Decoración especial']],
+           ['Elite','Lujo',3499,['Todo lo de Signature','Producción fotográfica premium','Spa para parejas','Actividades privadas','Transporte ejecutivo']],
+           ['Black','VIP',6999,['Todo lo de Elite','Concierge exclusivo','Experiencias totalmente privadas','Producción audiovisual completa','Hospedaje y gastronomía luxury']]]}
+  ];
+  window.VT_LOVE=L;
+  var mode='antes', all=false;
+  function money(n){ return '$'+String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.'); }
+  function minP(e){ return Math.min.apply(null,e.tiers.map(function(t){return t[2]})); }
+  function card(e){ return '<button type="button" class="lv-c" data-love="'+e.k+'"><img src="'+e.img+'" alt="'+e.name+'" loading="lazy"><span class="lv-ci">'+(e.tag?'<span class="lv-tag">'+e.tag+'</span>':'')+'<span class="lv-cn">'+e.name+'</span><span class="lv-ce">“'+e.es+'”</span><span class="lv-row"><span>desde <b>'+money(minP(e))+'</b></span><span class="lv-lk">Ver experiencia →</span></span></span></button>'; }
+  function render(){
+    var list=all?L:L.filter(function(e){return e.m===mode});
+    grid.className='lv-grid anim n'+list.length+(all?' all':''); clearTimeout(grid._t); grid._t=setTimeout(function(){ grid.classList.remove('anim'); },900);
+    grid.innerHTML=list.map(card).join('');
+    document.getElementById('lvAll').textContent=all?'Ver por momentos':'Ver las 10 experiencias';
+    [].forEach.call(document.querySelectorAll('.lv-tabs button'),function(b){ b.classList.toggle('is-on',!all&&b.dataset.lvm===mode); });
+    dots.innerHTML=list.map(function(){return '<i></i>'}).join(''); setDot(0);
+  }
+  var dots=document.getElementById('lvDots');
+  function setDot(n){ [].forEach.call(dots.children,function(d,i){ d.classList.toggle('on',i===n); }); }
+  grid.addEventListener('mouseover',function(e){ var c=e.target.closest('.lv-c'); if(c) setDot([].indexOf.call(grid.children,c)); });
+  grid.addEventListener('scroll',function(){ var cs=grid.children, best=0, bd=1e9, mid=grid.getBoundingClientRect().left+24;
+    for(var i=0;i<cs.length;i++){ var d=Math.abs(cs[i].getBoundingClientRect().left-mid); if(d<bd){bd=d;best=i;} } setDot(best); },{passive:true});
+  [].forEach.call(document.querySelectorAll('.lv-tabs button'),function(b){ b.addEventListener('click',function(){ mode=b.dataset.lvm; all=false; render(); }); });
+  document.getElementById('lvAll').addEventListener('click',function(){ all=!all; render(); });
+
+  /* página de experiencia */
+  var home=document.getElementById('inicio'), page=document.getElementById('tour'), back=0;
+  function wa(e,t){ var m='Hola Vitta Travel 💛 Me interesa '+e.name+', versión '+t[0]+' ('+(e.from?'desde ':'')+money(t[2])+' USD). ¿Me ayudan con fechas y disponibilidad?'; return 'https://wa'+'.me/593939480059?text='+encodeURIComponent(m); }
+  function open(k){
+    var e=L.filter(function(x){return x.k===k})[0]; if(!e) return;
+    back=window.pageYOffset;
+    var mom={antes:'Antes del sí',novia:'Celebrando a la novia',juntos:'Viajar juntos'}[e.m];
+    var hi=e.tiers.length-1;
+    page.innerHTML='<article class="lp">'+
+      '<header class="lp-hero"><img src="'+e.img+'" alt=""><button type="button" class="lp-back" data-love-back>← Volver</button>'+
+      '<div class="lp-hi wrap"><div class="lv-k lp-k">Vitta Love Experience · '+mom+'</div><h1>'+e.name+'</h1><p>“'+e.es+'”</p></div></header>'+
+      '<div class="lp-body wrap"><div class="lp-intro"><p>'+e.intro+'</p><div class="lp-chips">'+e.types.map(function(t){return '<span>'+t+'</span>'}).join('')+'</div></div>'+
+      '<h2 class="lp-h">'+(e.tiers.length>3?'Elige tu destino':'Elige tu versión')+'</h2>'+
+      '<div class="lp-tiers n'+e.tiers.length+'">'+e.tiers.map(function(t,i){ var lux=i===hi;
+        return '<div class="lp-t'+(lux?' lux':'')+'">'+(lux?'<span class="lp-badge">'+(e.tiers.length>3?'La más especial':'Recomendada')+'</span>':'')+'<div class="lp-ic">'+t[0]+'</div><h3>'+t[1]+'</h3><div class="lp-pr">'+(e.from?'<small class="lp-fr">desde </small>':'')+money(t[2])+' <small>USD</small></div><ul>'+t[3].map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul><a class="lp-btn" href="'+wa(e,t)+'" target="_blank" rel="noopener">Reservar '+t[0]+'</a></div>'; }).join('')+'</div>'+
+      '<p class="lp-note">Precios por pareja o por grupo según la experiencia. Te confirmamos disponibilidad, fechas y lugar por WhatsApp.</p></div></article>';
+    if(window.VTNav) VTNav.push(); else { home.hidden=true; page.hidden=false; window.scrollTo(0,0); }
+  }
+  function close(){ if(window.VTNav) VTNav.pop(back,function(){ page.innerHTML=''; }); else { page.hidden=true; page.innerHTML=''; home.hidden=false; window.scrollTo(0,back); } }
+  document.addEventListener('click',function(ev){
+    var c=ev.target.closest('[data-love]'); if(c){ ev.preventDefault(); open(c.dataset.love); return; }
+    if(ev.target.closest('[data-love-back]')){ ev.preventDefault(); close(); }
+  });
+  render();
+})();
+</script>
+
+<script>
+/* Navegación con la misma animación del cotizador, en horizontal:
+   entrar = la página llega desde la derecha con zoom y fundido; lo de atrás se difumina.
+   volver = la página se va hacia la derecha y lo de atrás vuelve a enfocarse. */
+(function(){
+  var home=document.getElementById('inicio'), page=document.getElementById('tour'); if(!home||!page) return;
+  var root=document.documentElement, D=640, EASE='cubic-bezier(.32,.72,0,1)';
+  var OUT='translate3d(12%,0,0) scale(.94)', BLUR='blur(14px) brightness(.82)';
+  function jump(y){ window.scrollTo({top:y,left:0,behavior:'instant'}); }
+  function pin(el){ var c=el.firstElementChild||el, r0=el.getBoundingClientRect().top, c0=c.getBoundingClientRect().top;
+    el.classList.add('vt-under'); el.style.top=r0+'px'; var c1=c.getBoundingClientRect().top; el.style.top=(r0+(c0-c1))+'px'; }
+  function reset(el){ el.classList.remove('vt-under','vt-over'); ['transform','filter','top','opacity','transition','transformOrigin','borderRadius'].forEach(function(p){ el.style[p]=''; }); }
+  function set(el,tr,op,fi,anim){ el.style.transition=anim?('transform .62s '+EASE+',opacity .45s '+EASE+',filter .55s '+EASE+',border-radius .62s '+EASE):'none';
+    if(tr!=null) el.style.transform=tr; if(op!=null) el.style.opacity=op; if(fi!=null) el.style.filter=fi; if(!anim) void el.offsetWidth; }
+  function frame(fn){ requestAnimationFrame(function(){ requestAnimationFrame(fn); }); }
+  function done(){ root.classList.remove('vt-anim'); window.dispatchEvent(new Event('scroll')); }
+  window.VTNav={
+    push:function(){
+      if(!page.hidden&&home.hidden){ jump(0); return; }
+      root.classList.add('vt-anim'); pin(home); set(home,null,null,'none',false);
+      page.hidden=false; page.classList.add('vt-over'); page.scrollTop=0; page.style.transformOrigin='100% 40%'; page.style.borderRadius='34px';
+      set(page,OUT,'0',null,false);
+      frame(function(){ set(page,'translate3d(0,0,0) scale(1)','1',null,true); page.style.borderRadius='0'; set(home,null,null,BLUR,true); });
+      setTimeout(function(){ home.hidden=true; reset(home); reset(page); jump(0); done(); },D);
+    },
+    pop:function(y,after){
+      if(!home.hidden&&page.hidden){ jump(y||0); if(after) after(); return; }
+      var s=window.pageYOffset; root.classList.add('vt-anim');
+      page.classList.add('vt-over'); void page.offsetHeight; page.scrollTo({top:s,behavior:'instant'}); page.style.transformOrigin='100% 40%';
+      set(page,'translate3d(0,0,0) scale(1)','1',null,false);
+      home.hidden=false; jump(y||0); pin(home); set(home,null,null,BLUR,false);
+      frame(function(){ set(page,OUT,'0',null,true); page.style.borderRadius='34px'; set(home,null,null,'blur(0px) brightness(1)',true); });
+      setTimeout(function(){ page.hidden=true; reset(page); reset(home); jump(y||0); if(after) after(); done(); },D);
+    }
+  };
+})();
+</script>
+
 <script>
 (function(){
   var DEST=window.VT_DESTINOS||[];
