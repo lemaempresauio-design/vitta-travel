@@ -678,6 +678,21 @@ html.cot-lock,html.cot-lock body{overflow:hidden}
   .fh.intro-on .fh-isl[data-p="1"]:not(.fh-planet){--x:50cqw;--y:2cqh;--s:.3}
   .fh.intro-on .fh-dots:not(.fh-dots-m){display:flex;top:auto;bottom:52px}
 }
+/* portada escritorio: logo y texto como un bloque centrado */
+.fh-stick{--bw:min(430px,31cqw,44cqh);--gt:max(calc(var(--hh,74px) + 18px),calc(50cqh - (var(--bw) * .55 + 430px) / 2 + 24px))}
+.fh.intro-on .fh-brand{top:var(--gt);width:var(--bw)}
+.fh-intro{top:calc(var(--gt) + var(--bw) * .55 + 44px);width:min(640px,46cqw)}
+.fh-ih{font-size:clamp(50px,5.2cqw,84px)}
+.fh-planet{width:min(48cqw,70cqh,740px)}
+.fh-planet[data-p="0"]{--x:min(19cqw,360px)}
+.fh.intro-on .fh-glow{background:radial-gradient(75% 85% at 32% 38%,#FFFFFF 0%,rgba(255,255,255,.75) 40%,rgba(255,255,255,0) 78%),linear-gradient(180deg,rgba(255,255,255,0) 60%,rgba(15,30,61,.05))}
+@media (max-width:760px){
+  .fh.intro-on .fh-brand{top:calc(var(--hh,74px) + 1cqh);width:min(68vw,28cqh)}
+  .fh-intro{top:auto;width:auto}
+  .fh-ih{font-size:clamp(34px,9.6vw,42px)}
+  .fh-planet{width:min(84cqw,44cqh)}
+  .fh-planet[data-p="0"]{--x:0cqw}
+}
 
 /* ===== Buscador de vuelos ===== */
 .vs{padding-block:64px 8px;position:relative;z-index:3}
@@ -1616,7 +1631,7 @@ html.vt-anim body>footer,html.vt-anim main~footer{visibility:hidden}
    pe:'<svg viewBox="0 0 30 20"><rect width="10" height="20" fill="#D91023"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#D91023"/></svg>',
    fr:'<svg viewBox="0 0 30 20"><rect width="10" height="20" fill="#002395"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#ED2939"/></svg>'};
   var D=[
-   {k:'intro',intro:1,c:'#FFFFFF',cd:'#0F1E3D',price:''},
+   {k:'intro',intro:1,c:'#E9ECF1',cd:'#0F1E3D',price:''},
    {k:'galapagos',name:'Galápagos',country:'Ecuador',f:'ec',sub:'Lobos marinos, tortugas gigantes y aguas turquesa.',price:'$399',dur:'4 días · 3 noches',c:'#F4EFE4',cd:'#2F6F67'},
    {k:'cancun',name:'Cancún',country:'México',f:'mx',sub:'Playas blancas y ruinas mayas frente al Caribe.',price:'A consultar',dur:'5 días · 4 noches',c:'#1C2E4A',dk:1,cd:'#1F5E68'},
    {k:'cartagena',name:'Cartagena',country:'Colombia',f:'co',sub:'Balcones con flores y atardeceres sobre la muralla.',price:'A consultar',dur:'4 días · 3 noches',c:'#B9AA98',cd:'#9A3B22'},
